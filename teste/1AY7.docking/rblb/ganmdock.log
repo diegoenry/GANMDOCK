@@ -1,0 +1,2780 @@
+ ###############################################################
+ #                   GANMDOCK - version 1.0rc3                 #
+ #               Mon Nov 19 16:46:08 BRST 2012                 #
+ #                                                             #
+ # Diego E B Gomes(1,2), Pedro G Pascutti(2),Paulo M Bisch(2), #
+ # David Perahia(3), Luis P B Scott(1)  | diego@biof.ufrj.br   #
+ #                                                             #
+ # 1 - Universidade Federal do ABC                             #
+ # 2 - Univerisdade Federal do Rio de Janeiro                  #
+ # 3 - Ecole Normale Superieure de Cachan                      #
+ ###############################################################
+ Running these parameters:
+ pbs    =            0
+ ngen   =            5
+ psize  =           25
+ grid   =   0.50000000    
+ nnodes =            1
+ nmodes =            1
+ nbest  =            0
+ pdock  =           48
+ Reading File: nmrec
+           7  -1.0000000       1.0000000    
+           8  -1.0000000       1.0000000    
+ Reading File: nmlig
+           7  -1.0000000       1.0000000    
+           8  -1.0000000       1.0000000    
+ Population Sizes
+ Receptor:          25
+ Ligand:          25
+--------------------------------------------------------------------------
+[[54805,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "R_1"
+--------------------------------------------------------------------------
+[[54819,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "R_16"
+--------------------------------------------------------------------------
+[[54803,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "R_22"
+--------------------------------------------------------------------------
+[[54831,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "R_13"
+--------------------------------------------------------------------------
+[[54826,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "R_17"
+--------------------------------------------------------------------------
+[[54802,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "R_6"
+--------------------------------------------------------------------------
+[[54829,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "R_23"
+--------------------------------------------------------------------------
+[[54825,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "R_20"
+--------------------------------------------------------------------------
+[[54804,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "R_19"
+--------------------------------------------------------------------------
+[[54809,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "R_9"
+--------------------------------------------------------------------------
+[[54821,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "R_2"
+--------------------------------------------------------------------------
+[[54818,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "R_11"
+--------------------------------------------------------------------------
+[[54808,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "R_24"
+--------------------------------------------------------------------------
+[[54801,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "R_10"
+--------------------------------------------------------------------------
+[[54807,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "R_4"
+--------------------------------------------------------------------------
+[[54830,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "R_7"
+--------------------------------------------------------------------------
+[[54820,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "R_3"
+--------------------------------------------------------------------------
+[[54824,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "R_8"
+--------------------------------------------------------------------------
+[[54822,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "R_14"
+--------------------------------------------------------------------------
+[[54823,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "R_5"
+--------------------------------------------------------------------------
+[[54806,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "R_15"
+--------------------------------------------------------------------------
+[[54800,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "R_18"
+--------------------------------------------------------------------------
+[[54827,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "R_21"
+--------------------------------------------------------------------------
+[[54902,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "L_1"
+--------------------------------------------------------------------------
+[[54828,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "R_12"
+--------------------------------------------------------------------------
+[[54898,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "R_25"
+--------------------------------------------------------------------------
+[[54905,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "L_2"
+--------------------------------------------------------------------------
+[[54908,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "L_3"
+--------------------------------------------------------------------------
+[[54882,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "L_5"
+--------------------------------------------------------------------------
+[[54886,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "L_7"
+--------------------------------------------------------------------------
+[[54887,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "L_6"
+--------------------------------------------------------------------------
+[[54870,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "L_12"
+--------------------------------------------------------------------------
+[[54893,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "L_8"
+--------------------------------------------------------------------------
+[[54894,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "L_9"
+--------------------------------------------------------------------------
+[[54875,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "L_13"
+--------------------------------------------------------------------------
+[[55217,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "L_21"
+--------------------------------------------------------------------------
+[[54910,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "L_4"
+--------------------------------------------------------------------------
+[[54869,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "L_11"
+--------------------------------------------------------------------------
+[[54862,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "L_20"
+--------------------------------------------------------------------------
+[[54855,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "L_17"
+--------------------------------------------------------------------------
+[[54850,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "L_16"
+--------------------------------------------------------------------------
+[[54867,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "L_10"
+--------------------------------------------------------------------------
+[[54861,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "L_19"
+--------------------------------------------------------------------------
+[[54849,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "L_15"
+--------------------------------------------------------------------------
+[[55222,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "L_23"
+--------------------------------------------------------------------------
+[[54856,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "L_18"
+--------------------------------------------------------------------------
+[[54879,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "L_14"
+--------------------------------------------------------------------------
+[[55221,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "L_22"
+--------------------------------------------------------------------------
+[[55226,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "L_24"
+--------------------------------------------------------------------------
+[[55231,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node-140
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+ Parameter: ISTR <- "L_25"
+fixing pdb files: Receptor:    1
+fixing pdb files: Receptor:    2
+fixing pdb files: Receptor:    3
+fixing pdb files: Receptor:    4
+fixing pdb files: Receptor:    5
+fixing pdb files: Receptor:    6
+fixing pdb files: Receptor:    7
+fixing pdb files: Receptor:    8
+fixing pdb files: Receptor:    9
+fixing pdb files: Receptor:   10
+fixing pdb files: Receptor:   11
+fixing pdb files: Receptor:   12
+fixing pdb files: Receptor:   13
+fixing pdb files: Receptor:   14
+fixing pdb files: Receptor:   15
+fixing pdb files: Receptor:   16
+fixing pdb files: Receptor:   17
+fixing pdb files: Receptor:   18
+fixing pdb files: Receptor:   19
+fixing pdb files: Receptor:   20
+fixing pdb files: Receptor:   21
+fixing pdb files: Receptor:   22
+fixing pdb files: Receptor:   23
+fixing pdb files: Receptor:   24
+fixing pdb files: Receptor:   25
+fixing pdb files: Ligand:    1
+fixing pdb files: Ligand:    2
+fixing pdb files: Ligand:    3
+fixing pdb files: Ligand:    4
+fixing pdb files: Ligand:    5
+fixing pdb files: Ligand:    6
+fixing pdb files: Ligand:    7
+fixing pdb files: Ligand:    8
+fixing pdb files: Ligand:    9
+fixing pdb files: Ligand:   10
+fixing pdb files: Ligand:   11
+fixing pdb files: Ligand:   12
+fixing pdb files: Ligand:   13
+fixing pdb files: Ligand:   14
+fixing pdb files: Ligand:   15
+fixing pdb files: Ligand:   16
+fixing pdb files: Ligand:   17
+fixing pdb files: Ligand:   18
+fixing pdb files: Ligand:   19
+fixing pdb files: Ligand:   20
+fixing pdb files: Ligand:   21
+fixing pdb files: Ligand:   22
+fixing pdb files: Ligand:   23
+fixing pdb files: Ligand:   24
+fixing pdb files: Ligand:   25
+ Generation:            0
+ Dock_GeneratePopulation           0
+ Found a duplicate          34
+           1           1           0 running
+          18          11           0 running
+          15          19           0 running
+          25          18           0 running
+           7          19           0 running
+           5           1           0 running
+          13           2           0 running
+           5          23           0 running
+          20          19           0 running
+          11           1           0 running
+          15          13           0 running
+           2          14           0 running
+          10           6           0 running
+          10          16           0 running
+          17          18           0 running
+          14           8           0 running
+          21          10           0 running
+          18           8           0 running
+           1           3           0 running
+          14          20           0 running
+           6           2           0 running
+           2           5           0 running
+          19           8           0 running
+           2          12           0 running
+          12          13           0 running
+          12           4           0 running
+           8          21           0 running
+          18          15           0 running
+          18           9           0 running
+           2          25           0 running
+          14           1           0 running
+          22           1           0 running
+          10          13           0 running
+          17          14           0 running
+           1           4           0 running
+          25           5           0 running
+           9          16           0 running
+          16           4           0 running
+          14          24           0 running
+           9          21           0 running
+          25           7           0 running
+           7          11           0 running
+          21          23           0 running
+           7          20           0 running
+          18          12           0 running
+           7          17           0 running
+           3           6           0 running
+           3          14           0 running
+parallel -j1 <<EOF
+./dock_and_rerank.bash      1    1    1
+./dock_and_rerank.bash      2   18   11
+./dock_and_rerank.bash      3   15   19
+./dock_and_rerank.bash      4   25   18
+./dock_and_rerank.bash      5    7   19
+./dock_and_rerank.bash      6    5    1
+./dock_and_rerank.bash      7   13    2
+./dock_and_rerank.bash      8    5   23
+./dock_and_rerank.bash      9   20   19
+./dock_and_rerank.bash     10   11    1
+./dock_and_rerank.bash     11   15   13
+./dock_and_rerank.bash     12    2   14
+./dock_and_rerank.bash     13   10    6
+./dock_and_rerank.bash     14   10   16
+./dock_and_rerank.bash     15   17   18
+./dock_and_rerank.bash     16   14    8
+./dock_and_rerank.bash     17   21   10
+./dock_and_rerank.bash     18   18    8
+./dock_and_rerank.bash     19    1    3
+./dock_and_rerank.bash     20   14   20
+./dock_and_rerank.bash     21    6    2
+./dock_and_rerank.bash     22    2    5
+./dock_and_rerank.bash     23   19    8
+./dock_and_rerank.bash     24    2   12
+./dock_and_rerank.bash     25   12   13
+./dock_and_rerank.bash     26   12    4
+./dock_and_rerank.bash     27    8   21
+./dock_and_rerank.bash     28   18   15
+./dock_and_rerank.bash     29   18    9
+./dock_and_rerank.bash     30    2   25
+./dock_and_rerank.bash     31   14    1
+./dock_and_rerank.bash     32   22    1
+./dock_and_rerank.bash     33   10   13
+./dock_and_rerank.bash     34   17   14
+./dock_and_rerank.bash     35    1    4
+./dock_and_rerank.bash     36   25    5
+./dock_and_rerank.bash     37    9   16
+./dock_and_rerank.bash     38   16    4
+./dock_and_rerank.bash     39   14   24
+./dock_and_rerank.bash     40    9   21
+./dock_and_rerank.bash     41   25    7
+./dock_and_rerank.bash     42    7   11
+./dock_and_rerank.bash     43   21   23
+./dock_and_rerank.bash     44    7   20
+./dock_and_rerank.bash     45   18   12
+./dock_and_rerank.bash     46    7   17
+./dock_and_rerank.bash     47    3    6
+./dock_and_rerank.bash     48    3   14
+EOF
+Running on node-140
+running 1 vs 1
+Fixing PDB 1
+ReScoring 1
+ReRanking 1
+Running on node-140
+running 18 vs 11
+Fixing PDB 2
+ReScoring 2
+ReRanking 2
+Running on node-140
+running 15 vs 19
+Fixing PDB 3
+ReScoring 3
+ReRanking 3
+Running on node-140
+running 25 vs 18
+Fixing PDB 4
+ReScoring 4
+ReRanking 4
+Running on node-140
+running 7 vs 19
+Fixing PDB 5
+ReScoring 5
+ReRanking 5
+Running on node-140
+running 5 vs 1
+Fixing PDB 6
+ReScoring 6
+ReRanking 6
+Running on node-140
+running 13 vs 2
+Fixing PDB 7
+ReScoring 7
+ReRanking 7
+Running on node-140
+running 5 vs 23
+Fixing PDB 8
+ReScoring 8
+ReRanking 8
+Running on node-140
+running 20 vs 19
+Fixing PDB 9
+ReScoring 9
+ReRanking 9
+Running on node-140
+running 11 vs 1
+Fixing PDB 10
+ReScoring 10
+ReRanking 10
+Running on node-140
+running 15 vs 13
+Fixing PDB 11
+ReScoring 11
+ReRanking 11
+Running on node-140
+running 2 vs 14
+Fixing PDB 12
+ReScoring 12
+ReRanking 12
+Running on node-140
+running 10 vs 6
+Fixing PDB 13
+ReScoring 13
+ReRanking 13
+Running on node-140
+running 10 vs 16
+Fixing PDB 14
+ReScoring 14
+ReRanking 14
+Running on node-140
+running 17 vs 18
+Fixing PDB 15
+ReScoring 15
+ReRanking 15
+Running on node-140
+running 14 vs 8
+Fixing PDB 16
+ReScoring 16
+ReRanking 16
+Running on node-140
+running 21 vs 10
+Fixing PDB 17
+ReScoring 17
+ReRanking 17
+Running on node-140
+running 18 vs 8
+Fixing PDB 18
+ReScoring 18
+ReRanking 18
+Running on node-140
+running 1 vs 3
+Fixing PDB 19
+ReScoring 19
+ReRanking 19
+Running on node-140
+running 14 vs 20
+Fixing PDB 20
+ReScoring 20
+ReRanking 20
+Running on node-140
+running 6 vs 2
+Fixing PDB 21
+ReScoring 21
+ReRanking 21
+Running on node-140
+running 2 vs 5
+Fixing PDB 22
+ReScoring 22
+ReRanking 22
+Running on node-140
+running 19 vs 8
+Fixing PDB 23
+ReScoring 23
+ReRanking 23
+Running on node-140
+running 2 vs 12
+Fixing PDB 24
+ReScoring 24
+ReRanking 24
+Running on node-140
+running 12 vs 13
+Fixing PDB 25
+ReScoring 25
+ReRanking 25
+Running on node-140
+running 12 vs 4
+Fixing PDB 26
+ReScoring 26
+ReRanking 26
+Running on node-140
+running 8 vs 21
+Fixing PDB 27
+ReScoring 27
+ReRanking 27
+Running on node-140
+running 18 vs 15
+Fixing PDB 28
+ReScoring 28
+ReRanking 28
+Running on node-140
+running 18 vs 9
+Fixing PDB 29
+ReScoring 29
+ReRanking 29
+Running on node-140
+running 2 vs 25
+Fixing PDB 30
+ReScoring 30
+ReRanking 30
+Running on node-140
+running 14 vs 1
+Fixing PDB 31
+ReScoring 31
+ReRanking 31
+Running on node-140
+running 22 vs 1
+Fixing PDB 32
+ReScoring 32
+ReRanking 32
+Running on node-140
+running 10 vs 13
+Fixing PDB 33
+ReScoring 33
+ReRanking 33
+Running on node-140
+running 17 vs 14
+Fixing PDB 34
+ReScoring 34
+ReRanking 34
+Running on node-140
+running 1 vs 4
+Fixing PDB 35
+ReScoring 35
+ReRanking 35
+Running on node-140
+running 25 vs 5
+Fixing PDB 36
+ReScoring 36
+ReRanking 36
+Running on node-140
+running 9 vs 16
+Fixing PDB 37
+ReScoring 37
+ReRanking 37
+Running on node-140
+running 16 vs 4
+Fixing PDB 38
+ReScoring 38
+ReRanking 38
+Running on node-140
+running 14 vs 24
+Fixing PDB 39
+ReScoring 39
+ReRanking 39
+Running on node-140
+running 9 vs 21
+Fixing PDB 40
+ReScoring 40
+ReRanking 40
+Running on node-140
+running 25 vs 7
+Fixing PDB 41
+ReScoring 41
+ReRanking 41
+Running on node-140
+running 7 vs 11
+Fixing PDB 42
+ReScoring 42
+ReRanking 42
+Running on node-140
+running 21 vs 23
+Fixing PDB 43
+ReScoring 43
+ReRanking 43
+Running on node-140
+running 7 vs 20
+Fixing PDB 44
+ReScoring 44
+ReRanking 44
+Running on node-140
+running 18 vs 12
+Fixing PDB 45
+ReScoring 45
+ReRanking 45
+Running on node-140
+running 7 vs 17
+Fixing PDB 46
+ReScoring 46
+ReRanking 46
+Running on node-140
+running 3 vs 6
+Fixing PDB 47
+ReScoring 47
+ReRanking 47
+Running on node-140
+running 3 vs 14
+Fixing PDB 48
+ReScoring 48
+ReRanking 48
+ Etable           1 rec           1 lig           1
+ Etable           2 rec          18 lig          11
+ Etable           3 rec          15 lig          19
+ Etable           4 rec          25 lig          18
+ Etable           5 rec           7 lig          19
+ Etable           6 rec           5 lig           1
+ Etable           7 rec          13 lig           2
+ Etable           8 rec           5 lig          23
+ Etable           9 rec          20 lig          19
+ Etable          10 rec          11 lig           1
+ Etable          11 rec          15 lig          13
+ Etable          12 rec           2 lig          14
+ Etable          13 rec          10 lig           6
+ Etable          14 rec          10 lig          16
+ Etable          15 rec          17 lig          18
+ Etable          16 rec          14 lig           8
+ Etable          17 rec          21 lig          10
+ Etable          18 rec          18 lig           8
+ Etable          19 rec           1 lig           3
+ Etable          20 rec          14 lig          20
+ Etable          21 rec           6 lig           2
+ Etable          22 rec           2 lig           5
+ Etable          23 rec          19 lig           8
+ Etable          24 rec           2 lig          12
+ Etable          25 rec          12 lig          13
+ Etable          26 rec          12 lig           4
+ Etable          27 rec           8 lig          21
+ Etable          28 rec          18 lig          15
+ Etable          29 rec          18 lig           9
+ Etable          30 rec           2 lig          25
+ Etable          31 rec          14 lig           1
+ Etable          32 rec          22 lig           1
+ Etable          33 rec          10 lig          13
+ Etable          34 rec          17 lig          14
+ Etable          35 rec           1 lig           4
+ Etable          36 rec          25 lig           5
+ Etable          37 rec           9 lig          16
+ Etable          38 rec          16 lig           4
+ Etable          39 rec          14 lig          24
+ Etable          40 rec           9 lig          21
+ Etable          41 rec          25 lig           7
+ Etable          42 rec           7 lig          11
+ Etable          43 rec          21 lig          23
+ Etable          44 rec           7 lig          20
+ Etable          45 rec          18 lig          12
+ Etable          46 rec           7 lig          17
+ Etable          47 rec           3 lig           6
+ Etable          48 rec           3 lig          14
+ Generation:            1
+ Dock_GeneratePopulation           1
+ Dock_GeneratePopulation           1
+crossover
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+ Parents
+          10          13
+           5          23
+          17          18
+           2           5
+           9          21
+           7          11
+          25          18
+           3          14
+           1           1
+           7          19
+          12          13
+          15          13
+           3           6
+          14           8
+          10          16
+          12           4
+          15          19
+           8          21
+          21          10
+          20          19
+           2          12
+          16           4
+          18           8
+           2          14
+           1           4
+           2          25
+          18          15
+           6           2
+           5           1
+          25           5
+           7          20
+          22           1
+           1           3
+           7          17
+          10           6
+          14          24
+          19           8
+          18           9
+          18          12
+          14           1
+          11           1
+           9          16
+          14          20
+          18          11
+          21          23
+          13           2
+          17          14
+          25           7
+ offspring
+          10          21
+           9          13
+           2           8
+          14          12
+           5           4
+           1          23
+          15           3
+           1          13
+          17          11
+          18          18
+          10          23
+           5          13
+          12           5
+          25           4
+          14          18
+          25           1
+          12           5
+          25          13
+          12           2
+           6           4
+           2           4
+           1          14
+           5          13
+          10           1
+          25          11
+           7          18
+          21           8
+          18          10
+          16          13
+          12           4
+          25           8
+          18          18
+           9           2
+           6          21
+           9          13
+          10          21
+           2           5
+           2          14
+           9           4
+          12          16
+          16          12
+          18           4
+          10          19
+          20          13
+          18           4
+          12          15
+           5           8
+          14          23
+   12    4 found in the Energy Table
+    2    5 found in the Energy Table
+    2   14 found in the Energy Table
+ Found a duplicate in pop_tmp, position =          61  pair:          12           5
+ Found a duplicate in pop_tmp, position =          60  pair:           5          13
+ Found a duplicate in pop_tmp, position =          58  pair:          18          18
+ Found a duplicate in pop_tmp, position =          50  pair:           9          13
+ Found a duplicate in pop_tmp, position =          49  pair:          10          21
+ Found a duplicate in pop_tmp, position =          90  pair:          18           4
+          10          21           0 running
+           9          13           0 running
+           2           8           0 running
+          14          12           0 running
+           5           4           0 running
+           1          23           0 running
+          15           3           0 running
+           1          13           0 running
+          17          11           0 running
+          18          18           0 running
+          10          23           0 running
+           5          13           0 running
+          12           5           0 running
+          25           4           0 running
+          14          18           0 running
+          25           1           0 running
+          12           5           1 NOT running
+          25          13           0 running
+          12           2           0 running
+           6           4           0 running
+           2           4           0 running
+           1          14           0 running
+           5          13           1 NOT running
+          10           1           0 running
+          25          11           0 running
+           7          18           0 running
+          21           8           0 running
+          18          10           0 running
+          16          13           0 running
+          12           4           1 NOT running
+          25           8           0 running
+          18          18           1 NOT running
+           9           2           0 running
+           6          21           0 running
+           9          13           1 NOT running
+          10          21           1 NOT running
+           2           5           1 NOT running
+           2          14           1 NOT running
+           9           4           0 running
+          12          16           0 running
+          16          12           0 running
+          18           4           0 running
+          10          19           0 running
+          20          13           0 running
+          18           4           1 NOT running
+          12          15           0 running
+           5           8           0 running
+          14          23           0 running
+parallel -j1 <<EOF
+./dock_and_rerank.bash      1   10   21
+./dock_and_rerank.bash      2    9   13
+./dock_and_rerank.bash      3    2    8
+./dock_and_rerank.bash      4   14   12
+./dock_and_rerank.bash      5    5    4
+./dock_and_rerank.bash      6    1   23
+./dock_and_rerank.bash      7   15    3
+./dock_and_rerank.bash      8    1   13
+./dock_and_rerank.bash      9   17   11
+./dock_and_rerank.bash     10   18   18
+./dock_and_rerank.bash     11   10   23
+./dock_and_rerank.bash     12    5   13
+./dock_and_rerank.bash     13   12    5
+./dock_and_rerank.bash     14   25    4
+./dock_and_rerank.bash     15   14   18
+./dock_and_rerank.bash     16   25    1
+./dock_and_rerank.bash     18   25   13
+./dock_and_rerank.bash     19   12    2
+./dock_and_rerank.bash     20    6    4
+./dock_and_rerank.bash     21    2    4
+./dock_and_rerank.bash     22    1   14
+./dock_and_rerank.bash     24   10    1
+./dock_and_rerank.bash     25   25   11
+./dock_and_rerank.bash     26    7   18
+./dock_and_rerank.bash     27   21    8
+./dock_and_rerank.bash     28   18   10
+./dock_and_rerank.bash     29   16   13
+./dock_and_rerank.bash     31   25    8
+./dock_and_rerank.bash     33    9    2
+./dock_and_rerank.bash     34    6   21
+./dock_and_rerank.bash     39    9    4
+./dock_and_rerank.bash     40   12   16
+./dock_and_rerank.bash     41   16   12
+./dock_and_rerank.bash     42   18    4
+./dock_and_rerank.bash     43   10   19
+./dock_and_rerank.bash     44   20   13
+./dock_and_rerank.bash     46   12   15
+./dock_and_rerank.bash     47    5    8
+./dock_and_rerank.bash     48   14   23
+EOF
+Running on node-140
+running 10 vs 21
+Fixing PDB 1
+ReScoring 1
+ReRanking 1
+Running on node-140
+running 9 vs 13
+Fixing PDB 2
+ReScoring 2
+ReRanking 2
+Running on node-140
+running 2 vs 8
+Fixing PDB 3
+ReScoring 3
+ReRanking 3
+Running on node-140
+running 14 vs 12
+Fixing PDB 4
+ReScoring 4
+ReRanking 4
+Running on node-140
+running 5 vs 4
+Fixing PDB 5
+ReScoring 5
+ReRanking 5
+Running on node-140
+running 1 vs 23
+Fixing PDB 6
+ReScoring 6
+ReRanking 6
+Running on node-140
+running 15 vs 3
+Fixing PDB 7
+ReScoring 7
+ReRanking 7
+Running on node-140
+running 1 vs 13
+Fixing PDB 8
+ReScoring 8
+ReRanking 8
+Running on node-140
+running 17 vs 11
+Fixing PDB 9
+ReScoring 9
+ReRanking 9
+Running on node-140
+running 18 vs 18
+Fixing PDB 10
+ReScoring 10
+ReRanking 10
+Running on node-140
+running 10 vs 23
+Fixing PDB 11
+ReScoring 11
+ReRanking 11
+Running on node-140
+running 5 vs 13
+Fixing PDB 12
+ReScoring 12
+ReRanking 12
+Running on node-140
+running 12 vs 5
+Fixing PDB 13
+ReScoring 13
+ReRanking 13
+Running on node-140
+running 25 vs 4
+Fixing PDB 14
+ReScoring 14
+ReRanking 14
+Running on node-140
+running 14 vs 18
+Fixing PDB 15
+ReScoring 15
+ReRanking 15
+Running on node-140
+running 25 vs 1
+Fixing PDB 16
+ReScoring 16
+ReRanking 16
+Running on node-140
+running 25 vs 13
+Fixing PDB 18
+ReScoring 18
+ReRanking 18
+Running on node-140
+running 12 vs 2
+Fixing PDB 19
+ReScoring 19
+ReRanking 19
+Running on node-140
+running 6 vs 4
+Fixing PDB 20
+ReScoring 20
+ReRanking 20
+Running on node-140
+running 2 vs 4
+Fixing PDB 21
+ReScoring 21
+ReRanking 21
+Running on node-140
+running 1 vs 14
+Fixing PDB 22
+ReScoring 22
+ReRanking 22
+Running on node-140
+running 10 vs 1
+Fixing PDB 24
+ReScoring 24
+ReRanking 24
+Running on node-140
+running 25 vs 11
+Fixing PDB 25
+ReScoring 25
+ReRanking 25
+Running on node-140
+running 7 vs 18
+Fixing PDB 26
+ReScoring 26
+ReRanking 26
+Running on node-140
+running 21 vs 8
+Fixing PDB 27
+ReScoring 27
+ReRanking 27
+Running on node-140
+running 18 vs 10
+Fixing PDB 28
+ReScoring 28
+ReRanking 28
+Running on node-140
+running 16 vs 13
+Fixing PDB 29
+ReScoring 29
+ReRanking 29
+Running on node-140
+running 25 vs 8
+Fixing PDB 31
+ReScoring 31
+ReRanking 31
+Running on node-140
+running 9 vs 2
+Fixing PDB 33
+ReScoring 33
+ReRanking 33
+Running on node-140
+running 6 vs 21
+Fixing PDB 34
+ReScoring 34
+ReRanking 34
+Running on node-140
+running 9 vs 4
+Fixing PDB 39
+ReScoring 39
+ReRanking 39
+Running on node-140
+running 12 vs 16
+Fixing PDB 40
+ReScoring 40
+ReRanking 40
+Running on node-140
+running 16 vs 12
+Fixing PDB 41
+ReScoring 41
+ReRanking 41
+Running on node-140
+running 18 vs 4
+Fixing PDB 42
+ReScoring 42
+ReRanking 42
+Running on node-140
+running 10 vs 19
+Fixing PDB 43
+ReScoring 43
+ReRanking 43
+Running on node-140
+running 20 vs 13
+Fixing PDB 44
+ReScoring 44
+ReRanking 44
+Running on node-140
+running 12 vs 15
+Fixing PDB 46
+ReScoring 46
+ReRanking 46
+Running on node-140
+running 5 vs 8
+Fixing PDB 47
+ReScoring 47
+ReRanking 47
+Running on node-140
+running 14 vs 23
+Fixing PDB 48
+ReScoring 48
+ReRanking 48
+ Etable          49 rec          10 lig          21
+ Etable          50 rec           9 lig          13
+ Etable          51 rec           2 lig           8
+ Etable          52 rec          14 lig          12
+ Etable          53 rec           5 lig           4
+ Etable          54 rec           1 lig          23
+ Etable          55 rec          15 lig           3
+ Etable          56 rec           1 lig          13
+ Etable          57 rec          17 lig          11
+ Etable          58 rec          18 lig          18
+ Etable          59 rec          10 lig          23
+ Etable          60 rec           5 lig          13
+ Etable          61 rec          12 lig           5
+ Etable          62 rec          25 lig           4
+ Etable          63 rec          14 lig          18
+ Etable          64 rec          25 lig           1
+ Etable          65 rec          25 lig          13
+ Etable          66 rec          12 lig           2
+ Etable          67 rec           6 lig           4
+ Etable          68 rec           2 lig           4
+ Etable          69 rec           1 lig          14
+ Etable          70 rec          10 lig           1
+ Etable          71 rec          25 lig          11
+ Etable          72 rec           7 lig          18
+ Etable          73 rec          21 lig           8
+ Etable          74 rec          18 lig          10
+ Etable          75 rec          16 lig          13
+ Etable          76 rec          25 lig           8
+ Etable          77 rec           9 lig           2
+ Etable          78 rec           6 lig          21
+ Etable          79 rec           9 lig           4
+ Etable          80 rec          12 lig          16
+ Etable          81 rec          16 lig          12
+ Etable          82 rec          18 lig           4
+ Etable          83 rec          10 lig          19
+ Etable          84 rec          20 lig          13
+ Etable          85 rec          12 lig          15
+ Etable          86 rec           5 lig           8
+ Etable          87 rec          14 lig          23
+ Generation:            2
+ Dock_GeneratePopulation           2
+ Dock_GeneratePopulation           2
+crossover
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+ Parents
+          10          13
+           5          23
+           9          13
+           9          13
+          17          18
+           2           5
+           2           5
+          25          13
+          25           4
+           9          21
+           1          13
+           7          11
+          25          18
+           3          14
+          25           1
+          10          19
+          16          12
+          12          15
+           1           1
+           7          19
+          12          13
+           9           2
+          15          13
+           3           6
+          16          13
+           6           4
+          18           4
+          18           4
+          14           8
+          10          16
+          12           4
+          12           4
+          21           8
+          15          19
+           8          21
+          21          10
+          20          19
+           5           4
+           9           4
+          18          10
+          12           5
+          12           5
+           2          12
+          16           4
+          15           3
+          18           8
+           2          14
+           2          14
+ offspring
+          21          14
+           2           8
+           9           4
+          18          13
+           2           8
+          14          14
+           1           4
+          18           1
+           2          13
+           1          14
+          25           2
+           9           4
+           2          14
+           3          14
+           9           5
+           2          13
+          21           4
+          25           8
+          21           5
+           2           8
+           2           2
+           9          14
+           6           1
+           1           4
+           2           4
+           5          14
+           2          13
+          15          14
+           2          10
+          18          14
+          12          21
+           8          13
+          18           6
+           3           4
+           3          13
+           9          14
+          16           8
+          14          13
+          16           5
+           2          12
+           7          14
+           2          11
+          15           8
+          18          19
+           2          14
+           3          14
+           2           1
+          25          14
+    2    8 found in the Energy Table
+    9    4 found in the Energy Table
+    2    8 found in the Energy Table
+    1    4 found in the Energy Table
+    1   14 found in the Energy Table
+    9    4 found in the Energy Table
+    2   14 found in the Energy Table
+    3   14 found in the Energy Table
+   25    8 found in the Energy Table
+    2    8 found in the Energy Table
+    1    4 found in the Energy Table
+    2    4 found in the Energy Table
+    2   12 found in the Energy Table
+    2   14 found in the Energy Table
+    3   14 found in the Energy Table
+ Found a duplicate in pop_tmp, position =          50  pair:           2           8
+ Found a duplicate in pop_tmp, position =          51  pair:           9           4
+ Found a duplicate in pop_tmp, position =          57  pair:           2          13
+ Found a duplicate in pop_tmp, position =          50  pair:           2           8
+ Found a duplicate in pop_tmp, position =          55  pair:           1           4
+ Found a duplicate in pop_tmp, position =          57  pair:           2          13
+ Found a duplicate in pop_tmp, position =          70  pair:           9          14
+ Found a duplicate in pop_tmp, position =          61  pair:           2          14
+ Found a duplicate in pop_tmp, position =          62  pair:           3          14
+          21          14           0 running
+           2           8           1 NOT running
+           9           4           1 NOT running
+          18          13           0 running
+           2           8           1 NOT running
+          14          14           0 running
+           1           4           1 NOT running
+          18           1           0 running
+           2          13           0 running
+           1          14           1 NOT running
+          25           2           0 running
+           9           4           1 NOT running
+           2          14           1 NOT running
+           3          14           1 NOT running
+           9           5           0 running
+           2          13           1 NOT running
+          21           4           0 running
+          25           8           1 NOT running
+          21           5           0 running
+           2           8           1 NOT running
+           2           2           0 running
+           9          14           0 running
+           6           1           0 running
+           1           4           1 NOT running
+           2           4           1 NOT running
+           5          14           0 running
+           2          13           1 NOT running
+          15          14           0 running
+           2          10           0 running
+          18          14           0 running
+          12          21           0 running
+           8          13           0 running
+          18           6           0 running
+           3           4           0 running
+           3          13           0 running
+           9          14           1 NOT running
+          16           8           0 running
+          14          13           0 running
+          16           5           0 running
+           2          12           1 NOT running
+           7          14           0 running
+           2          11           0 running
+          15           8           0 running
+          18          19           0 running
+           2          14           1 NOT running
+           3          14           1 NOT running
+           2           1           0 running
+          25          14           0 running
+parallel -j1 <<EOF
+./dock_and_rerank.bash      1   21   14
+./dock_and_rerank.bash      4   18   13
+./dock_and_rerank.bash      6   14   14
+./dock_and_rerank.bash      8   18    1
+./dock_and_rerank.bash      9    2   13
+./dock_and_rerank.bash     11   25    2
+./dock_and_rerank.bash     15    9    5
+./dock_and_rerank.bash     17   21    4
+./dock_and_rerank.bash     19   21    5
+./dock_and_rerank.bash     21    2    2
+./dock_and_rerank.bash     22    9   14
+./dock_and_rerank.bash     23    6    1
+./dock_and_rerank.bash     26    5   14
+./dock_and_rerank.bash     28   15   14
+./dock_and_rerank.bash     29    2   10
+./dock_and_rerank.bash     30   18   14
+./dock_and_rerank.bash     31   12   21
+./dock_and_rerank.bash     32    8   13
+./dock_and_rerank.bash     33   18    6
+./dock_and_rerank.bash     34    3    4
+./dock_and_rerank.bash     35    3   13
+./dock_and_rerank.bash     37   16    8
+./dock_and_rerank.bash     38   14   13
+./dock_and_rerank.bash     39   16    5
+./dock_and_rerank.bash     41    7   14
+./dock_and_rerank.bash     42    2   11
+./dock_and_rerank.bash     43   15    8
+./dock_and_rerank.bash     44   18   19
+./dock_and_rerank.bash     47    2    1
+./dock_and_rerank.bash     48   25   14
+EOF
+Running on node-140
+running 21 vs 14
+Fixing PDB 1
+ReScoring 1
+ReRanking 1
+Running on node-140
+running 18 vs 13
+Fixing PDB 4
+ReScoring 4
+ReRanking 4
+Running on node-140
+running 14 vs 14
+Fixing PDB 6
+ReScoring 6
+ReRanking 6
+Running on node-140
+running 18 vs 1
+Fixing PDB 8
+ReScoring 8
+ReRanking 8
+Running on node-140
+running 2 vs 13
+Fixing PDB 9
+ReScoring 9
+ReRanking 9
+Running on node-140
+running 25 vs 2
+Fixing PDB 11
+ReScoring 11
+ReRanking 11
+Running on node-140
+running 9 vs 5
+Fixing PDB 15
+ReScoring 15
+ReRanking 15
+Running on node-140
+running 21 vs 4
+Fixing PDB 17
+ReScoring 17
+ReRanking 17
+Running on node-140
+running 21 vs 5
+Fixing PDB 19
+ReScoring 19
+ReRanking 19
+Running on node-140
+running 2 vs 2
+Fixing PDB 21
+ReScoring 21
+ReRanking 21
+Running on node-140
+running 9 vs 14
+Fixing PDB 22
+ReScoring 22
+ReRanking 22
+Running on node-140
+running 6 vs 1
+Fixing PDB 23
+ReScoring 23
+ReRanking 23
+Running on node-140
+running 5 vs 14
+Fixing PDB 26
+ReScoring 26
+ReRanking 26
+Running on node-140
+running 15 vs 14
+Fixing PDB 28
+ReScoring 28
+ReRanking 28
+Running on node-140
+running 2 vs 10
+Fixing PDB 29
+ReScoring 29
+ReRanking 29
+Running on node-140
+running 18 vs 14
+Fixing PDB 30
+ReScoring 30
+ReRanking 30
+Running on node-140
+running 12 vs 21
+Fixing PDB 31
+ReScoring 31
+ReRanking 31
+Running on node-140
+running 8 vs 13
+Fixing PDB 32
+ReScoring 32
+ReRanking 32
+Running on node-140
+running 18 vs 6
+Fixing PDB 33
+ReScoring 33
+ReRanking 33
+Running on node-140
+running 3 vs 4
+Fixing PDB 34
+ReScoring 34
+ReRanking 34
+Running on node-140
+running 3 vs 13
+Fixing PDB 35
+ReScoring 35
+ReRanking 35
+Running on node-140
+running 16 vs 8
+Fixing PDB 37
+ReScoring 37
+ReRanking 37
+Running on node-140
+running 14 vs 13
+Fixing PDB 38
+ReScoring 38
+ReRanking 38
+Running on node-140
+running 16 vs 5
+Fixing PDB 39
+ReScoring 39
+ReRanking 39
+Running on node-140
+running 7 vs 14
+Fixing PDB 41
+ReScoring 41
+ReRanking 41
+Running on node-140
+running 2 vs 11
+Fixing PDB 42
+ReScoring 42
+ReRanking 42
+Running on node-140
+running 15 vs 8
+Fixing PDB 43
+ReScoring 43
+ReRanking 43
+Running on node-140
+running 18 vs 19
+Fixing PDB 44
+ReScoring 44
+ReRanking 44
+Running on node-140
+running 2 vs 1
+Fixing PDB 47
+ReScoring 47
+ReRanking 47
+Running on node-140
+running 25 vs 14
+Fixing PDB 48
+ReScoring 48
+ReRanking 48
+ Etable          88 rec          21 lig          14
+ Etable          89 rec          18 lig          13
+ Etable          90 rec          14 lig          14
+ Etable          91 rec          18 lig           1
+ Etable          92 rec           2 lig          13
+ Etable          93 rec          25 lig           2
+ Etable          94 rec           9 lig           5
+ Etable          95 rec          21 lig           4
+ Etable          96 rec          21 lig           5
+ Etable          97 rec           2 lig           2
+ Etable          98 rec           9 lig          14
+ Etable          99 rec           6 lig           1
+ Etable         100 rec           5 lig          14
+ Etable         101 rec          15 lig          14
+ Etable         102 rec           2 lig          10
+ Etable         103 rec          18 lig          14
+ Etable         104 rec          12 lig          21
+ Etable         105 rec           8 lig          13
+ Etable         106 rec          18 lig           6
+ Etable         107 rec           3 lig           4
+ Etable         108 rec           3 lig          13
+ Etable         109 rec          16 lig           8
+ Etable         110 rec          14 lig          13
+ Etable         111 rec          16 lig           5
+ Etable         112 rec           7 lig          14
+ Etable         113 rec           2 lig          11
+ Etable         114 rec          15 lig           8
+ Etable         115 rec          18 lig          19
+ Etable         116 rec           2 lig           1
+ Etable         117 rec          25 lig          14
+ Generation:            3
+ Dock_GeneratePopulation           3
+ Dock_GeneratePopulation           3
+crossover
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+ Parents
+          10          13
+           5          23
+          18          13
+           9          13
+           9          13
+          17          18
+           2           5
+           2           5
+           8          13
+          25          13
+          25           4
+           9          21
+           1          13
+           7          11
+           3           4
+          25          18
+           3          14
+           3          14
+           3          14
+          25           1
+          10          19
+          16          12
+          12          15
+           1           1
+           7          19
+          12          13
+           9           2
+          15          13
+           3           6
+          16          13
+           6           4
+          18           4
+          18           4
+          16           8
+          14           8
+          21           4
+           2          11
+          15          14
+          10          16
+           6           1
+          12           4
+          12           4
+          21           8
+          15          19
+           8          21
+          21          10
+          20          19
+           5           4
+ offspring
+          12          13
+           9          13
+          18           4
+           3           4
+           5           8
+          14           4
+          10          14
+           3          13
+           5          13
+          16           4
+           9           4
+           5          21
+           8           4
+           5          13
+           5           4
+          25           4
+          21          13
+           9          10
+           1           1
+          25           1
+           2           4
+           5          11
+           5          12
+          16           4
+           5          13
+          18           4
+          18          13
+          25          13
+           5          13
+           9           4
+          15           4
+           5          14
+           3          13
+           1           4
+          17           4
+           5          18
+           5           4
+          21           4
+           3           4
+           5          14
+          12          13
+           1          13
+           3           4
+           6           4
+          18           4
+           5           4
+           5           4
+           6           4
+   12   13 found in the Energy Table
+    9   13 found in the Energy Table
+   18    4 found in the Energy Table
+    3    4 found in the Energy Table
+    5    8 found in the Energy Table
+    3   13 found in the Energy Table
+    5   13 found in the Energy Table
+   16    4 found in the Energy Table
+    9    4 found in the Energy Table
+    5   13 found in the Energy Table
+    5    4 found in the Energy Table
+   25    4 found in the Energy Table
+    1    1 found in the Energy Table
+   25    1 found in the Energy Table
+    2    4 found in the Energy Table
+   16    4 found in the Energy Table
+    5   13 found in the Energy Table
+   18    4 found in the Energy Table
+   18   13 found in the Energy Table
+   25   13 found in the Energy Table
+    5   13 found in the Energy Table
+    9    4 found in the Energy Table
+    5   14 found in the Energy Table
+    3   13 found in the Energy Table
+    1    4 found in the Energy Table
+    5    4 found in the Energy Table
+   21    4 found in the Energy Table
+    3    4 found in the Energy Table
+    5   14 found in the Energy Table
+   12   13 found in the Energy Table
+    1   13 found in the Energy Table
+    3    4 found in the Energy Table
+    6    4 found in the Energy Table
+   18    4 found in the Energy Table
+    5    4 found in the Energy Table
+    5    4 found in the Energy Table
+    6    4 found in the Energy Table
+ Found a duplicate in pop_tmp, position =          57  pair:           5          13
+ Found a duplicate in pop_tmp, position =          58  pair:          16           4
+ Found a duplicate in pop_tmp, position =          57  pair:           5          13
+ Found a duplicate in pop_tmp, position =          51  pair:          18           4
+ Found a duplicate in pop_tmp, position =          57  pair:           5          13
+ Found a duplicate in pop_tmp, position =          59  pair:           9           4
+ Found a duplicate in pop_tmp, position =          56  pair:           3          13
+ Found a duplicate in pop_tmp, position =          63  pair:           5           4
+ Found a duplicate in pop_tmp, position =          52  pair:           3           4
+ Found a duplicate in pop_tmp, position =          80  pair:           5          14
+ Found a duplicate in pop_tmp, position =          49  pair:          12          13
+ Found a duplicate in pop_tmp, position =          52  pair:           3           4
+ Found a duplicate in pop_tmp, position =          51  pair:          18           4
+ Found a duplicate in pop_tmp, position =          63  pair:           5           4
+ Found a duplicate in pop_tmp, position =          63  pair:           5           4
+ Found a duplicate in pop_tmp, position =          92  pair:           6           4
+          12          13           1 NOT running
+           9          13           1 NOT running
+          18           4           1 NOT running
+           3           4           1 NOT running
+           5           8           1 NOT running
+          14           4           0 running
+          10          14           0 running
+           3          13           1 NOT running
+           5          13           1 NOT running
+          16           4           1 NOT running
+           9           4           1 NOT running
+           5          21           0 running
+           8           4           0 running
+           5          13           1 NOT running
+           5           4           1 NOT running
+          25           4           1 NOT running
+          21          13           0 running
+           9          10           0 running
+           1           1           1 NOT running
+          25           1           1 NOT running
+           2           4           1 NOT running
+           5          11           0 running
+           5          12           0 running
+          16           4           1 NOT running
+           5          13           1 NOT running
+          18           4           1 NOT running
+          18          13           1 NOT running
+          25          13           1 NOT running
+           5          13           1 NOT running
+           9           4           1 NOT running
+          15           4           0 running
+           5          14           1 NOT running
+           3          13           1 NOT running
+           1           4           1 NOT running
+          17           4           0 running
+           5          18           0 running
+           5           4           1 NOT running
+          21           4           1 NOT running
+           3           4           1 NOT running
+           5          14           1 NOT running
+          12          13           1 NOT running
+           1          13           1 NOT running
+           3           4           1 NOT running
+           6           4           1 NOT running
+          18           4           1 NOT running
+           5           4           1 NOT running
+           5           4           1 NOT running
+           6           4           1 NOT running
+parallel -j1 <<EOF
+./dock_and_rerank.bash      6   14    4
+./dock_and_rerank.bash      7   10   14
+./dock_and_rerank.bash     12    5   21
+./dock_and_rerank.bash     13    8    4
+./dock_and_rerank.bash     17   21   13
+./dock_and_rerank.bash     18    9   10
+./dock_and_rerank.bash     22    5   11
+./dock_and_rerank.bash     23    5   12
+./dock_and_rerank.bash     31   15    4
+./dock_and_rerank.bash     35   17    4
+./dock_and_rerank.bash     36    5   18
+EOF
+Running on node-140
+running 14 vs 4
+Fixing PDB 6
+ReScoring 6
+ReRanking 6
+Running on node-140
+running 10 vs 14
+Fixing PDB 7
+ReScoring 7
+ReRanking 7
+Running on node-140
+running 5 vs 21
+Fixing PDB 12
+ReScoring 12
+ReRanking 12
+Running on node-140
+running 8 vs 4
+Fixing PDB 13
+ReScoring 13
+ReRanking 13
+Running on node-140
+running 21 vs 13
+Fixing PDB 17
+ReScoring 17
+ReRanking 17
+Running on node-140
+running 9 vs 10
+Fixing PDB 18
+ReScoring 18
+ReRanking 18
+Running on node-140
+running 5 vs 11
+Fixing PDB 22
+ReScoring 22
+ReRanking 22
+Running on node-140
+running 5 vs 12
+Fixing PDB 23
+ReScoring 23
+ReRanking 23
+Running on node-140
+running 15 vs 4
+Fixing PDB 31
+ReScoring 31
+ReRanking 31
+Running on node-140
+running 17 vs 4
+Fixing PDB 35
+ReScoring 35
+ReRanking 35
+Running on node-140
+running 5 vs 18
+Fixing PDB 36
+ReScoring 36
+ReRanking 36
+ Etable         118 rec          14 lig           4
+ Etable         119 rec          10 lig          14
+ Etable         120 rec           5 lig          21
+ Etable         121 rec           8 lig           4
+ Etable         122 rec          21 lig          13
+ Etable         123 rec           9 lig          10
+ Etable         124 rec           5 lig          11
+ Etable         125 rec           5 lig          12
+ Etable         126 rec          15 lig           4
+ Etable         127 rec          17 lig           4
+ Etable         128 rec           5 lig          18
+ Generation:            4
+ Dock_GeneratePopulation           4
+ Dock_GeneratePopulation           4
+crossover
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+ Parents
+          10          13
+          10          14
+           5          23
+          18          13
+          18          13
+           9          13
+           9          13
+           9          13
+          17          18
+           2           5
+           2           5
+           8          13
+          25          13
+          25          13
+          25           4
+          25           4
+           9          21
+           1          13
+           1          13
+           7          11
+           3           4
+           3           4
+           3           4
+           3           4
+          25          18
+           3          14
+           3          14
+           3          14
+           5          11
+          25           1
+          25           1
+          10          19
+          16          12
+          12          15
+           1           1
+           1           1
+           7          19
+          12          13
+          12          13
+          12          13
+           9           2
+          15          13
+           3           6
+          16          13
+          21          13
+           6           4
+           6           4
+           6           4
+ offspring
+          10          19
+           7          14
+          10           4
+           6          14
+           3           4
+           6           6
+           3           4
+          25           4
+          12           1
+          25          13
+           3           4
+           6          14
+           6           4
+           3           4
+          17           4
+           6          18
+           6          12
+          16           4
+           6          13
+          12           4
+           9           5
+           2           2
+           6           5
+           2           4
+          10           4
+           3          14
+           9          13
+           9          13
+           7          14
+          10          19
+          12           4
+           6          13
+           7           4
+           6          19
+           6          14
+          10           4
+           8           4
+           6          13
+           3          13
+          18           4
+          17           4
+           6          18
+          25          14
+           3          13
+          15           5
+           2          13
+          10           4
+           6          14
+   10   19 found in the Energy Table
+    7   14 found in the Energy Table
+    3    4 found in the Energy Table
+    3    4 found in the Energy Table
+   25    4 found in the Energy Table
+   25   13 found in the Energy Table
+    3    4 found in the Energy Table
+    6    4 found in the Energy Table
+    3    4 found in the Energy Table
+   17    4 found in the Energy Table
+   16    4 found in the Energy Table
+   12    4 found in the Energy Table
+    9    5 found in the Energy Table
+    2    2 found in the Energy Table
+    2    4 found in the Energy Table
+    3   14 found in the Energy Table
+    9   13 found in the Energy Table
+    9   13 found in the Energy Table
+    7   14 found in the Energy Table
+   10   19 found in the Energy Table
+   12    4 found in the Energy Table
+    8    4 found in the Energy Table
+    3   13 found in the Energy Table
+   18    4 found in the Energy Table
+   17    4 found in the Energy Table
+   25   14 found in the Energy Table
+    3   13 found in the Energy Table
+    2   13 found in the Energy Table
+ Found a duplicate in pop_tmp, position =          53  pair:           3           4
+ Found a duplicate in pop_tmp, position =          53  pair:           3           4
+ Found a duplicate in pop_tmp, position =          52  pair:           6          14
+ Found a duplicate in pop_tmp, position =          53  pair:           3           4
+ Found a duplicate in pop_tmp, position =          51  pair:          10           4
+ Found a duplicate in pop_tmp, position =          75  pair:           9          13
+ Found a duplicate in pop_tmp, position =          50  pair:           7          14
+ Found a duplicate in pop_tmp, position =          49  pair:          10          19
+ Found a duplicate in pop_tmp, position =          68  pair:          12           4
+ Found a duplicate in pop_tmp, position =          67  pair:           6          13
+ Found a duplicate in pop_tmp, position =          52  pair:           6          14
+ Found a duplicate in pop_tmp, position =          51  pair:          10           4
+ Found a duplicate in pop_tmp, position =          67  pair:           6          13
+ Found a duplicate in pop_tmp, position =          63  pair:          17           4
+ Found a duplicate in pop_tmp, position =          64  pair:           6          18
+ Found a duplicate in pop_tmp, position =          87  pair:           3          13
+ Found a duplicate in pop_tmp, position =          51  pair:          10           4
+ Found a duplicate in pop_tmp, position =          52  pair:           6          14
+          10          19           1 NOT running
+           7          14           1 NOT running
+          10           4           0 running
+           6          14           0 running
+           3           4           1 NOT running
+           6           6           0 running
+           3           4           1 NOT running
+          25           4           1 NOT running
+          12           1           0 running
+          25          13           1 NOT running
+           3           4           1 NOT running
+           6          14           1 NOT running
+           6           4           1 NOT running
+           3           4           1 NOT running
+          17           4           1 NOT running
+           6          18           0 running
+           6          12           0 running
+          16           4           1 NOT running
+           6          13           0 running
+          12           4           1 NOT running
+           9           5           1 NOT running
+           2           2           1 NOT running
+           6           5           0 running
+           2           4           1 NOT running
+          10           4           1 NOT running
+           3          14           1 NOT running
+           9          13           1 NOT running
+           9          13           1 NOT running
+           7          14           1 NOT running
+          10          19           1 NOT running
+          12           4           1 NOT running
+           6          13           1 NOT running
+           7           4           0 running
+           6          19           0 running
+           6          14           1 NOT running
+          10           4           1 NOT running
+           8           4           1 NOT running
+           6          13           1 NOT running
+           3          13           1 NOT running
+          18           4           1 NOT running
+          17           4           1 NOT running
+           6          18           1 NOT running
+          25          14           1 NOT running
+           3          13           1 NOT running
+          15           5           0 running
+           2          13           1 NOT running
+          10           4           1 NOT running
+           6          14           1 NOT running
+parallel -j1 <<EOF
+./dock_and_rerank.bash      3   10    4
+./dock_and_rerank.bash      4    6   14
+./dock_and_rerank.bash      6    6    6
+./dock_and_rerank.bash      9   12    1
+./dock_and_rerank.bash     16    6   18
+./dock_and_rerank.bash     17    6   12
+./dock_and_rerank.bash     19    6   13
+./dock_and_rerank.bash     23    6    5
+./dock_and_rerank.bash     33    7    4
+./dock_and_rerank.bash     34    6   19
+./dock_and_rerank.bash     45   15    5
+EOF
+Running on node-140
+running 10 vs 4
+Fixing PDB 3
+ReScoring 3
+ReRanking 3
+Running on node-140
+running 6 vs 14
+Fixing PDB 4
+ReScoring 4
+ReRanking 4
+Running on node-140
+running 6 vs 6
+Fixing PDB 6
+ReScoring 6
+ReRanking 6
+Running on node-140
+running 12 vs 1
+Fixing PDB 9
+ReScoring 9
+ReRanking 9
+Running on node-140
+running 6 vs 18
+Fixing PDB 16
+ReScoring 16
+ReRanking 16
+Running on node-140
+running 6 vs 12
+Fixing PDB 17
+ReScoring 17
+ReRanking 17
+Running on node-140
+running 6 vs 13
+Fixing PDB 19
+ReScoring 19
+ReRanking 19
+Running on node-140
+running 6 vs 5
+Fixing PDB 23
+ReScoring 23
+ReRanking 23
+Running on node-140
+running 7 vs 4
+Fixing PDB 33
+ReScoring 33
+ReRanking 33
+Running on node-140
+running 6 vs 19
+Fixing PDB 34
+ReScoring 34
+ReRanking 34
+Running on node-140
+running 15 vs 5
+Fixing PDB 45
+ReScoring 45
+ReRanking 45
+ Etable         129 rec          10 lig           4
+ Etable         130 rec           6 lig          14
+ Etable         131 rec           6 lig           6
+ Etable         132 rec          12 lig           1
+ Etable         133 rec           6 lig          18
+ Etable         134 rec           6 lig          12
+ Etable         135 rec           6 lig          13
+ Etable         136 rec           6 lig           5
+ Etable         137 rec           7 lig           4
+ Etable         138 rec           6 lig          19
+ Etable         139 rec          15 lig           5
+ Generation:            5
+ Dock_GeneratePopulation           5
+ Dock_GeneratePopulation           5
+crossover
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+Roulette
+ Parents
+          10          13
+           7           4
+          10          14
+          10           4
+          10           4
+          10           4
+          10           4
+           5          23
+          18          13
+          18          13
+           9          13
+           9          13
+           9          13
+           9          13
+           9          13
+          17          18
+           2           5
+           2           5
+           8          13
+          25          13
+          25          13
+          25          13
+          25           4
+          25           4
+          25           4
+           9          21
+           1          13
+           1          13
+           7          11
+           3           4
+           3           4
+           3           4
+           3           4
+           3           4
+           3           4
+           3           4
+           3           4
+          25          18
+           3          14
+           3          14
+           3          14
+           3          14
+           5          11
+          25           1
+          25           1
+          10          19
+          10          19
+          10          19
+ offspring
+          10           4
+          10          19
+          10          19
+          10          19
+          10           4
+           3          19
+           3          19
+          10          14
+          10          14
+           3          19
+          25          13
+           9          18
+          10          19
+          10          19
+          25          14
+           3          13
+          10           4
+          10          19
+           5          19
+          10          11
+          10          14
+           3          19
+          25          19
+          10           1
+           3          13
+          18           4
+           3          19
+          10          14
+           7          14
+          10           4
+           3           4
+          25          14
+           7           5
+           2           4
+          10          11
+           7           4
+          25          19
+          10           1
+          10          14
+           3          19
+          25          19
+          10          18
+          10           4
+           3          19
+          25           4
+           3          18
+          10          14
+           3          19
+   10    4 found in the Energy Table
+   10   19 found in the Energy Table
+   10   19 found in the Energy Table
+   10   19 found in the Energy Table
+   10    4 found in the Energy Table
+   10   14 found in the Energy Table
+   10   14 found in the Energy Table
+   25   13 found in the Energy Table
+   10   19 found in the Energy Table
+   10   19 found in the Energy Table
+   25   14 found in the Energy Table
+    3   13 found in the Energy Table
+   10    4 found in the Energy Table
+   10   19 found in the Energy Table
+   10   14 found in the Energy Table
+   10    1 found in the Energy Table
+    3   13 found in the Energy Table
+   18    4 found in the Energy Table
+   10   14 found in the Energy Table
+    7   14 found in the Energy Table
+   10    4 found in the Energy Table
+    3    4 found in the Energy Table
+   25   14 found in the Energy Table
+    2    4 found in the Energy Table
+    7    4 found in the Energy Table
+   10    1 found in the Energy Table
+   10   14 found in the Energy Table
+   10    4 found in the Energy Table
+   25    4 found in the Energy Table
+   10   14 found in the Energy Table
+ Found a duplicate in pop_tmp, position =          50  pair:          10          19
+ Found a duplicate in pop_tmp, position =          50  pair:          10          19
+ Found a duplicate in pop_tmp, position =          49  pair:          10           4
+ Found a duplicate in pop_tmp, position =          54  pair:           3          19
+ Found a duplicate in pop_tmp, position =          56  pair:          10          14
+ Found a duplicate in pop_tmp, position =          54  pair:           3          19
+ Found a duplicate in pop_tmp, position =          50  pair:          10          19
+ Found a duplicate in pop_tmp, position =          50  pair:          10          19
+ Found a duplicate in pop_tmp, position =          49  pair:          10           4
+ Found a duplicate in pop_tmp, position =          50  pair:          10          19
+ Found a duplicate in pop_tmp, position =          56  pair:          10          14
+ Found a duplicate in pop_tmp, position =          54  pair:           3          19
+ Found a duplicate in pop_tmp, position =          64  pair:           3          13
+ Found a duplicate in pop_tmp, position =          54  pair:           3          19
+ Found a duplicate in pop_tmp, position =          56  pair:          10          14
+ Found a duplicate in pop_tmp, position =          49  pair:          10           4
+ Found a duplicate in pop_tmp, position =          63  pair:          25          14
+ Found a duplicate in pop_tmp, position =          68  pair:          10          11
+ Found a duplicate in pop_tmp, position =          71  pair:          25          19
+ Found a duplicate in pop_tmp, position =          72  pair:          10           1
+ Found a duplicate in pop_tmp, position =          56  pair:          10          14
+ Found a duplicate in pop_tmp, position =          54  pair:           3          19
+ Found a duplicate in pop_tmp, position =          71  pair:          25          19
+ Found a duplicate in pop_tmp, position =          49  pair:          10           4
+ Found a duplicate in pop_tmp, position =          54  pair:           3          19
+ Found a duplicate in pop_tmp, position =          56  pair:          10          14
+ Found a duplicate in pop_tmp, position =          54  pair:           3          19
+          10           4           1 NOT running
+          10          19           1 NOT running
+          10          19           1 NOT running
+          10          19           1 NOT running
+          10           4           1 NOT running
+           3          19           0 running
+           3          19           1 NOT running
+          10          14           1 NOT running
+          10          14           1 NOT running
+           3          19           1 NOT running
+          25          13           1 NOT running
+           9          18           0 running
+          10          19           1 NOT running
+          10          19           1 NOT running
+          25          14           1 NOT running
+           3          13           1 NOT running
+          10           4           1 NOT running
+          10          19           1 NOT running
+           5          19           0 running
+          10          11           0 running
+          10          14           1 NOT running
+           3          19           1 NOT running
+          25          19           0 running
+          10           1           1 NOT running
+           3          13           1 NOT running
+          18           4           1 NOT running
+           3          19           1 NOT running
+          10          14           1 NOT running
+           7          14           1 NOT running
+          10           4           1 NOT running
+           3           4           1 NOT running
+          25          14           1 NOT running
+           7           5           0 running
+           2           4           1 NOT running
+          10          11           1 NOT running
+           7           4           1 NOT running
+          25          19           1 NOT running
+          10           1           1 NOT running
+          10          14           1 NOT running
+           3          19           1 NOT running
+          25          19           1 NOT running
+          10          18           0 running
+          10           4           1 NOT running
+           3          19           1 NOT running
+          25           4           1 NOT running
+           3          18           0 running
+          10          14           1 NOT running
+           3          19           1 NOT running
+parallel -j1 <<EOF
+./dock_and_rerank.bash      6    3   19
+./dock_and_rerank.bash     12    9   18
+./dock_and_rerank.bash     19    5   19
+./dock_and_rerank.bash     20   10   11
+./dock_and_rerank.bash     23   25   19
+./dock_and_rerank.bash     33    7    5
+./dock_and_rerank.bash     42   10   18
+./dock_and_rerank.bash     46    3   18
+EOF
+Running on node-140
+running 3 vs 19
+Fixing PDB 6
+ReScoring 6
+ReRanking 6
+Running on node-140
+running 9 vs 18
+Fixing PDB 12
+ReScoring 12
+ReRanking 12
+Running on node-140
+running 5 vs 19
+Fixing PDB 19
+ReScoring 19
+ReRanking 19
+Running on node-140
+running 10 vs 11
+Fixing PDB 20
+ReScoring 20
+ReRanking 20
+Running on node-140
+running 25 vs 19
+Fixing PDB 23
+ReScoring 23
+ReRanking 23
+Running on node-140
+running 7 vs 5
+Fixing PDB 33
+ReScoring 33
+ReRanking 33
+Running on node-140
+running 10 vs 18
+Fixing PDB 42
+ReScoring 42
+ReRanking 42
+Running on node-140
+running 3 vs 18
+Fixing PDB 46
+ReScoring 46
+ReRanking 46
+ Etable         140 rec           3 lig          19
+ Etable         141 rec           9 lig          18
+ Etable         142 rec           5 lig          19
+ Etable         143 rec          10 lig          11
+ Etable         144 rec          25 lig          19
+ Etable         145 rec           7 lig           5
+ Etable         146 rec          10 lig          18
+ Etable         147 rec           3 lig          18

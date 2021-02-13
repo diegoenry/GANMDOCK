@@ -1,0 +1,89 @@
+* chainA energy and  minimisation
+*
+
+!stream toppar.str
+! protein topology and parameter
+open read card unit 10 name $CHARMMDATA/top_all22_prot.inp
+read  rtf card unit 10
+
+open read card unit 20 name $CHARMMDATA/par_all22_prot.inp
+read para card unit 20 
+
+open read card unit 12 name step1_pdbreader.psf
+read psf card unit 12
+close unit 12
+
+open read card unit 12 name step1_pdbreader.pdb
+read coor pdb resi unit 12
+close unit 12
+
+! define force field 2
+set par1 8.0
+set par2 10.0
+set par3 12.0
+set par4 2.0
+
+
+updat  inbfrq -1 -
+atom rdiel switch vswitch -
+ctonnb @par1 ctofnb @par2 cutnb @par3 eps @par4 e14fac 1.0 wmin 1.5
+!ctonnb 5. ctofnb 9. cutnb 11.0 eps 2.0 e14fac 1.0 wmin 1.5
+
+ener
+coor copy comp
+
+cons harm sele all end force 250.0  mass
+mini CONJ nstep 100 tolgrd 1.0
+cons harm sele all end force 100.0  mass
+mini CONJ nstep 100 tolgrd 1.0
+cons harm sele all end force 50.0  mass
+mini CONJ nstep 100 tolgrd 1.0
+cons harm sele all end force 25.0  mass
+mini CONJ nstep 100 tolgrd 1.0
+cons harm sele all end force 10.0  mass
+mini CONJ nstep 100 tolgrd 1.0
+cons harm sele all end force 5.0  mass
+mini CONJ nstep 100 tolgrd 1.0
+cons harm sele all end force 0.0  mass
+mini CONJ nstep 10000 tolgrd 0.1
+
+open write card unit 14 name ./mini-inter.pdb
+write coor pdb unit 14
+* Writing the coordinates of the minimised structure in pdb format
+* of chainA
+* harmonic restraints are used + CONJ gradient up to 0.01
+*
+
+cons harm sele all end force 0.0  mass
+mini ABNR nstep 30000 tolgrd 0.00001
+
+open write card unit 13 name ./mini.crd
+write coor card unit 13 
+* Writing the coordinates of the minimised structure in crd format
+* of chainA ctonnb @par1 ctofnb @par2 cutnb @par3 eps @par4 e14fac 1.0 wmin 1.5 
+* harmonic restraints are used + ABNR tol gradient of 0.00001
+*
+
+open write card unit 14 name ./mini.pdb
+write coor pdb unit 14 
+* Writing the coordinates of the minimised structure in pdb format
+* of chainA ctonnb @par1 ctofnb @par2 cutnb @par3 eps @par4 e14fac 1.0 wmin 1.5
+* harmonic restraints are used + ABNR tol gradient of 0.00001
+*
+
+open write file unit 14 name ./mini.bin
+write coor  unit 14 
+* Writing the coordinates of the minimised structure in binary
+* of chainA ctonnb @par1 ctofnb @par2 cutnb @par3 eps @par4 e14fac 1.0 wmin 1.5
+* harmonic restraints are used + ABNR tol gradient of 0.00001
+*
+ 
+
+! calculate the rms
+coor orient rms mass
+
+! calculate the rms of the protein
+coor orient rms mass sele segid PROA end
+stop
+end
+

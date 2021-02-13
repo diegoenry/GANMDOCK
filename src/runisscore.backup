@@ -1,0 +1,4 @@
+isscore="/home/lpscott/dgomes/software64/isscore/bin/isscore.pl -w scratch -l results.lst complex.pdb RL"
+echo a | $isscore | awk '/RMSD / {print $6}' > ./dockout/${1}/${1}.isscore.rms
+echo a | $isscore | awk '/RMSD=/ {print $9}' > ./dockout/${1}/${1}.isscore.irms
+echo a | $isscore | awk '/IS-score    =/ {print $3}' > ./dockout/${1}/${1}.isscore

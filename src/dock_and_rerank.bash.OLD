@@ -1,0 +1,109 @@
+#!/bin/bash
+# Written by
+# Diego Enry B. Gomes (1,2)  | diego@biof.ufrj.br
+# Elodie Japaud (2,3)        |
+# Luis Paulo Scott (4)       |
+# Pedro Pascutti (1)         |
+# Paulo Mascarello Bisch (1) |
+# David Perahia (2)          |
+#
+# 1) Universidade Federal do Rio de Janeiro, Rio de Janeiro - Brazil
+# 2) Universite Paris Diderot, Paris - France
+# 3) Ecole Normale Superieure de Cachan, Cachan - France
+# 4) Universidade Federal do ABC - Santo André - Brasil
+
+
+echo $HOSTNAME
+export HEX_ROOT="/export/apps/hex/6/cpu/"
+#export HEX_ROOT="/export/apps/hex/6/gpu/"
+
+export root=$PWD
+person=$1
+receptor=$2
+ligand=$3
+
+
+write_hex_input() {
+echo "
+close_all
+open_receptor ./dockinput/fixed.r_${receptor}.pdb
+open_ligand   ./dockinput/fixed.l_${ligand}.pdb
+open_complex  ./complex.pdb
+
+docking_correlation 0
+docking_refine 0
+docking_grid_size 0.6
+max_docking_solutions      3000
+receptor_range_angle 30
+docking_receptor_stepsize 7.5
+ligand_range_angle 30
+docking_ligand_stepsize 7.5
+docking_r12_range 40
+docking_r12_substeps 0
+docking_main_scan 20
+docking_main_search 25
+docking_fft_device 1
+docking_fft_type 1
+docking_refine 3
+
+# Actually do the docking
+activate_docking
+
+# Save best results
+save_range 1 1000 ./dockout ${receptor}_${ligand}_ pdb
+save_summary      ./dockout/${receptor}_${ligand}.sum
+save_transform    ./dockout/${receptor}_${ligand}.hex
+
+EXIT
+" > hex.${person}.macro
+}
+
+exec_hex() {
+echo "running ${receptor} vs ${ligand}"
+$HEX_ROOT/bin/hex -nproc 8 -noexec -nogui -e hex.${person}.macro -l dockout/${receptor}"_"${ligand}".log" >/dev/null
+sleep 2
+}
+
+fix_pdb() {
+# HEX is stupid, it merges the PDB files but discarts the TER and END records
+echo "Fixing PDB $person"
+cd ${root}/dockout/
+for pdbfile in `ls ${receptor}"_"${ligand}"_"*.pdb` ; do
+  grep ATOM $pdbfile > tmp.$pdbfile
+  ${root}/fixpdb tmp.$pdbfile > $pdbfile
+  rm -rf tmp.$pdbfile
+done
+}
+
+re_score() {
+echo "ReScoring $person"
+cd ${root}/dockout/
+# run ZRANK to re-rank the results
+list=${receptor}"_"${ligand}".list"
+ls ${receptor}"_"${ligand}"_"*pdb > $list
+${root}/zrank $list
+}
+
+re_rank() {
+echo "ReRanking $person"
+cd ${root}/dockout/
+sort -gk 2 ${list}.zr.out > $list.zr.reranked
+head -1 $list.zr.reranked > ${list}.best.energy
+}
+
+move_files() {
+cd ${root}/dockout/
+rm -rf ${receptor}"_"${ligand}/
+mkdir ${receptor}"_"${ligand}
+mv ${receptor}"_"${ligand}"_"*pdb ${receptor}"_"${ligand}/
+}
+
+
+write_hex_input
+exec_hex   ; sleep 5
+fix_pdb    ; sleep 5
+re_score   ; sleep 5
+re_rank    ; sleep 5
+move_files ;
+
+

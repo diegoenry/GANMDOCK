@@ -1,0 +1,83 @@
+scratch/complexRL_int.pdb detected, overwrite the file? [(a)ll/(y)es/(n)o]: IS-score version 1.1b3
+IS-score starts at 2012-11-29 14:03:13
+
++++++ Stage 1: Processing PDB files ...
+complex.pdb:  found 2 protein chains R L
+
++++++ Stage 2: Extracting protein-protein interfaces ...
+Mininum number of interface residue required: 15 AAs
+Target: scratch/complex.parsed
+Model: scratch/16_18_0001.parsed
+Model R vs Target R sequence alignment
+DVSGTVCLSALPPEATDTLNLIASDGPFPYSQDGVVFQNRESVLPTQSYGYYHEYTVITPGARTRGTRRIITGEATQEDYYTGDHYATFSLIDQTC
+DVSGTVCLSALPPEATDTLNLIASDGPFPYSQDGVVFQNRESVLPTQSYGYYHEYTVITPGARTRGTRRIITGEATQEDYYTGDHYATFSLIDQTC
+Model L vs Target L sequence alignment
+KKAVINGEQIRSISDLHQTLKKELALPEYYGENLDALWDCLTGWVEYPLVLEWRQFEQSKQLTENGAESVLQVFREAKAEGCDITIILS
+KKAVINGEQIRSISDLHQTLKKELALPEYYGENLDALWDCLTGWVEYPLVLEWRQFEQSKQLTENGAESVLQVFREAKAEGCDITIILS
+scratch/complex.parsed: found 1 valid PPI(s) RL 30
+./dockout/16_18/16_18_0001.pdb:  found 2 protein chains R L
+scratch/16_18_0001.parsed: found 1 PPI(s) RL 23
+
++++++ Stage 3: Calculating IS-score ...
+>>>16_18_0001RL vs complexRL
+
+Structure 1: 16_18_0001RL_int.pdb      Chains R L,  30 AAs,  26 Contacts
+Structure 2: complexRL_int.pdb         Chains R L,  30 AAs,  34 Contacts
+Number of matched residues =   30
+RMSD   of matched residues =    2.290
+Number of matched contacts =   20
+ 
+IS-score    = 0.3657  P-value = 0.3738E-008  Z-score = 19.405
+MaxSub-score= 0.7310  (d0= 3.50)
+GDT-TS-score= 0.7833 %(d<1)=0.5333 %(d<2)=0.6333 %(d<4)=0.9667 %(d<8)=1.0000
+GDT-HA-score= 0.6250 %(d<0.5)=0.3667 %(d<1)=0.5333 %(d<2)=0.6333 %(d<4)=0.9667
+ 
+ -------- rotation matrix to rotate Chain-1 to Chain-2 ------
+ i          t(i)         u(i,1)         u(i,2)         u(i,3)
+ 1     -9.5816706605   0.9118026755   0.4102393708  -0.0178756704
+ 2      1.9272241916  -0.4076391010   0.9095497146   0.0809300932
+ 3      1.3049777865   0.0494595215  -0.0665054533   0.9965594716
+ 
+ -----   Aligned Interface Residues  -----
+ ----- Structure 1       Structure 2 -----
+ Index Ch1 Resid1 AA1    Ch2 Resid2 AA2    Distance NAC NC1 NC2 Note
+    1    R   32   GLN      R   32   GLN      4.264    2   6   2  :*   
+    2    R   37   PHE      R   37   PHE      0.526    1   1   1  :*   
+    3    R   38   GLN      R   38   GLN      0.744    1   2   1  :*   
+    4    R   39   ASN      R   39   ASN      2.252    0   0   1  :*   
+    5    R   40   ARG      R   40   ARG      2.166    4   4   5  :*   
+    6    R   41   GLU      R   41   GLU      3.566    1   1   3  :*   
+    7    R   64   THR      R   64   THR      6.816    1   1   2   *   
+    8    R   65   ARG      R   65   ARG      5.001    2   2   2   *   
+    9    R   66   GLY      R   66   GLY      5.205    1   1   1   *   
+   10    R   67   THR      R   67   THR      4.900    0   0   1  :*   
+   11    R   69   ARG      R   69   ARG      1.661    0   0   1  :*   
+   12    R   84   ASP      R   84   ASP      5.279    0   0   1   *   
+   13    R   85   HSD      R   85   HSD      4.870    4   5   7  :*   
+   14    R   86   TYR      R   86   TYR      4.427    3   3   4  :*   
+   15    R   87   ALA      R   87   ALA      5.769    0   0   2   *   
+   16    L   29   TYR      L   29   TYR      3.219    4   5   5  :*   
+   17    L   30   TYR      L   30   TYR      1.309    0   0   1  :*   
+   18    L   31   GLY      L   31   GLY      0.460    1   1   3  :*   
+   19    L   33   ASN      L   33   ASN      0.053    2   2   4  :*   
+   20    L   34   LEU      L   34   LEU      0.052    2   2   2  :*   
+   21    L   35   ASP      L   35   ASP      0.049    3   4   5  :*   
+   22    L   36   ALA      L   36   ALA      0.027    2   2   2  :*   
+   23    L   38   TRP      L   38   TRP      0.084    1   2   1  :*   
+   24    L   39   ASP      L   39   ASP      0.171    1   2   4  :*   
+   25    L   40   CYS      L   40   CYS      0.309    0   1   1  :*   
+   26    L   42   THR      L   42   THR      0.255    1   1   1  :*   
+   27    L   43   GLY      L   43   GLY      0.074    1   1   1  :*   
+   28    L   44   TRP      L   44   TRP      0.602    0   1   1  :*   
+   29    L   73   VAL      L   73   VAL      0.821    0   0   1  :*   
+   30    L   76   GLU      L   76   GLU      1.302    2   2   2  :*   
+ 
+":" AA pairs within 5.0 Ansgtrom in Ca-Ca distance
+"*" Identical AA pairs, "-" Unmatched AA.
+ 
+Scoring parameters: normalization length =  30,  d0 = 1.258,  s0 = 0.068
+Superposed residues for the IS-score: length= 25, RMSD=  1.92
+ 
+
+IS-score ends at 2012-11-29 14:03:13.
+

@@ -1,0 +1,14 @@
+IS-score help
+> ../bin/isscore.pl -h
+
+IS-score manual
+
+> ../bin/isscore.pl -m
+
+run isscore compare a model to its native structure
+
+>  ../bin/isscore.pl -w scratch Complex_6650g.pdb AB 117eAB.parsed AB
+
+or compare a list of models to its native structure
+
+../bin/isscore.pl -w scratch -l model.lst  117eAB.parsed AB

@@ -1,0 +1,76 @@
+program GANMDOCK
+use vectors
+  
+  call credits
+
+  call SetDefaults
+
+  call ReadCommandLine
+
+  call InitAmplitudes
+
+  !calcula o tamanho da nPerson para caber essas diferencas.
+  call CalcNPerson
+
+  call GeneratePopulation(0)
+ 
+!Compute the structures.
+
+  if(onlydock==0) call GenerateStructures(0)
+  if(onlydock==0) call Dock_FixPDB(nPersonReceptor,nPersonLigand)
+
+!Dock the structures.
+  if(nodock==0) call GADock
+
+end
+
+
+
+subroutine CalcNPerson
+use vectors
+integer     ::  rtemp
+
+nPersonReceptor=1
+do i=1,nModesReceptor
+  call fac(NormalModeReceptor(i)%ndisp,rtemp)
+  nPersonReceptor=nPersonReceptor*rtemp
+  if ( nPersonReceptor >= nPerson ) then
+    nPersonReceptor=nPerson
+    exit
+  endif
+enddo
+
+nPersonLigand=1
+do i=1,nModesLigand
+  call fac(NormalModeLigand(i)%ndisp,rtemp)
+  nPersonLigand=nPersonLigand*rtemp
+  if ( nPersonLigand >= nPerson ) then
+    nPersonLigand=nPerson
+    exit
+  endif
+enddo
+
+  write(*,*) "Population Sizes"
+  write(*,*) "Receptor:",nPersonReceptor
+  write(*,*) "Ligand:",nPersonLigand
+
+end subroutine CalcNPerson
+
+subroutine fac(np,r)
+integer,intent(in) :: np
+integer :: n
+integer,intent(out) :: r
+n=np
+r=1
+if (n==1) goto 10
+if (n>=8) then ! se for fatorial mt grande 
+  r=100000
+  return
+endif
+do while (n>=1)
+ r=r*n
+ n=n-1
+enddo
+
+10 return
+end

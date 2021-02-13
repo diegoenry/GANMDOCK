@@ -1,0 +1,1539 @@
+------------------------------------------------------------------------------
+Hex 6.3 + CUDA log starting at Wed Nov 21 01:50:48 2012 on host node-140.
+------------------------------------------------------------------------------
+*Error* HEX_CACHE = /home/dgomes/software64/hex//hex_cache is not a directory. Cache disabled.Hex 6.3 + CUDA starting at Wed Nov 21 01:50:48 2012 on host node-140.
+
+Hostname:        node-140
+Main memory:     48295 Mb
+CPUs online:     24
+GPUs online:     1
+Compute threads: 24
+
+Sizeof(short):   2
+Sizeof(int):     4
+Sizeof(long):    8
+Sizeof(float):   4
+Sizeof(double):  8
+
+Default path:    /home/dgomes/GANMDOCK.1.0.RELEASE/teste/1AY7.docking/rblb
+PATH:            /home/dgomes/software64/hex//exe:/home/dgomes/software64/hex//bin:/usr/local/NAMD_2.9_Linux-x86_64-multicore:/opt/intel/composerxe-2011.3.174/bin/intel64:/usr/local/NAMD_2.9_Linux-x86_64-multicore:/opt/intel/composerxe-2011.3.174/bin/intel
+Hex program:     /home/dgomes/software64/hex//exe/hex6d-cuda.x64
+HEX_ROOT:        /home/dgomes/software64/hex/
+HEX_STRIDE:      stride.x64
+HEX_PDB:         .
+HEX_DATA:        /home/dgomes/software64/hex//data/
+HEX_MACROS:      .
+HEX_COLOURS:     NULL
+HEX_STARTUP:     NULL
+HEX_PIPE:        NULL
+HEX_CACHE:       /home/dgomes/software64/hex//hex_cache
+HEX_LOG:         /dev/shm/1_13.log
+HEX_CPUS:        24
+HEX_GPUS:        1
+HEX_FIRST_GPU:   NULL
+
+CUDA enabled:    Yes
+CUDA device:     [0] Tesla M2075 (5376 Mb) = active.
+
+
+
+Running HEX_STARTUP file: /home/dgomes/software64/hex//data/startup_v5.mac
+Cannot enable Disc Cache because HEX_CACHE is not set.
+Session logging is on. Using file: /dev/shm/1_13.log
+
+Running macro: /dev/shm/hex.8.macro
+>> 
+>> close_all
+>> open_receptor ./dockinput/fixed.r_1.pdb
+>> open_ligand   ./dockinput/fixed.l_13.pdb
+>> open_complex  ./complex.pdb
+>> 
+>> DOCKING_RECEPTOR_SAMPLES  492
+>> DOCKING_LIGAND_SAMPLES    492
+>> DOCKING_ALPHA_SAMPLES     128
+>> 
+>> RECEPTOR_RANGE_ANGLE       30
+>> LIGAND_RANGE_ANGLE         30
+>> TWIST_RANGE_ANGLE          90
+>> 
+>> 
+>> R12_RANGE                  21
+>> R12_STEP                 0.75
+>> GRID_SIZE                0.6
+>> 
+>> DOCKING_MAIN_SCAN          16
+>> DOCKING_MAIN_SEARCH        25
+>> max_docking_solutions      1000
+>> 
+>> #pede a GPU
+>> docking_fft_device 1
+>> 
+>> # Actually do the docking
+>> activate_docking
+>> 
+>> # Save best results
+>> save_range 1 100   /dev/shm/ 1_13_ pdb
+>> save_summary      ./dockout/1_13.sum
+>> save_transform    ./dockout/1_13.hex
+>> 
+>> EXIT
+>> 
+>> .
+Assuming ./dockinput/fixed.r_1.pdb is a PDB file...
+
+Opened PDB file: ./dockinput/fixed.r_1.pdb, ID = fixed
+Loaded PDB file: ./dockinput/fixed.r_1.pdb, (96 residues, 907 atoms, 1 models)
+*Warning* Assigned R=1.52, Q=0.00 to unknown atom R 96:CYS(OT2)
+*Warning* Fractional charge (-0.46) for terminal residue: R 96:CYS
+   CYS:N    Radius = 1.40, Charge = -0.52
+   CYS:CA   Radius = 1.50, Charge = 0.15
+   CYS:CB   Radius = 1.70, Charge = 0.10
+   CYS:SG   Radius = 1.80, Charge = 0.00
+   CYS:C    Radius = 1.40, Charge = 0.14
+   CYS:OT1  Radius = 1.50, Charge = -0.57
+   CYS:OT2  Radius = 1.52, Charge = 0.00
+   CYS:H    Radius = 0.00, Charge = 0.25
+Counted 5 +ve and 12 -ve formal charged residues: Net formal charge: -7
+>fixed R
+DVSGTVCLSALPPEATDTLNLIASDGPFPYSQDGVVFQNRESVLPTQSYGYYXEYTVITPGARTRGTRRIITGEATQEDYYTGDXYATFSLIDQTC
+Assuming ./dockinput/fixed.l_13.pdb is a PDB file...
+
+Opened PDB file: ./dockinput/fixed.l_13.pdb, ID = fixed
+Loaded PDB file: ./dockinput/fixed.l_13.pdb, (89 residues, 876 atoms, 1 models)
+*Warning* Assigned R=1.52, Q=0.00 to unknown atom L 89:SER(OT2)
+*Warning* Fractional charge (-0.46) for terminal residue: L 89:SER
+   SER:N    Radius = 1.40, Charge = -0.52
+   SER:CA   Radius = 1.50, Charge = 0.29
+   SER:CB   Radius = 1.70, Charge = 0.19
+   SER:OG   Radius = 1.70, Charge = -0.55
+   SER:C    Radius = 1.40, Charge = 0.14
+   SER:OT1  Radius = 1.50, Charge = -0.57
+   SER:OT2  Radius = 1.52, Charge = 0.00
+   SER:H    Radius = 0.00, Charge = 0.25
+   SER:HG   Radius = 0.00, Charge = 0.31
+Counted 9 +ve and 15 -ve formal charged residues: Net formal charge: -6
+>fixed L
+KKAVINGEQIRSISDLXQTLKKELALPEYYGENLDALWDCLTGWVEYPLVLEWRQFEQSKQLTENGAESVLQVFREAKAEGCDITIILS
+Assuming ./complex.pdb is a PDB file...
+
+Opened PDB file: ./complex.pdb, ID = complex
+Loaded PDB file: ./complex.pdb, (185 residues, 1783 atoms, 1 models)
+*Warning* Assigned R=1.52, Q=0.00 to unknown atom R 96:CYS(OT2)
+*Warning* Fractional charge (-0.46) for terminal residue: R 96:CYS
+   CYS:N    Radius = 1.40, Charge = -0.52
+   CYS:CA   Radius = 1.50, Charge = 0.15
+   CYS:C    Radius = 1.40, Charge = 0.14
+   CYS:OT1  Radius = 1.50, Charge = -0.57
+   CYS:CB   Radius = 1.70, Charge = 0.10
+   CYS:SG   Radius = 1.80, Charge = 0.00
+   CYS:OT2  Radius = 1.52, Charge = 0.00
+   CYS:H    Radius = 0.00, Charge = 0.25
+*Warning* Assigned R=1.52, Q=0.00 to unknown atom L 89:SER(OT2)
+*Warning* Fractional charge (-0.46) for terminal residue: L 89:SER
+   SER:N    Radius = 1.40, Charge = -0.52
+   SER:CA   Radius = 1.50, Charge = 0.29
+   SER:C    Radius = 1.40, Charge = 0.14
+   SER:OT1  Radius = 1.50, Charge = -0.57
+   SER:CB   Radius = 1.70, Charge = 0.19
+   SER:OG   Radius = 1.70, Charge = -0.55
+   SER:OT2  Radius = 1.52, Charge = 0.00
+   SER:H    Radius = 0.00, Charge = 0.25
+   SER:HG   Radius = 0.00, Charge = 0.31
+Counted 14 +ve and 27 -ve formal charged residues: Net formal charge: -13
+>complex R
+DVSGTVCLSALPPEATDTLNLIASDGPFPYSQDGVVFQNRESVLPTQSYGYYXEYTVITPGARTRGTRRIITGEATQEDYYTGDXYATFSLIDQTC
+>complex L
+KKAVINGEQIRSISDLXQTLKKELALPEYYGENLDALWDCLTGWVEYPLVLEWRQFEQSKQLTENGAESVLQVFREAKAEGCDITIILS
+Fitting ligand atom: 53:HSD(N) to 53:HSD(N) 
+Fitting ligand atom: 53:HSD(CA) to 53:HSD(CA) 
+Fitting ligand atom: 53:HSD(CB) to 53:HSD(CB) 
+Fitting ligand atom: 53:HSD(ND1) to 53:HSD(ND1) 
+Fitting ligand atom: 53:HSD(CG) to 53:HSD(CG) 
+Fitting ligand atom: 53:HSD(CE1) to 53:HSD(CE1) 
+Fitting ligand atom: 53:HSD(NE2) to 53:HSD(NE2) 
+Fitting ligand atom: 53:HSD(CD2) to 53:HSD(CD2) 
+Fitting ligand atom: 53:HSD(C) to 53:HSD(C) 
+Fitting ligand atom: 53:HSD(O) to 53:HSD(O) 
+Fitting ligand atom: 85:HSD(N) to 85:HSD(N) 
+Fitting ligand atom: 85:HSD(CA) to 85:HSD(CA) 
+Fitting ligand atom: 85:HSD(CB) to 85:HSD(CB) 
+Fitting ligand atom: 85:HSD(ND1) to 85:HSD(ND1) 
+Fitting ligand atom: 85:HSD(CG) to 85:HSD(CG) 
+Fitting ligand atom: 85:HSD(CE1) to 85:HSD(CE1) 
+Fitting ligand atom: 85:HSD(NE2) to 85:HSD(NE2) 
+Fitting ligand atom: 85:HSD(CD2) to 85:HSD(CD2) 
+Fitting ligand atom: 85:HSD(C) to 85:HSD(C) 
+Fitting ligand atom: 85:HSD(O) to 85:HSD(O) 
+Complex fitted to Receptor model-1 with RMS = 0.71 (114 atoms).
+Fitting ligand atom: 17:HSD(N) to 17:HSD(N) 
+Fitting ligand atom: 17:HSD(CA) to 17:HSD(CA) 
+Fitting ligand atom: 17:HSD(C) to 17:HSD(C) 
+Fitting ligand atom: 17:HSD(O) to 17:HSD(O) 
+Fitting ligand atom: 17:HSD(CB) to 17:HSD(CB) 
+Fitting ligand atom: 17:HSD(CG) to 17:HSD(CG) 
+Fitting ligand atom: 17:HSD(ND1) to 17:HSD(ND1) 
+Fitting ligand atom: 17:HSD(CD2) to 17:HSD(CD2) 
+Fitting ligand atom: 17:HSD(CE1) to 17:HSD(CE1) 
+Fitting ligand atom: 17:HSD(NE2) to 17:HSD(NE2) 
+
+Ligand model-1 backbone reference RMS = 0.92 (98 atoms).
+Receptor step size: 9.88 deg. B=18, M=36, T=492.
+Ligand step size: 9.88 deg. B=18, M=36, T=492.
+Twist step size: 5.60 deg. B=32, M=64.
+Twist angle search limited to +/- 45.00 degrees from starting orientation.
+
+R12 range: 21 Angstrom (+/- 10 from starting orientation).
+R12 steps: 0.80 Angstrom -> total of 25 distances.
+R12 final search sub-stepping is off.
+
+R12 range: 21 Angstrom (+/- 10 from starting orientation).
+R12 steps: 0.75 Angstrom -> total of 27 distances.
+R12 final search sub-stepping is off.
+
+Contouring surface for molecule fixed.
+Polar probe = 1.40A, Apolar probe = 1.40A
+Gaussian sampling over 741 atoms done in 0.08 seconds.
+Contoured 59808 triangles (29906 vertices) in 0.04 seconds.
+Culled 22635 short edges in 6 cycles in 0.14 seconds.
+[12617,6141,2818,935,122,2]
+Surface traversal done in 0.01 seconds - Found 1 surface segments.
+Primary surface:   Area = 4671.92, Volume = 20419.88.
+Culled 0 small segments in 0.01 seconds.
+Culling reduced surface complexity by 75 per cent (14538 triangles, 7271 vertices).
+Total contouring time: 0.21 seconds.
+
+
+Contouring surface for molecule fixed.
+Polar probe = 1.40A, Apolar probe = 1.40A
+Gaussian sampling over 714 atoms done in 0.08 seconds.
+Contoured 53800 triangles (26902 vertices) in 0.04 seconds.
+Culled 20397 short edges in 5 cycles in 0.11 seconds.
+[11399,5528,2540,841,89]
+Surface traversal done in 0.01 seconds - Found 1 surface segments.
+Primary surface:   Area = 4194.85, Volume = 19265.81.
+Culled 0 small segments in 0.01 seconds.
+Culling reduced surface complexity by 75 per cent (13006 triangles, 6505 vertices).
+Total contouring time: 0.17 seconds.
+
+Sampling surface and interior volumes for molecule fixed.
+Generated 34548 exterior and 25230 interior skin grid cells.
+Exterior skin volume = 7462.37; interior skin volume = 5449.68.
+Volume sampling done in 0.03 seconds.
+Sampling surface and interior volumes for molecule fixed.
+Generated 31090 exterior and 24592 interior skin grid cells.
+Exterior skin volume = 6715.44; interior skin volume = 5311.87.
+Volume sampling done in 0.03 seconds.
+
+Calculating skin coefficients to N = 25 using 24 Tasks ...
+Grid: 100x100x100 = 1000000 cells (93137 non-zero) of 0.60 Angstroms.
+CPU  6: Done integration for 3821 grids cells in 0.37s (10291/s).
+CPU 13: Done integration for 3952 grids cells in 0.37s (10617/s).
+CPU  0: Done integration for 3995 grids cells in 0.37s (10710/s).
+CPU  2: Done integration for 3994 grids cells in 0.37s (10692/s).
+CPU 16: Done integration for 4402 grids cells in 0.37s (11788/s).
+CPU 14: Done integration for 3817 grids cells in 0.37s (10215/s).
+CPU  1: Done integration for 4008 grids cells in 0.37s (10703/s).
+CPU 10: Done integration for 3936 grids cells in 0.37s (10510/s).
+CPU 19: Done integration for 3697 grids cells in 0.37s (9872/s).
+CPU 15: Done integration for 4176 grids cells in 0.37s (11142/s).
+CPU 17: Done integration for 3751 grids cells in 0.38s (9999/s).
+CPU  9: Done integration for 3788 grids cells in 0.38s (10083/s).
+Integration over 93137 cells done in 0.38 seconds.
+
+CPU  3: Done integration for 3481 grids cells in 0.38s (9250/s).
+CPU  7: Done integration for 3928 grids cells in 0.38s (10434/s).
+CPU  5: Done integration for 3999 grids cells in 0.38s (10615/s).
+
+------------------------------------------------------------------------------
+*Warning* Docking will be faster if you enable the disc cache.
+Docking will output a maximum of 1000 solutions per pair...
+CPU 11: Done integration for 3816 grids cells in 0.38s (10117/s).
+CPU  8: Done integration for 3651 grids cells in 0.38s (9671/s).
+CPU 18: Done integration for 3768 grids cells in 0.38s (9980/s).
+CPU 12: Done integration for 3813 grids cells in 0.38s (10087/s).
+CPU 22: Done integration for 3740 grids cells in 0.38s (9898/s).
+CPU  4: Done integration for 3864 grids cells in 0.38s (10194/s).
+
+------------------------------------------------------------------------------
+Docking 1 pair of starting orientations...
+
+Docking receptor: fixed and ligand: fixed...
+
+Receptor fixed: Tag = fixed
+Ligand   fixed: Tag = fixed
+CPU 23: Done integration for 4068 grids cells in 0.38s (10732/s).
+CPU 20: Done integration for 4047 grids cells in 0.38s (10666/s).
+Setting up shape-only correlation.
+CPU 21: Done integration for 3625 grids cells in 0.38s (9548/s).
+n_alpha = 64/9
+Setting distance range = 14.25 to 35.25, with steps of 0.75
+
+Adjusting ligand FFT range: 4 * 10.00 = 40.00.
+
+Working buffer for 200000 orientations: (13Mb)
+Total 6D space: Iterate[29,492,1] x FFT[64,4,36] = 131493888.
+Initial rotational increments (N=16) Receptor: 31 (1Mb), Ligand: 31 (1Mb)
+Loading 1 sets of 31+31 vectors to N=16 into memory...
+Coefficient vector rotations done in 0.01 seconds.
+
+Using Intel MKL for general purpose DFTs.
+
+Starting 3D FFT search using 0 CPUs and 1 GPUs with N=16, Nalpha=64/64.
+Calculating Wigner coefficients to N=16 ...
+Done 6936 coupling coefficients to N=16 in 0.09 seconds.
+Translation matrix K[16](24.75) <38760> done in 0.24 seconds.
+Estart = -124.70.
+GPU task will require 12 (large) or 12 (small) Mb.
+GPU  0: GPU large memory = 11 Mb.
+Translation matrix K[16](14.25) <38760> done in 0.13 seconds.
+Translation matrix K[16](15.00) <38760> done in 0.13 seconds.
+Translation matrix K[16](15.75) <38760> done in 0.13 seconds.
+Translation matrix K[16](16.50) <38760> done in 0.13 seconds.
+Translation matrix K[16](17.25) <38760> done in 0.13 seconds.
+Translation matrix K[16](18.00) <38760> done in 0.13 seconds.
+Translation matrix K[16](18.75) <38760> done in 0.13 seconds.
+Translation matrix K[16](19.50) <38760> done in 0.13 seconds.
+Translation matrix K[16](20.25) <38760> done in 0.13 seconds.
+Translation matrix K[16](21.00) <38760> done in 0.13 seconds.
+Translation matrix K[16](21.75) <38760> done in 0.13 seconds.
+Translation matrix K[16](22.50) <38760> done in 0.13 seconds.
+Translation matrix K[16](23.25) <38760> done in 0.17 seconds.
+Translation matrix K[16](24.00) <38760> done in 0.13 seconds.
+Translation matrix K[16](24.75) <38760> done in 0.11 seconds.
+Translation matrix K[16](25.50) <38760> done in 0.11 seconds.
+Translation matrix K[16](26.25) <38760> done in 0.11 seconds.
+Translation matrix K[16](27.00) <38760> done in 0.11 seconds.
+Translation matrix K[16](27.75) <38760> done in 0.11 seconds.
+Translation matrix K[16](28.50) <38760> done in 0.11 seconds.
+Translation matrix K[16](29.25) <38760> done in 0.11 seconds.
+Translation matrix K[16](30.00) <38760> done in 0.11 seconds.
+Translation matrix K[16](30.75) <38760> done in 0.11 seconds.
+Translation matrix K[16](31.50) <38760> done in 0.11 seconds.
+Translation matrix K[16](32.25) <38760> done in 0.11 seconds.
+Translation matrix K[16](33.00) <38760> done in 0.11 seconds.
+Translation matrix K[16](33.75) <38760> done in 0.11 seconds.
+Translation matrix K[16](34.50) <38760> done in 0.12 seconds.
+Translation matrix K[16](35.25) <38760> done in 0.11 seconds.
+
+Evaluated 8285184 orientations in 6.47s (1280914/s).
+Consumer found 32861/8285184 within threshold including start guess in 0.00s.
+GPU  0: Done 899 3D FFTs for 8285184 orientations in 6.47s (1280885/s).
+GPU  0: Tran: 0.01s, GF: 0.09s, FFT: 0.06s, Scan: 0.04s, Disc: 3.62s, I/O: 0.00+0.07s.
+GPU  0: Device Rate: 41559951/s, FFT Rate: 129320617/s, I/O: 39 Mb (540Mb/s).
+
+Best start orientation [alpha=63] (E=-125.56) is at 3208/6223.
+Emin = -304.39, Emax = -94.10
+
+Retaining top 6223 solutions.
+Working buffer for 4198 orientations: (1Mb)
+Surviving rotational steps (N=25) Receptor: 31 (3Mb), Ligand: 46 (4Mb)
+Loading 1 sets of 31+46 vectors to N=25 into memory...
+Coefficient vector rotations done in 0.10 seconds.
+
+Starting 1D FFT refinement using 0 CPUs and 1 GPUs with N=25, Nalpha=8/64.
+Calculating Wigner coefficients to N=25 ...
+Done 38025 coupling coefficients to N=25 in 0.84 seconds.
+Translation matrix K[25](24.75) <315315> done in 2.22 seconds.
+Estart = -201.76.
+Translation matrix K[25](21.00) <315315> done in 1.61 seconds.
+Translation matrix K[25](21.75) <315315> done in 1.43 seconds.
+Translation matrix K[25](22.50) <315315> done in 1.38 seconds.
+Translation matrix K[25](23.25) <315315> done in 1.39 seconds.
+Translation matrix K[25](24.00) <315315> done in 1.39 seconds.
+Translation matrix K[25](24.75) <315315> done in 1.39 seconds.
+Translation matrix K[25](25.50) <315315> done in 1.38 seconds.
+Translation matrix K[25](26.25) <315315> done in 1.38 seconds.
+Translation matrix K[25](27.00) <315315> done in 1.38 seconds.
+Translation matrix K[25](27.75) <315315> done in 1.38 seconds.
+Translation matrix K[25](28.50) <315315> done in 1.38 seconds.
+Translation matrix K[25](29.25) <315315> done in 1.38 seconds.
+Translation matrix K[25](30.00) <315315> done in 1.38 seconds.
+Translation matrix K[25](30.75) <315315> done in 1.38 seconds.
+Translation matrix K[25](31.50) <315315> done in 1.38 seconds.
+Translation matrix K[25](32.25) <315315> done in 1.38 seconds.
+Translation matrix K[25](33.00) <315315> done in 1.38 seconds.
+
+Evaluated 268672 orientations in 24.10s (11150/s).
+Consumer found 3723/268672 within threshold including start guess in 0.00s.
+GPU  0: Done 4198 1D FFTs for 268672 orientations in 24.10s (11150/s).
+GPU  0: Tran: 0.05s, GF: 0.01s, FFT: 0.00s, Scan: 0.00s, Disc: 23.90s, I/O: 0.01+0.10s.
+GPU  0: Device Rate: 3858955/s, FFT Rate: 59917930/s, I/O: 465 Mb (4034Mb/s).
+
+
+Best start orientation [alpha=63] (E=-220.68) is at 279/930.
+Emin = -336.11, Emax = -182.69
+
+Docking correlation summary by RMS deviation and steric clashes
+-------------------------------------------------------------------------
+  Soln   Etotal    Eshape    Eforce    Eair              RMS        Bumps
+  ----  --------- --------- --------- ---------   ----------------  -----
+     2    -326.62   -326.62      0.00      0.00               8.31    ?
+     3    -325.38   -325.38      0.00      0.00               8.82    ?
+     4    -320.92   -320.92      0.00      0.00               8.98    ?
+     6    -313.37   -313.37      0.00      0.00         5.15          ?
+     9    -301.67   -301.67      0.00      0.00               9.38    ?
+    10    -301.17   -301.17      0.00      0.00               8.20    ?
+    11    -300.83   -300.83      0.00      0.00               8.40    ?
+    12    -299.01   -299.01      0.00      0.00               9.84    ?
+    13    -298.40   -298.40      0.00      0.00               7.84    ?
+    17    -294.50   -294.50      0.00      0.00               6.78    ?
+    19    -290.32   -290.32      0.00      0.00         4.54          ?
+    25    -278.36   -278.36      0.00      0.00               9.37    ?
+    26    -277.75   -277.75      0.00      0.00               9.41    ?
+    30    -275.76   -275.76      0.00      0.00         5.90          ?
+    31    -275.71   -275.71      0.00      0.00         5.92          ?
+    38    -270.55   -270.55      0.00      0.00         4.56          ?
+    41    -270.11   -270.11      0.00      0.00               6.59    ?
+    43    -269.57   -269.57      0.00      0.00               6.58    ?
+    44    -269.30   -269.30      0.00      0.00         4.67          ?
+    45    -269.18   -269.18      0.00      0.00               6.68    ?
+    47    -267.95   -267.95      0.00      0.00               9.79    ?
+    50    -265.63   -265.63      0.00      0.00               9.50    ?
+    52    -263.50   -263.50      0.00      0.00               8.02    ?
+    53    -263.37   -263.37      0.00      0.00               6.53    ?
+    64    -259.54   -259.54      0.00      0.00               8.34    ?
+    67    -258.41   -258.41      0.00      0.00               8.07    ?
+    74    -254.80   -254.80      0.00      0.00               9.45    ?
+    77    -254.08   -254.08      0.00      0.00         4.53          ?
+    79    -253.74   -253.74      0.00      0.00         5.71          ?
+    82    -252.35   -252.35      0.00      0.00               9.67    ?
+    86    -251.33   -251.33      0.00      0.00               6.46    ?
+    87    -251.29   -251.29      0.00      0.00               9.40    ?
+    88    -251.06   -251.06      0.00      0.00         4.64          ?
+    89    -250.72   -250.72      0.00      0.00               6.05    ?
+    90    -250.58   -250.58      0.00      0.00               9.15    ?
+    91    -250.33   -250.33      0.00      0.00         4.70          ?
+    94    -249.88   -249.88      0.00      0.00               9.60    ?
+    98    -249.52   -249.52      0.00      0.00               9.79    ?
+   100    -249.38   -249.38      0.00      0.00               7.03    ?
+   105    -247.56   -247.56      0.00      0.00               9.22    ?
+   106    -247.44   -247.44      0.00      0.00               9.54    ?
+   109    -246.79   -246.79      0.00      0.00               8.35    ?
+   110    -246.53   -246.53      0.00      0.00               9.34    ?
+   112    -246.00   -246.00      0.00      0.00               9.64    ?
+   114    -245.96   -245.96      0.00      0.00               7.87    ?
+   117    -245.65   -245.65      0.00      0.00               9.50    ?
+   118    -245.62   -245.62      0.00      0.00               6.00    ?
+   120    -245.49   -245.49      0.00      0.00               7.79    ?
+   121    -245.43   -245.43      0.00      0.00               8.31    ?
+   123    -245.24   -245.24      0.00      0.00               7.97    ?
+   124    -245.23   -245.23      0.00      0.00               9.48    ?
+   130    -244.06   -244.06      0.00      0.00               8.31    ?
+   132    -242.93   -242.93      0.00      0.00         4.72          ?
+   133    -242.76   -242.76      0.00      0.00               7.09    ?
+   134    -242.50   -242.50      0.00      0.00         5.28          ?
+   136    -242.21   -242.21      0.00      0.00               7.79    ?
+   138    -242.11   -242.11      0.00      0.00               7.63    ?
+   140    -241.79   -241.79      0.00      0.00               9.24    ?
+   143    -240.94   -240.94      0.00      0.00         4.91          ?
+   145    -240.71   -240.71      0.00      0.00               9.93    ?
+   146    -240.60   -240.60      0.00      0.00               9.69    ?
+   147    -240.38   -240.38      0.00      0.00               9.99    ?
+   158    -237.76   -237.76      0.00      0.00               6.01    ?
+   160    -237.26   -237.26      0.00      0.00               7.88    ?
+   165    -236.31   -236.31      0.00      0.00               9.08    ?
+   168    -235.71   -235.71      0.00      0.00               7.11    ?
+   169    -234.92   -234.92      0.00      0.00               8.13    ?
+   172    -234.64   -234.64      0.00      0.00               8.42    ?
+   175    -234.24   -234.24      0.00      0.00         5.60          ?
+   191    -232.39   -232.39      0.00      0.00               8.68    ?
+   192    -232.36   -232.36      0.00      0.00         5.87          ?
+   200    -230.83   -230.83      0.00      0.00               7.06    ?
+   204    -230.48   -230.48      0.00      0.00               9.99    ?
+   213    -229.26   -229.26      0.00      0.00               7.71    ?
+   216    -228.93   -228.93      0.00      0.00               8.29    ?
+   219    -228.68   -228.68      0.00      0.00               8.21    ?
+   224    -228.26   -228.26      0.00      0.00               7.68    ?
+   225    -227.98   -227.98      0.00      0.00               9.41    ?
+   236    -225.86   -225.86      0.00      0.00               9.57    ?
+   249    -224.93   -224.93      0.00      0.00               8.15    ?
+   257    -223.83   -223.83      0.00      0.00               7.71    ?
+   262    -223.48   -223.48      0.00      0.00               9.79    ?
+   265    -222.88   -222.88      0.00      0.00         5.13          ?
+   270    -222.34   -222.34      0.00      0.00               6.01    ?
+   278    -220.70   -220.70      0.00      0.00               8.29    ?
+   279    -220.68   -220.68      0.00      0.00   1.28                ?
+   280    -220.63   -220.63      0.00      0.00               8.55    ?
+   283    -220.33   -220.33      0.00      0.00               7.22    ?
+   290    -219.36   -219.36      0.00      0.00               8.17    ?
+   293    -219.25   -219.25      0.00      0.00               8.64    ?
+   297    -219.02   -219.02      0.00      0.00               9.70    ?
+   302    -218.75   -218.75      0.00      0.00               9.41    ?
+   304    -218.43   -218.43      0.00      0.00               7.87    ?
+   307    -217.83   -217.83      0.00      0.00               8.43    ?
+   308    -217.77   -217.77      0.00      0.00               9.44    ?
+   315    -216.62   -216.62      0.00      0.00               8.41    ?
+   317    -216.51   -216.51      0.00      0.00               6.94    ?
+   318    -216.43   -216.43      0.00      0.00               6.16    ?
+   320    -216.31   -216.31      0.00      0.00               6.88    ?
+   323    -216.18   -216.18      0.00      0.00         4.93          ?
+   325    -215.98   -215.98      0.00      0.00               9.50    ?
+   328    -215.76   -215.76      0.00      0.00               9.11    ?
+   338    -214.72   -214.72      0.00      0.00               7.99    ?
+   340    -214.60   -214.60      0.00      0.00               7.42    ?
+   352    -213.65   -213.65      0.00      0.00               7.81    ?
+   355    -213.04   -213.04      0.00      0.00               9.92    ?
+   357    -213.00   -213.00      0.00      0.00               6.03    ?
+   363    -212.74   -212.74      0.00      0.00               9.14    ?
+   368    -212.56   -212.56      0.00      0.00         4.70          ?
+   378    -212.02   -212.02      0.00      0.00               8.86    ?
+   383    -211.77   -211.77      0.00      0.00               7.49    ?
+   390    -211.44   -211.44      0.00      0.00               9.17    ?
+   401    -211.11   -211.11      0.00      0.00               9.34    ?
+   411    -210.34   -210.34      0.00      0.00               9.04    ?
+   416    -209.57   -209.57      0.00      0.00               7.62    ?
+   417    -209.54   -209.54      0.00      0.00               7.06    ?
+   418    -209.47   -209.47      0.00      0.00               9.44    ?
+   419    -209.42   -209.42      0.00      0.00               6.27    ?
+   435    -208.18   -208.18      0.00      0.00               7.56    ?
+   437    -208.13   -208.13      0.00      0.00               9.34    ?
+   454    -206.96   -206.96      0.00      0.00               9.38    ?
+   460    -206.44   -206.44      0.00      0.00               7.43    ?
+   462    -206.25   -206.25      0.00      0.00               8.35    ?
+   465    -206.20   -206.20      0.00      0.00   2.75                ?
+   468    -205.95   -205.95      0.00      0.00               9.25    ?
+   470    -205.91   -205.91      0.00      0.00               9.18    ?
+   471    -205.91   -205.91      0.00      0.00               6.35    ?
+   480    -205.66   -205.66      0.00      0.00               9.96    ?
+   482    -205.42   -205.42      0.00      0.00               8.15    ?
+   486    -205.18   -205.18      0.00      0.00               6.32    ?
+   490    -204.86   -204.86      0.00      0.00               8.35    ?
+   502    -204.36   -204.36      0.00      0.00         5.99          ?
+   504    -204.30   -204.30      0.00      0.00               9.70    ?
+   512    -204.00   -204.00      0.00      0.00         5.89          ?
+   523    -203.10   -203.10      0.00      0.00         4.75          ?
+   527    -202.88   -202.88      0.00      0.00               6.76    ?
+   534    -202.41   -202.41      0.00      0.00               8.34    ?
+   537    -202.23   -202.23      0.00      0.00         5.01          ?
+   542    -201.85   -201.85      0.00      0.00               9.80    ?
+   544    -201.61   -201.61      0.00      0.00               8.76    ?
+   545    -201.58   -201.58      0.00      0.00               6.53    ?
+   548    -201.41   -201.41      0.00      0.00               9.24    ?
+   557    -200.90   -200.90      0.00      0.00               7.95    ?
+   561    -200.81   -200.81      0.00      0.00         5.73          ?
+   562    -200.79   -200.79      0.00      0.00               9.35    ?
+   564    -200.70   -200.70      0.00      0.00               8.28    ?
+   565    -200.68   -200.68      0.00      0.00               7.64    ?
+   575    -200.19   -200.19      0.00      0.00               7.77    ?
+   585    -199.76   -199.76      0.00      0.00         4.80          ?
+   590    -199.56   -199.56      0.00      0.00               8.65    ?
+   595    -199.37   -199.37      0.00      0.00               8.79    ?
+   596    -199.36   -199.36      0.00      0.00               9.44    ?
+   608    -198.88   -198.88      0.00      0.00         5.08          ?
+   614    -198.60   -198.60      0.00      0.00               9.12    ?
+   620    -198.27   -198.27      0.00      0.00               7.80    ?
+   628    -197.57   -197.57      0.00      0.00               9.72    ?
+   634    -197.31   -197.31      0.00      0.00               9.83    ?
+   636    -197.19   -197.19      0.00      0.00               7.81    ?
+   637    -197.10   -197.10      0.00      0.00               9.67    ?
+   638    -197.05   -197.05      0.00      0.00               8.93    ?
+   640    -196.97   -196.97      0.00      0.00               9.90    ?
+   645    -196.50   -196.50      0.00      0.00               6.56    ?
+   648    -196.44   -196.44      0.00      0.00               9.03    ?
+   649    -196.37   -196.37      0.00      0.00               9.09    ?
+   658    -196.12   -196.12      0.00      0.00               7.61    ?
+   664    -195.77   -195.77      0.00      0.00               6.00    ?
+   668    -195.65   -195.65      0.00      0.00               9.76    ?
+   683    -194.82   -194.82      0.00      0.00               8.40    ?
+   689    -194.66   -194.66      0.00      0.00               8.60    ?
+   690    -194.57   -194.57      0.00      0.00               7.91    ?
+   695    -194.26   -194.26      0.00      0.00         4.66          ?
+   696    -194.20   -194.20      0.00      0.00               8.81    ?
+   699    -193.95   -193.95      0.00      0.00               6.77    ?
+   703    -193.89   -193.89      0.00      0.00         5.88          ?
+   704    -193.85   -193.85      0.00      0.00               8.56    ?
+   707    -193.62   -193.62      0.00      0.00               8.79    ?
+   718    -193.06   -193.06      0.00      0.00               9.03    ?
+   725    -192.63   -192.63      0.00      0.00               7.79    ?
+   743    -191.74   -191.74      0.00      0.00               6.41    ?
+   746    -191.43   -191.43      0.00      0.00               9.30    ?
+   748    -191.29   -191.29      0.00      0.00               9.08    ?
+   767    -190.52   -190.52      0.00      0.00               9.88    ?
+   775    -190.12   -190.12      0.00      0.00               7.92    ?
+   776    -190.11   -190.11      0.00      0.00               9.01    ?
+   783    -189.85   -189.85      0.00      0.00               9.65    ?
+   788    -189.63   -189.63      0.00      0.00               7.67    ?
+   790    -189.58   -189.58      0.00      0.00               9.61    ?
+   809    -187.87   -187.87      0.00      0.00               7.69    ?
+   811    -187.76   -187.76      0.00      0.00               8.50    ?
+   816    -187.61   -187.61      0.00      0.00               9.45    ?
+   831    -187.00   -187.00      0.00      0.00               6.84    ?
+   843    -186.66   -186.66      0.00      0.00               9.68    ?
+   848    -186.38   -186.38      0.00      0.00               8.23    ?
+   854    -185.91   -185.91      0.00      0.00               8.46    ?
+   857    -185.71   -185.71      0.00      0.00               7.22    ?
+   867    -185.15   -185.15      0.00      0.00               6.72    ?
+   869    -185.11   -185.11      0.00      0.00               9.82    ?
+   875    -184.90   -184.90      0.00      0.00               7.43    ?
+   876    -184.89   -184.89      0.00      0.00               9.58    ?
+   885    -184.58   -184.58      0.00      0.00   2.22                ?
+   893    -184.11   -184.11      0.00      0.00               7.46    ?
+   896    -183.93   -183.93      0.00      0.00               8.67    ?
+   900    -183.71   -183.71      0.00      0.00               8.80    ?
+   902    -183.65   -183.65      0.00      0.00               9.73    ?
+   903    -183.63   -183.63      0.00      0.00               7.78    ?
+   907    -183.40   -183.40      0.00      0.00               9.06    ?
+   913    -183.30   -183.30      0.00      0.00         4.76          ?
+   927    -182.82   -182.82      0.00      0.00               8.22    ?
+
+
+Docked structures fixed:fixed in a total of 0 min, 33 sec.
+
+
+------------------------------------------------------------------------------
+Saving top 1000 orientations.
+
+Docking done in a total of 0 min, 33 sec.
+
+
+------------------------------------------------------------------------------
+
+No AIRs enabled or defined. Skipping restraint checks.
+Clustering found 588 clusters from 930 docking solutions in 0.07 seconds.
+
+---- ---- ------- ------- ------- ------- ------- ------  --- -----
+Clst Soln  Models  Etotal  Eshape  Eforce  Eair    Vshape Vclash  Bmp  RMS
+---- ---- ------- ------- ------- ------- ------- ------- ------  --- -----
+   1    1 000:000  -336.1  -336.1     0.0     0.0     0.0    0.0  -1  22.49
+   1   20 000:000  -286.6  -286.6     0.0     0.0     0.0    0.0  -1  22.62
+   1   22 000:000  -281.4  -281.4     0.0     0.0     0.0    0.0  -1  22.38
+   1  154 000:000  -238.8  -238.8     0.0     0.0     0.0    0.0  -1  22.28
+   2    2 000:000  -326.6  -326.6     0.0     0.0     0.0    0.0  -1   8.31
+   2   11 000:000  -300.8  -300.8     0.0     0.0     0.0    0.0  -1   8.40
+   3    3 000:000  -325.4  -325.4     0.0     0.0     0.0    0.0  -1   8.82
+   3    4 000:000  -320.9  -320.9     0.0     0.0     0.0    0.0  -1   8.98
+   3    9 000:000  -301.7  -301.7     0.0     0.0     0.0    0.0  -1   9.38
+   3   94 000:000  -249.9  -249.9     0.0     0.0     0.0    0.0  -1   9.60
+   3  105 000:000  -247.6  -247.6     0.0     0.0     0.0    0.0  -1   9.22
+   3  117 000:000  -245.6  -245.6     0.0     0.0     0.0    0.0  -1   9.50
+   4    5 000:000  -318.7  -318.7     0.0     0.0     0.0    0.0  -1  11.98
+   4    7 000:000  -309.0  -309.0     0.0     0.0     0.0    0.0  -1  12.11
+   4   48 000:000  -267.2  -267.2     0.0     0.0     0.0    0.0  -1  10.85
+   4   60 000:000  -260.2  -260.2     0.0     0.0     0.0    0.0  -1  10.99
+   4   73 000:000  -254.9  -254.9     0.0     0.0     0.0    0.0  -1  11.90
+   5    6 000:000  -313.4  -313.4     0.0     0.0     0.0    0.0  -1   5.15
+   5   17 000:000  -294.5  -294.5     0.0     0.0     0.0    0.0  -1   6.78
+   5   19 000:000  -290.3  -290.3     0.0     0.0     0.0    0.0  -1   4.54
+   5   77 000:000  -254.1  -254.1     0.0     0.0     0.0    0.0  -1   4.53
+   5  133 000:000  -242.8  -242.8     0.0     0.0     0.0    0.0  -1   7.09
+   5  134 000:000  -242.5  -242.5     0.0     0.0     0.0    0.0  -1   5.28
+   5  192 000:000  -232.4  -232.4     0.0     0.0     0.0    0.0  -1   5.87
+   6    8 000:000  -304.7  -304.7     0.0     0.0     0.0    0.0  -1  17.18
+   6   29 000:000  -276.6  -276.6     0.0     0.0     0.0    0.0  -1  16.71
+   6   36 000:000  -271.6  -271.6     0.0     0.0     0.0    0.0  -1  16.36
+   6   54 000:000  -263.2  -263.2     0.0     0.0     0.0    0.0  -1  18.10
+   6   68 000:000  -257.7  -257.7     0.0     0.0     0.0    0.0  -1  17.78
+   7   10 000:000  -301.2  -301.2     0.0     0.0     0.0    0.0  -1   8.20
+   7  109 000:000  -246.8  -246.8     0.0     0.0     0.0    0.0  -1   8.35
+   8   12 000:000  -299.0  -299.0     0.0     0.0     0.0    0.0  -1   9.84
+   8   50 000:000  -265.6  -265.6     0.0     0.0     0.0    0.0  -1   9.50
+   8   96 000:000  -249.6  -249.6     0.0     0.0     0.0    0.0  -1  10.51
+   8  146 000:000  -240.6  -240.6     0.0     0.0     0.0    0.0  -1   9.69
+   9   13 000:000  -298.4  -298.4     0.0     0.0     0.0    0.0  -1   7.84
+   9  123 000:000  -245.2  -245.2     0.0     0.0     0.0    0.0  -1   7.97
+  10   14 000:000  -297.5  -297.5     0.0     0.0     0.0    0.0  -1  18.00
+  10   18 000:000  -290.4  -290.4     0.0     0.0     0.0    0.0  -1  17.58
+  10   23 000:000  -280.9  -280.9     0.0     0.0     0.0    0.0  -1  17.22
+  10   46 000:000  -268.9  -268.9     0.0     0.0     0.0    0.0  -1  17.23
+  10  183 000:000  -233.0  -233.0     0.0     0.0     0.0    0.0  -1  17.65
+  11   15 000:000  -296.0  -296.0     0.0     0.0     0.0    0.0  -1  21.61
+  11   24 000:000  -278.6  -278.6     0.0     0.0     0.0    0.0  -1  21.59
+  11   92 000:000  -250.3  -250.3     0.0     0.0     0.0    0.0  -1  21.72
+  12   16 000:000  -295.5  -295.5     0.0     0.0     0.0    0.0  -1  21.89
+  12  107 000:000  -247.4  -247.4     0.0     0.0     0.0    0.0  -1  21.88
+  13   21 000:000  -282.1  -282.1     0.0     0.0     0.0    0.0  -1  21.83
+  13   66 000:000  -258.7  -258.7     0.0     0.0     0.0    0.0  -1  21.72
+  13  115 000:000  -245.9  -245.9     0.0     0.0     0.0    0.0  -1  21.59
+  13  214 000:000  -229.2  -229.2     0.0     0.0     0.0    0.0  -1  22.07
+  14   25 000:000  -278.4  -278.4     0.0     0.0     0.0    0.0  -1   9.37
+  14   55 000:000  -263.0  -263.0     0.0     0.0     0.0    0.0  -1  10.55
+  14  124 000:000  -245.2  -245.2     0.0     0.0     0.0    0.0  -1   9.48
+  15   26 000:000  -277.7  -277.7     0.0     0.0     0.0    0.0  -1   9.41
+  15   90 000:000  -250.6  -250.6     0.0     0.0     0.0    0.0  -1   9.15
+  15  110 000:000  -246.5  -246.5     0.0     0.0     0.0    0.0  -1   9.34
+  15  165 000:000  -236.3  -236.3     0.0     0.0     0.0    0.0  -1   9.08
+  16   27 000:000  -277.6  -277.6     0.0     0.0     0.0    0.0  -1  12.63
+  16  195 000:000  -232.1  -232.1     0.0     0.0     0.0    0.0  -1  12.68
+  17   28 000:000  -277.5  -277.5     0.0     0.0     0.0    0.0  -1  10.36
+  17   49 000:000  -266.5  -266.5     0.0     0.0     0.0    0.0  -1  10.34
+  17  103 000:000  -248.0  -248.0     0.0     0.0     0.0    0.0  -1  10.31
+  17  210 000:000  -229.8  -229.8     0.0     0.0     0.0    0.0  -1  10.38
+  17  217 000:000  -228.9  -228.9     0.0     0.0     0.0    0.0  -1  11.17
+  18   30 000:000  -275.8  -275.8     0.0     0.0     0.0    0.0  -1   5.90
+  18   31 000:000  -275.7  -275.7     0.0     0.0     0.0    0.0  -1   5.92
+  18   41 000:000  -270.1  -270.1     0.0     0.0     0.0    0.0  -1   6.59
+  18   79 000:000  -253.7  -253.7     0.0     0.0     0.0    0.0  -1   5.71
+  18  118 000:000  -245.6  -245.6     0.0     0.0     0.0    0.0  -1   6.00
+  18  175 000:000  -234.2  -234.2     0.0     0.0     0.0    0.0  -1   5.60
+  19   32 000:000  -275.4  -275.4     0.0     0.0     0.0    0.0  -1  19.46
+  20   33 000:000  -273.7  -273.7     0.0     0.0     0.0    0.0  -1  13.02
+  20   42 000:000  -270.1  -270.1     0.0     0.0     0.0    0.0  -1  13.54
+  20  101 000:000  -248.7  -248.7     0.0     0.0     0.0    0.0  -1  14.07
+  20  119 000:000  -245.5  -245.5     0.0     0.0     0.0    0.0  -1  12.99
+  20  153 000:000  -239.0  -239.0     0.0     0.0     0.0    0.0  -1  13.05
+  21   34 000:000  -273.2  -273.2     0.0     0.0     0.0    0.0  -1  10.37
+  21  113 000:000  -246.0  -246.0     0.0     0.0     0.0    0.0  -1  10.16
+  22   35 000:000  -272.9  -272.9     0.0     0.0     0.0    0.0  -1  19.59
+  22  125 000:000  -245.1  -245.1     0.0     0.0     0.0    0.0  -1  19.31
+  22  232 000:000  -226.8  -226.8     0.0     0.0     0.0    0.0  -1  20.41
+  23   37 000:000  -270.8  -270.8     0.0     0.0     0.0    0.0  -1  14.30
+  23   56 000:000  -262.9  -262.9     0.0     0.0     0.0    0.0  -1  14.43
+  23  128 000:000  -244.4  -244.4     0.0     0.0     0.0    0.0  -1  13.75
+  23  129 000:000  -244.4  -244.4     0.0     0.0     0.0    0.0  -1  14.99
+  23  161 000:000  -236.8  -236.8     0.0     0.0     0.0    0.0  -1  14.44
+  24   38 000:000  -270.6  -270.6     0.0     0.0     0.0    0.0  -1   4.56
+  24   44 000:000  -269.3  -269.3     0.0     0.0     0.0    0.0  -1   4.67
+  24   91 000:000  -250.3  -250.3     0.0     0.0     0.0    0.0  -1   4.70
+  24  132 000:000  -242.9  -242.9     0.0     0.0     0.0    0.0  -1   4.72
+  24  143 000:000  -240.9  -240.9     0.0     0.0     0.0    0.0  -1   4.91
+  25   39 000:000  -270.3  -270.3     0.0     0.0     0.0    0.0  -1  20.45
+  25   62 000:000  -259.8  -259.8     0.0     0.0     0.0    0.0  -1  21.07
+  25  135 000:000  -242.3  -242.3     0.0     0.0     0.0    0.0  -1  20.54
+  25  205 000:000  -230.4  -230.4     0.0     0.0     0.0    0.0  -1  20.70
+  26   40 000:000  -270.2  -270.2     0.0     0.0     0.0    0.0  -1  10.36
+  27   43 000:000  -269.6  -269.6     0.0     0.0     0.0    0.0  -1   6.58
+  27   45 000:000  -269.2  -269.2     0.0     0.0     0.0    0.0  -1   6.68
+  28   47 000:000  -268.0  -268.0     0.0     0.0     0.0    0.0  -1   9.79
+  28   98 000:000  -249.5  -249.5     0.0     0.0     0.0    0.0  -1   9.79
+  28  172 000:000  -234.6  -234.6     0.0     0.0     0.0    0.0  -1   8.42
+  28  225 000:000  -228.0  -228.0     0.0     0.0     0.0    0.0  -1   9.41
+  29   51 000:000  -264.9  -264.9     0.0     0.0     0.0    0.0  -1  10.43
+  29   74 000:000  -254.8  -254.8     0.0     0.0     0.0    0.0  -1   9.45
+  29   82 000:000  -252.4  -252.4     0.0     0.0     0.0    0.0  -1   9.67
+  29  145 000:000  -240.7  -240.7     0.0     0.0     0.0    0.0  -1   9.93
+  29  152 000:000  -239.1  -239.1     0.0     0.0     0.0    0.0  -1  10.63
+  29  173 000:000  -234.5  -234.5     0.0     0.0     0.0    0.0  -1  10.95
+  30   52 000:000  -263.5  -263.5     0.0     0.0     0.0    0.0  -1   8.02
+  31   53 000:000  -263.4  -263.4     0.0     0.0     0.0    0.0  -1   6.53
+  31   86 000:000  -251.3  -251.3     0.0     0.0     0.0    0.0  -1   6.46
+  32   57 000:000  -262.1  -262.1     0.0     0.0     0.0    0.0  -1  12.94
+  32  141 000:000  -241.2  -241.2     0.0     0.0     0.0    0.0  -1  12.69
+  33   58 000:000  -261.1  -261.1     0.0     0.0     0.0    0.0  -1  22.70
+  33  116 000:000  -245.8  -245.8     0.0     0.0     0.0    0.0  -1  22.58
+  34   59 000:000  -260.8  -260.8     0.0     0.0     0.0    0.0  -1  22.70
+  34  127 000:000  -244.4  -244.4     0.0     0.0     0.0    0.0  -1  22.63
+  34  199 000:000  -231.2  -231.2     0.0     0.0     0.0    0.0  -1  22.34
+  35   61 000:000  -259.8  -259.8     0.0     0.0     0.0    0.0  -1  12.13
+  36   63 000:000  -259.7  -259.7     0.0     0.0     0.0    0.0  -1  19.26
+  36  159 000:000  -237.4  -237.4     0.0     0.0     0.0    0.0  -1  19.44
+  37   64 000:000  -259.5  -259.5     0.0     0.0     0.0    0.0  -1   8.34
+  37  213 000:000  -229.3  -229.3     0.0     0.0     0.0    0.0  -1   7.71
+  37  216 000:000  -228.9  -228.9     0.0     0.0     0.0    0.0  -1   8.29
+  38   65 000:000  -258.7  -258.7     0.0     0.0     0.0    0.0  -1  12.81
+  38  252 000:000  -224.7  -224.7     0.0     0.0     0.0    0.0  -1  13.75
+  39   67 000:000  -258.4  -258.4     0.0     0.0     0.0    0.0  -1   8.07
+  39  169 000:000  -234.9  -234.9     0.0     0.0     0.0    0.0  -1   8.13
+  40   69 000:000  -256.4  -256.4     0.0     0.0     0.0    0.0  -1  16.82
+  40  148 000:000  -240.2  -240.2     0.0     0.0     0.0    0.0  -1  16.71
+  41   70 000:000  -255.9  -255.9     0.0     0.0     0.0    0.0  -1  11.12
+  42   71 000:000  -255.9  -255.9     0.0     0.0     0.0    0.0  -1  13.86
+  42   81 000:000  -252.8  -252.8     0.0     0.0     0.0    0.0  -1  13.80
+  43   72 000:000  -255.7  -255.7     0.0     0.0     0.0    0.0  -1  12.81
+  43  230 000:000  -227.1  -227.1     0.0     0.0     0.0    0.0  -1  13.02
+  44   75 000:000  -254.7  -254.7     0.0     0.0     0.0    0.0  -1  16.37
+  44  104 000:000  -247.8  -247.8     0.0     0.0     0.0    0.0  -1  17.00
+  45   76 000:000  -254.3  -254.3     0.0     0.0     0.0    0.0  -1  22.59
+  45  267 000:000  -222.7  -222.7     0.0     0.0     0.0    0.0  -1  22.62
+  45  268 000:000  -222.7  -222.7     0.0     0.0     0.0    0.0  -1  22.53
+  46   78 000:000  -253.8  -253.8     0.0     0.0     0.0    0.0  -1  20.00
+  46   93 000:000  -250.1  -250.1     0.0     0.0     0.0    0.0  -1  20.87
+  46  263 000:000  -223.5  -223.5     0.0     0.0     0.0    0.0  -1  20.12
+  47   80 000:000  -252.9  -252.9     0.0     0.0     0.0    0.0  -1  19.16
+  48   83 000:000  -252.2  -252.2     0.0     0.0     0.0    0.0  -1  12.59
+  48  189 000:000  -232.6  -232.6     0.0     0.0     0.0    0.0  -1  11.95
+  49   84 000:000  -251.5  -251.5     0.0     0.0     0.0    0.0  -1  15.71
+  49  251 000:000  -224.8  -224.8     0.0     0.0     0.0    0.0  -1  16.56
+  49  272 000:000  -221.5  -221.5     0.0     0.0     0.0    0.0  -1  16.45
+  50   85 000:000  -251.4  -251.4     0.0     0.0     0.0    0.0  -1  22.14
+  50  194 000:000  -232.2  -232.2     0.0     0.0     0.0    0.0  -1  22.52
+  51   87 000:000  -251.3  -251.3     0.0     0.0     0.0    0.0  -1   9.40
+  52   88 000:000  -251.1  -251.1     0.0     0.0     0.0    0.0  -1   4.64
+  52   89 000:000  -250.7  -250.7     0.0     0.0     0.0    0.0  -1   6.05
+  52  158 000:000  -237.8  -237.8     0.0     0.0     0.0    0.0  -1   6.01
+  52  265 000:000  -222.9  -222.9     0.0     0.0     0.0    0.0  -1   5.13
+  53   95 000:000  -249.7  -249.7     0.0     0.0     0.0    0.0  -1  17.39
+  53  209 000:000  -230.0  -230.0     0.0     0.0     0.0    0.0  -1  17.95
+  54   97 000:000  -249.6  -249.6     0.0     0.0     0.0    0.0  -1  13.83
+  54  235 000:000  -226.0  -226.0     0.0     0.0     0.0    0.0  -1  14.02
+  55   99 000:000  -249.4  -249.4     0.0     0.0     0.0    0.0  -1  12.32
+  56  100 000:000  -249.4  -249.4     0.0     0.0     0.0    0.0  -1   7.03
+  56  200 000:000  -230.8  -230.8     0.0     0.0     0.0    0.0  -1   7.06
+  56  224 000:000  -228.3  -228.3     0.0     0.0     0.0    0.0  -1   7.68
+  56  257 000:000  -223.8  -223.8     0.0     0.0     0.0    0.0  -1   7.71
+  57  102 000:000  -248.3  -248.3     0.0     0.0     0.0    0.0  -1  11.00
+  57  185 000:000  -232.8  -232.8     0.0     0.0     0.0    0.0  -1  10.98
+  58  106 000:000  -247.4  -247.4     0.0     0.0     0.0    0.0  -1   9.54
+  59  108 000:000  -247.1  -247.1     0.0     0.0     0.0    0.0  -1  20.44
+  60  111 000:000  -246.1  -246.1     0.0     0.0     0.0    0.0  -1  21.11
+  60  296 000:000  -219.1  -219.1     0.0     0.0     0.0    0.0  -1  20.58
+  61  112 000:000  -246.0  -246.0     0.0     0.0     0.0    0.0  -1   9.64
+  61  140 000:000  -241.8  -241.8     0.0     0.0     0.0    0.0  -1   9.24
+  61  236 000:000  -225.9  -225.9     0.0     0.0     0.0    0.0  -1   9.57
+  62  114 000:000  -246.0  -246.0     0.0     0.0     0.0    0.0  -1   7.87
+  62  160 000:000  -237.3  -237.3     0.0     0.0     0.0    0.0  -1   7.88
+  63  120 000:000  -245.5  -245.5     0.0     0.0     0.0    0.0  -1   7.79
+  63  219 000:000  -228.7  -228.7     0.0     0.0     0.0    0.0  -1   8.21
+  63  307 000:000  -217.8  -217.8     0.0     0.0     0.0    0.0  -1   8.43
+  64  121 000:000  -245.4  -245.4     0.0     0.0     0.0    0.0  -1   8.31
+  65  122 000:000  -245.4  -245.4     0.0     0.0     0.0    0.0  -1  14.32
+  65  149 000:000  -240.0  -240.0     0.0     0.0     0.0    0.0  -1  14.66
+  65  166 000:000  -236.2  -236.2     0.0     0.0     0.0    0.0  -1  14.87
+  65  227 000:000  -227.6  -227.6     0.0     0.0     0.0    0.0  -1  15.14
+  66  126 000:000  -244.6  -244.6     0.0     0.0     0.0    0.0  -1  21.01
+  67  130 000:000  -244.1  -244.1     0.0     0.0     0.0    0.0  -1   8.31
+  68  131 000:000  -243.3  -243.3     0.0     0.0     0.0    0.0  -1  20.74
+  69  136 000:000  -242.2  -242.2     0.0     0.0     0.0    0.0  -1   7.79
+  69  138 000:000  -242.1  -242.1     0.0     0.0     0.0    0.0  -1   7.63
+  69  304 000:000  -218.4  -218.4     0.0     0.0     0.0    0.0  -1   7.87
+  70  137 000:000  -242.1  -242.1     0.0     0.0     0.0    0.0  -1  13.12
+  70  170 000:000  -234.9  -234.9     0.0     0.0     0.0    0.0  -1  14.01
+  70  215 000:000  -229.1  -229.1     0.0     0.0     0.0    0.0  -1  13.33
+  70  287 000:000  -219.8  -219.8     0.0     0.0     0.0    0.0  -1  12.34
+  71  139 000:000  -242.1  -242.1     0.0     0.0     0.0    0.0  -1  15.98
+  71  314 000:000  -216.7  -216.7     0.0     0.0     0.0    0.0  -1  16.61
+  72  142 000:000  -241.1  -241.1     0.0     0.0     0.0    0.0  -1  13.13
+  73  144 000:000  -240.8  -240.8     0.0     0.0     0.0    0.0  -1  10.91
+  74  147 000:000  -240.4  -240.4     0.0     0.0     0.0    0.0  -1   9.99
+  74  203 000:000  -230.5  -230.5     0.0     0.0     0.0    0.0  -1  10.01
+  75  150 000:000  -239.3  -239.3     0.0     0.0     0.0    0.0  -1  15.03
+  75  201 000:000  -230.7  -230.7     0.0     0.0     0.0    0.0  -1  15.16
+  76  151 000:000  -239.2  -239.2     0.0     0.0     0.0    0.0  -1  13.90
+  76  345 000:000  -214.2  -214.2     0.0     0.0     0.0    0.0  -1  13.21
+  77  155 000:000  -238.7  -238.7     0.0     0.0     0.0    0.0  -1  14.22
+  77  250 000:000  -224.9  -224.9     0.0     0.0     0.0    0.0  -1  14.48
+  78  156 000:000  -238.4  -238.4     0.0     0.0     0.0    0.0  -1  20.32
+  79  157 000:000  -238.2  -238.2     0.0     0.0     0.0    0.0  -1  12.44
+  80  162 000:000  -236.4  -236.4     0.0     0.0     0.0    0.0  -1  13.96
+  81  163 000:000  -236.4  -236.4     0.0     0.0     0.0    0.0  -1  18.91
+  82  164 000:000  -236.4  -236.4     0.0     0.0     0.0    0.0  -1  20.33
+  82  178 000:000  -233.3  -233.3     0.0     0.0     0.0    0.0  -1  19.22
+  82  277 000:000  -220.7  -220.7     0.0     0.0     0.0    0.0  -1  21.12
+  83  167 000:000  -235.8  -235.8     0.0     0.0     0.0    0.0  -1  15.57
+  84  168 000:000  -235.7  -235.7     0.0     0.0     0.0    0.0  -1   7.11
+  85  171 000:000  -234.7  -234.7     0.0     0.0     0.0    0.0  -1  14.24
+  86  174 000:000  -234.3  -234.3     0.0     0.0     0.0    0.0  -1  22.13
+  86  254 000:000  -224.4  -224.4     0.0     0.0     0.0    0.0  -1  22.20
+  87  176 000:000  -233.7  -233.7     0.0     0.0     0.0    0.0  -1  12.20
+  87  273 000:000  -221.2  -221.2     0.0     0.0     0.0    0.0  -1  12.86
+  88  177 000:000  -233.3  -233.3     0.0     0.0     0.0    0.0  -1  11.96
+  89  179 000:000  -233.2  -233.2     0.0     0.0     0.0    0.0  -1  17.24
+  90  180 000:000  -233.2  -233.2     0.0     0.0     0.0    0.0  -1  20.76
+  91  181 000:000  -233.1  -233.1     0.0     0.0     0.0    0.0  -1  14.03
+  92  182 000:000  -233.1  -233.1     0.0     0.0     0.0    0.0  -1  14.83
+  93  184 000:000  -232.9  -232.9     0.0     0.0     0.0    0.0  -1  16.28
+  93  286 000:000  -219.9  -219.9     0.0     0.0     0.0    0.0  -1  15.64
+  93  373 000:000  -212.3  -212.3     0.0     0.0     0.0    0.0  -1  15.09
+  94  186 000:000  -232.7  -232.7     0.0     0.0     0.0    0.0  -1  21.04
+  94  369 000:000  -212.5  -212.5     0.0     0.0     0.0    0.0  -1  20.95
+  95  187 000:000  -232.7  -232.7     0.0     0.0     0.0    0.0  -1  11.46
+  96  188 000:000  -232.7  -232.7     0.0     0.0     0.0    0.0  -1  11.83
+  96  380 000:000  -211.9  -211.9     0.0     0.0     0.0    0.0  -1  12.19
+  97  190 000:000  -232.6  -232.6     0.0     0.0     0.0    0.0  -1  14.66
+  97  298 000:000  -219.0  -219.0     0.0     0.0     0.0    0.0  -1  15.18
+  98  191 000:000  -232.4  -232.4     0.0     0.0     0.0    0.0  -1   8.68
+  99  193 000:000  -232.3  -232.3     0.0     0.0     0.0    0.0  -1  14.05
+ 100  196 000:000  -231.8  -231.8     0.0     0.0     0.0    0.0  -1  22.67
+ 101  197 000:000  -231.8  -231.8     0.0     0.0     0.0    0.0  -1  16.66
+ 101  281 000:000  -220.4  -220.4     0.0     0.0     0.0    0.0  -1  17.79
+ 101  350 000:000  -213.8  -213.8     0.0     0.0     0.0    0.0  -1  16.28
+ 102  198 000:000  -231.6  -231.6     0.0     0.0     0.0    0.0  -1  18.13
+ 103  202 000:000  -230.6  -230.6     0.0     0.0     0.0    0.0  -1  13.37
+ 104  204 000:000  -230.5  -230.5     0.0     0.0     0.0    0.0  -1   9.99
+ 105  206 000:000  -230.4  -230.4     0.0     0.0     0.0    0.0  -1  16.41
+ 105  291 000:000  -219.3  -219.3     0.0     0.0     0.0    0.0  -1  16.49
+ 106  207 000:000  -230.3  -230.3     0.0     0.0     0.0    0.0  -1  14.35
+ 107  208 000:000  -230.1  -230.1     0.0     0.0     0.0    0.0  -1  22.28
+ 108  211 000:000  -229.7  -229.7     0.0     0.0     0.0    0.0  -1  12.11
+ 109  212 000:000  -229.4  -229.4     0.0     0.0     0.0    0.0  -1  17.01
+ 109  266 000:000  -222.8  -222.8     0.0     0.0     0.0    0.0  -1  17.09
+ 110  218 000:000  -228.8  -228.8     0.0     0.0     0.0    0.0  -1  15.29
+ 111  220 000:000  -228.6  -228.6     0.0     0.0     0.0    0.0  -1  19.15
+ 112  221 000:000  -228.4  -228.4     0.0     0.0     0.0    0.0  -1  10.14
+ 112  325 000:000  -216.0  -216.0     0.0     0.0     0.0    0.0  -1   9.50
+ 112  329 000:000  -215.7  -215.7     0.0     0.0     0.0    0.0  -1  10.63
+ 112  394 000:000  -211.3  -211.3     0.0     0.0     0.0    0.0  -1  10.46
+ 113  222 000:000  -228.4  -228.4     0.0     0.0     0.0    0.0  -1  17.08
+ 113  312 000:000  -216.9  -216.9     0.0     0.0     0.0    0.0  -1  17.50
+ 114  223 000:000  -228.3  -228.3     0.0     0.0     0.0    0.0  -1  11.18
+ 114  360 000:000  -212.8  -212.8     0.0     0.0     0.0    0.0  -1  10.20
+ 115  226 000:000  -227.9  -227.9     0.0     0.0     0.0    0.0  -1  12.45
+ 115  371 000:000  -212.5  -212.5     0.0     0.0     0.0    0.0  -1  11.82
+ 116  228 000:000  -227.3  -227.3     0.0     0.0     0.0    0.0  -1  22.15
+ 117  229 000:000  -227.2  -227.2     0.0     0.0     0.0    0.0  -1  13.83
+ 118  231 000:000  -226.9  -226.9     0.0     0.0     0.0    0.0  -1  11.00
+ 118  335 000:000  -215.3  -215.3     0.0     0.0     0.0    0.0  -1  10.73
+ 119  233 000:000  -226.4  -226.4     0.0     0.0     0.0    0.0  -1  20.09
+ 119  264 000:000  -222.9  -222.9     0.0     0.0     0.0    0.0  -1  20.16
+ 120  234 000:000  -226.0  -226.0     0.0     0.0     0.0    0.0  -1  14.61
+ 121  237 000:000  -225.8  -225.8     0.0     0.0     0.0    0.0  -1  11.66
+ 122  238 000:000  -225.8  -225.8     0.0     0.0     0.0    0.0  -1  21.31
+ 122  261 000:000  -223.6  -223.6     0.0     0.0     0.0    0.0  -1  21.48
+ 122  274 000:000  -221.1  -221.1     0.0     0.0     0.0    0.0  -1  21.22
+ 123  239 000:000  -225.8  -225.8     0.0     0.0     0.0    0.0  -1  16.51
+ 123  303 000:000  -218.6  -218.6     0.0     0.0     0.0    0.0  -1  16.45
+ 123  359 000:000  -212.9  -212.9     0.0     0.0     0.0    0.0  -1  17.32
+ 124  240 000:000  -225.7  -225.7     0.0     0.0     0.0    0.0  -1  10.79
+ 124  282 000:000  -220.4  -220.4     0.0     0.0     0.0    0.0  -1  11.47
+ 124  294 000:000  -219.2  -219.2     0.0     0.0     0.0    0.0  -1  11.30
+ 124  362 000:000  -212.8  -212.8     0.0     0.0     0.0    0.0  -1  11.68
+ 124  415 000:000  -209.6  -209.6     0.0     0.0     0.0    0.0  -1  11.91
+ 125  241 000:000  -225.7  -225.7     0.0     0.0     0.0    0.0  -1  17.51
+ 125  271 000:000  -222.1  -222.1     0.0     0.0     0.0    0.0  -1  17.67
+ 125  305 000:000  -218.2  -218.2     0.0     0.0     0.0    0.0  -1  16.53
+ 125  440 000:000  -207.9  -207.9     0.0     0.0     0.0    0.0  -1  18.30
+ 126  242 000:000  -225.7  -225.7     0.0     0.0     0.0    0.0  -1  12.86
+ 127  243 000:000  -225.5  -225.5     0.0     0.0     0.0    0.0  -1  10.59
+ 127  355 000:000  -213.0  -213.0     0.0     0.0     0.0    0.0  -1   9.92
+ 128  244 000:000  -225.4  -225.4     0.0     0.0     0.0    0.0  -1  14.38
+ 129  245 000:000  -225.1  -225.1     0.0     0.0     0.0    0.0  -1  13.65
+ 129  322 000:000  -216.2  -216.2     0.0     0.0     0.0    0.0  -1  13.78
+ 129  341 000:000  -214.5  -214.5     0.0     0.0     0.0    0.0  -1  13.88
+ 130  246 000:000  -225.0  -225.0     0.0     0.0     0.0    0.0  -1  16.52
+ 131  247 000:000  -225.0  -225.0     0.0     0.0     0.0    0.0  -1  22.28
+ 131  353 000:000  -213.5  -213.5     0.0     0.0     0.0    0.0  -1  22.44
+ 131  372 000:000  -212.4  -212.4     0.0     0.0     0.0    0.0  -1  21.93
+ 132  248 000:000  -225.0  -225.0     0.0     0.0     0.0    0.0  -1  21.93
+ 133  249 000:000  -224.9  -224.9     0.0     0.0     0.0    0.0  -1   8.15
+ 133  401 000:000  -211.1  -211.1     0.0     0.0     0.0    0.0  -1   9.34
+ 134  253 000:000  -224.5  -224.5     0.0     0.0     0.0    0.0  -1  20.98
+ 135  255 000:000  -224.1  -224.1     0.0     0.0     0.0    0.0  -1  11.27
+ 135  288 000:000  -219.7  -219.7     0.0     0.0     0.0    0.0  -1  10.63
+ 135  391 000:000  -211.4  -211.4     0.0     0.0     0.0    0.0  -1  10.70
+ 136  256 000:000  -223.9  -223.9     0.0     0.0     0.0    0.0  -1  14.08
+ 137  258 000:000  -223.8  -223.8     0.0     0.0     0.0    0.0  -1  20.19
+ 138  259 000:000  -223.8  -223.8     0.0     0.0     0.0    0.0  -1  19.77
+ 139  260 000:000  -223.8  -223.8     0.0     0.0     0.0    0.0  -1  15.79
+ 139  348 000:000  -213.9  -213.9     0.0     0.0     0.0    0.0  -1  16.35
+ 140  262 000:000  -223.5  -223.5     0.0     0.0     0.0    0.0  -1   9.79
+ 141  269 000:000  -222.5  -222.5     0.0     0.0     0.0    0.0  -1  10.46
+ 141  451 000:000  -207.0  -207.0     0.0     0.0     0.0    0.0  -1  11.12
+ 142  270 000:000  -222.3  -222.3     0.0     0.0     0.0    0.0  -1   6.01
+ 143  275 000:000  -220.9  -220.9     0.0     0.0     0.0    0.0  -1  13.18
+ 144  276 000:000  -220.9  -220.9     0.0     0.0     0.0    0.0  -1  16.08
+ 144  332 000:000  -215.5  -215.5     0.0     0.0     0.0    0.0  -1  16.27
+ 145  278 000:000  -220.7  -220.7     0.0     0.0     0.0    0.0  -1   8.29
+ 145  352 000:000  -213.7  -213.7     0.0     0.0     0.0    0.0  -1   7.81
+ 146  279 000:000  -220.7  -220.7     0.0     0.0     0.0    0.0  -1   1.28
+ 146  465 000:000  -206.2  -206.2     0.0     0.0     0.0    0.0  -1   2.75
+ 147  280 000:000  -220.6  -220.6     0.0     0.0     0.0    0.0  -1   8.55
+ 148  283 000:000  -220.3  -220.3     0.0     0.0     0.0    0.0  -1   7.22
+ 149  284 000:000  -220.3  -220.3     0.0     0.0     0.0    0.0  -1  17.15
+ 150  285 000:000  -220.0  -220.0     0.0     0.0     0.0    0.0  -1  17.97
+ 150  299 000:000  -218.9  -218.9     0.0     0.0     0.0    0.0  -1  16.76
+ 150  406 000:000  -210.8  -210.8     0.0     0.0     0.0    0.0  -1  17.15
+ 150  445 000:000  -207.5  -207.5     0.0     0.0     0.0    0.0  -1  18.14
+ 151  289 000:000  -219.7  -219.7     0.0     0.0     0.0    0.0  -1  12.06
+ 152  290 000:000  -219.4  -219.4     0.0     0.0     0.0    0.0  -1   8.17
+ 153  292 000:000  -219.3  -219.3     0.0     0.0     0.0    0.0  -1  13.66
+ 153  351 000:000  -213.7  -213.7     0.0     0.0     0.0    0.0  -1  12.75
+ 153  374 000:000  -212.3  -212.3     0.0     0.0     0.0    0.0  -1  13.12
+ 154  293 000:000  -219.3  -219.3     0.0     0.0     0.0    0.0  -1   8.64
+ 155  295 000:000  -219.1  -219.1     0.0     0.0     0.0    0.0  -1  17.93
+ 156  297 000:000  -219.0  -219.0     0.0     0.0     0.0    0.0  -1   9.70
+ 156  411 000:000  -210.3  -210.3     0.0     0.0     0.0    0.0  -1   9.04
+ 157  300 000:000  -218.9  -218.9     0.0     0.0     0.0    0.0  -1  13.59
+ 158  301 000:000  -218.8  -218.8     0.0     0.0     0.0    0.0  -1  17.17
+ 159  302 000:000  -218.7  -218.7     0.0     0.0     0.0    0.0  -1   9.41
+ 160  306 000:000  -218.0  -218.0     0.0     0.0     0.0    0.0  -1  21.62
+ 161  308 000:000  -217.8  -217.8     0.0     0.0     0.0    0.0  -1   9.44
+ 162  309 000:000  -217.8  -217.8     0.0     0.0     0.0    0.0  -1  17.99
+ 163  310 000:000  -217.3  -217.3     0.0     0.0     0.0    0.0  -1  20.37
+ 163  381 000:000  -211.8  -211.8     0.0     0.0     0.0    0.0  -1  20.86
+ 164  311 000:000  -217.1  -217.1     0.0     0.0     0.0    0.0  -1  22.40
+ 164  491 000:000  -204.8  -204.8     0.0     0.0     0.0    0.0  -1  22.27
+ 165  313 000:000  -216.8  -216.8     0.0     0.0     0.0    0.0  -1  18.66
+ 166  315 000:000  -216.6  -216.6     0.0     0.0     0.0    0.0  -1   8.41
+ 167  316 000:000  -216.6  -216.6     0.0     0.0     0.0    0.0  -1  12.43
+ 168  317 000:000  -216.5  -216.5     0.0     0.0     0.0    0.0  -1   6.94
+ 169  318 000:000  -216.4  -216.4     0.0     0.0     0.0    0.0  -1   6.16
+ 169  419 000:000  -209.4  -209.4     0.0     0.0     0.0    0.0  -1   6.27
+ 169  471 000:000  -205.9  -205.9     0.0     0.0     0.0    0.0  -1   6.35
+ 169  502 000:000  -204.4  -204.4     0.0     0.0     0.0    0.0  -1   5.99
+ 170  319 000:000  -216.3  -216.3     0.0     0.0     0.0    0.0  -1  12.37
+ 170  343 000:000  -214.3  -214.3     0.0     0.0     0.0    0.0  -1  12.80
+ 170  423 000:000  -209.3  -209.3     0.0     0.0     0.0    0.0  -1  11.90
+ 170  457 000:000  -206.7  -206.7     0.0     0.0     0.0    0.0  -1  13.56
+ 171  320 000:000  -216.3  -216.3     0.0     0.0     0.0    0.0  -1   6.88
+ 172  321 000:000  -216.2  -216.2     0.0     0.0     0.0    0.0  -1  10.32
+ 172  326 000:000  -216.0  -216.0     0.0     0.0     0.0    0.0  -1  10.18
+ 173  323 000:000  -216.2  -216.2     0.0     0.0     0.0    0.0  -1   4.93
+ 174  324 000:000  -216.1  -216.1     0.0     0.0     0.0    0.0  -1  10.21
+ 174  395 000:000  -211.3  -211.3     0.0     0.0     0.0    0.0  -1  10.57
+ 175  327 000:000  -215.9  -215.9     0.0     0.0     0.0    0.0  -1  15.03
+ 176  328 000:000  -215.8  -215.8     0.0     0.0     0.0    0.0  -1   9.11
+ 177  330 000:000  -215.6  -215.6     0.0     0.0     0.0    0.0  -1  16.91
+ 177  396 000:000  -211.3  -211.3     0.0     0.0     0.0    0.0  -1  15.92
+ 178  331 000:000  -215.5  -215.5     0.0     0.0     0.0    0.0  -1  16.49
+ 178  506 000:000  -204.3  -204.3     0.0     0.0     0.0    0.0  -1  16.70
+ 179  333 000:000  -215.4  -215.4     0.0     0.0     0.0    0.0  -1  11.98
+ 180  334 000:000  -215.3  -215.3     0.0     0.0     0.0    0.0  -1  20.06
+ 181  336 000:000  -215.2  -215.2     0.0     0.0     0.0    0.0  -1  17.73
+ 182  337 000:000  -215.1  -215.1     0.0     0.0     0.0    0.0  -1  21.40
+ 182  387 000:000  -211.5  -211.5     0.0     0.0     0.0    0.0  -1  21.47
+ 182  398 000:000  -211.2  -211.2     0.0     0.0     0.0    0.0  -1  21.29
+ 183  338 000:000  -214.7  -214.7     0.0     0.0     0.0    0.0  -1   7.99
+ 183  490 000:000  -204.9  -204.9     0.0     0.0     0.0    0.0  -1   8.35
+ 184  339 000:000  -214.6  -214.6     0.0     0.0     0.0    0.0  -1  10.49
+ 184  429 000:000  -208.7  -208.7     0.0     0.0     0.0    0.0  -1  10.02
+ 184  538 000:000  -202.1  -202.1     0.0     0.0     0.0    0.0  -1  10.35
+ 185  340 000:000  -214.6  -214.6     0.0     0.0     0.0    0.0  -1   7.42
+ 185  378 000:000  -212.0  -212.0     0.0     0.0     0.0    0.0  -1   8.86
+ 185  460 000:000  -206.4  -206.4     0.0     0.0     0.0    0.0  -1   7.43
+ 186  342 000:000  -214.5  -214.5     0.0     0.0     0.0    0.0  -1  14.39
+ 187  344 000:000  -214.2  -214.2     0.0     0.0     0.0    0.0  -1  11.30
+ 188  346 000:000  -213.9  -213.9     0.0     0.0     0.0    0.0  -1  21.17
+ 188  520 000:000  -203.3  -203.3     0.0     0.0     0.0    0.0  -1  21.48
+ 189  347 000:000  -213.9  -213.9     0.0     0.0     0.0    0.0  -1  14.60
+ 189  399 000:000  -211.2  -211.2     0.0     0.0     0.0    0.0  -1  15.17
+ 190  349 000:000  -213.8  -213.8     0.0     0.0     0.0    0.0  -1  13.26
+ 191  354 000:000  -213.1  -213.1     0.0     0.0     0.0    0.0  -1  17.91
+ 191  366 000:000  -212.7  -212.7     0.0     0.0     0.0    0.0  -1  18.19
+ 192  356 000:000  -213.0  -213.0     0.0     0.0     0.0    0.0  -1  15.50
+ 193  357 000:000  -213.0  -213.0     0.0     0.0     0.0    0.0  -1   6.03
+ 193  512 000:000  -204.0  -204.0     0.0     0.0     0.0    0.0  -1   5.89
+ 194  358 000:000  -213.0  -213.0     0.0     0.0     0.0    0.0  -1  22.40
+ 194  458 000:000  -206.6  -206.6     0.0     0.0     0.0    0.0  -1  22.65
+ 195  361 000:000  -212.8  -212.8     0.0     0.0     0.0    0.0  -1  22.53
+ 195  422 000:000  -209.4  -209.4     0.0     0.0     0.0    0.0  -1  22.37
+ 195  479 000:000  -205.7  -205.7     0.0     0.0     0.0    0.0  -1  22.25
+ 195  508 000:000  -204.2  -204.2     0.0     0.0     0.0    0.0  -1  22.28
+ 196  363 000:000  -212.7  -212.7     0.0     0.0     0.0    0.0  -1   9.14
+ 197  364 000:000  -212.7  -212.7     0.0     0.0     0.0    0.0  -1  18.76
+ 198  365 000:000  -212.7  -212.7     0.0     0.0     0.0    0.0  -1  13.25
+ 199  367 000:000  -212.6  -212.6     0.0     0.0     0.0    0.0  -1  20.30
+ 200  368 000:000  -212.6  -212.6     0.0     0.0     0.0    0.0  -1   4.70
+ 201  370 000:000  -212.5  -212.5     0.0     0.0     0.0    0.0  -1  21.09
+ 201  439 000:000  -207.9  -207.9     0.0     0.0     0.0    0.0  -1  21.57
+ 202  375 000:000  -212.3  -212.3     0.0     0.0     0.0    0.0  -1  13.14
+ 203  376 000:000  -212.2  -212.2     0.0     0.0     0.0    0.0  -1  21.58
+ 203  402 000:000  -211.0  -211.0     0.0     0.0     0.0    0.0  -1  21.47
+ 204  377 000:000  -212.0  -212.0     0.0     0.0     0.0    0.0  -1  12.95
+ 204  438 000:000  -208.0  -208.0     0.0     0.0     0.0    0.0  -1  12.89
+ 204  532 000:000  -202.7  -202.7     0.0     0.0     0.0    0.0  -1  11.84
+ 205  379 000:000  -212.0  -212.0     0.0     0.0     0.0    0.0  -1  15.24
+ 205  464 000:000  -206.2  -206.2     0.0     0.0     0.0    0.0  -1  14.93
+ 206  382 000:000  -211.8  -211.8     0.0     0.0     0.0    0.0  -1  17.03
+ 206  414 000:000  -209.6  -209.6     0.0     0.0     0.0    0.0  -1  16.94
+ 207  383 000:000  -211.8  -211.8     0.0     0.0     0.0    0.0  -1   7.49
+ 208  384 000:000  -211.8  -211.8     0.0     0.0     0.0    0.0  -1  11.00
+ 208  478 000:000  -205.7  -205.7     0.0     0.0     0.0    0.0  -1  11.18
+ 209  385 000:000  -211.5  -211.5     0.0     0.0     0.0    0.0  -1  22.59
+ 210  386 000:000  -211.5  -211.5     0.0     0.0     0.0    0.0  -1  18.36
+ 211  388 000:000  -211.5  -211.5     0.0     0.0     0.0    0.0  -1  22.48
+ 211  474 000:000  -205.9  -205.9     0.0     0.0     0.0    0.0  -1  22.45
+ 212  389 000:000  -211.5  -211.5     0.0     0.0     0.0    0.0  -1  12.72
+ 212  580 000:000  -200.0  -200.0     0.0     0.0     0.0    0.0  -1  13.39
+ 212  588 000:000  -199.6  -199.6     0.0     0.0     0.0    0.0  -1  11.42
+ 213  390 000:000  -211.4  -211.4     0.0     0.0     0.0    0.0  -1   9.17
+ 214  392 000:000  -211.4  -211.4     0.0     0.0     0.0    0.0  -1  12.13
+ 214  577 000:000  -200.1  -200.1     0.0     0.0     0.0    0.0  -1  11.60
+ 215  393 000:000  -211.4  -211.4     0.0     0.0     0.0    0.0  -1  20.97
+ 216  397 000:000  -211.2  -211.2     0.0     0.0     0.0    0.0  -1  18.34
+ 217  400 000:000  -211.2  -211.2     0.0     0.0     0.0    0.0  -1  15.26
+ 217  467 000:000  -206.0  -206.0     0.0     0.0     0.0    0.0  -1  15.51
+ 218  403 000:000  -210.9  -210.9     0.0     0.0     0.0    0.0  -1  20.75
+ 219  404 000:000  -210.8  -210.8     0.0     0.0     0.0    0.0  -1  14.59
+ 219  495 000:000  -204.7  -204.7     0.0     0.0     0.0    0.0  -1  14.54
+ 220  405 000:000  -210.8  -210.8     0.0     0.0     0.0    0.0  -1  21.10
+ 220  517 000:000  -203.4  -203.4     0.0     0.0     0.0    0.0  -1  21.35
+ 221  407 000:000  -210.7  -210.7     0.0     0.0     0.0    0.0  -1  14.52
+ 221  605 000:000  -199.0  -199.0     0.0     0.0     0.0    0.0  -1  14.66
+ 222  408 000:000  -210.7  -210.7     0.0     0.0     0.0    0.0  -1  21.90
+ 223  409 000:000  -210.6  -210.6     0.0     0.0     0.0    0.0  -1  17.67
+ 224  410 000:000  -210.6  -210.6     0.0     0.0     0.0    0.0  -1  13.16
+ 225  412 000:000  -209.8  -209.8     0.0     0.0     0.0    0.0  -1  13.36
+ 226  413 000:000  -209.7  -209.7     0.0     0.0     0.0    0.0  -1  11.25
+ 227  416 000:000  -209.6  -209.6     0.0     0.0     0.0    0.0  -1   7.62
+ 228  417 000:000  -209.5  -209.5     0.0     0.0     0.0    0.0  -1   7.06
+ 229  418 000:000  -209.5  -209.5     0.0     0.0     0.0    0.0  -1   9.44
+ 230  420 000:000  -209.4  -209.4     0.0     0.0     0.0    0.0  -1  16.17
+ 231  421 000:000  -209.4  -209.4     0.0     0.0     0.0    0.0  -1  16.16
+ 231  442 000:000  -207.7  -207.7     0.0     0.0     0.0    0.0  -1  16.07
+ 232  424 000:000  -209.2  -209.2     0.0     0.0     0.0    0.0  -1  20.51
+ 233  425 000:000  -209.0  -209.0     0.0     0.0     0.0    0.0  -1  19.66
+ 233  456 000:000  -206.8  -206.8     0.0     0.0     0.0    0.0  -1  19.10
+ 234  426 000:000  -209.0  -209.0     0.0     0.0     0.0    0.0  -1  18.31
+ 235  427 000:000  -208.9  -208.9     0.0     0.0     0.0    0.0  -1  15.83
+ 235  566 000:000  -200.7  -200.7     0.0     0.0     0.0    0.0  -1  16.86
+ 236  428 000:000  -208.9  -208.9     0.0     0.0     0.0    0.0  -1  12.59
+ 237  430 000:000  -208.6  -208.6     0.0     0.0     0.0    0.0  -1  20.36
+ 238  431 000:000  -208.6  -208.6     0.0     0.0     0.0    0.0  -1  22.63
+ 239  432 000:000  -208.5  -208.5     0.0     0.0     0.0    0.0  -1  20.67
+ 239  441 000:000  -207.8  -207.8     0.0     0.0     0.0    0.0  -1  20.78
+ 240  433 000:000  -208.4  -208.4     0.0     0.0     0.0    0.0  -1  20.88
+ 241  434 000:000  -208.2  -208.2     0.0     0.0     0.0    0.0  -1  11.09
+ 242  435 000:000  -208.2  -208.2     0.0     0.0     0.0    0.0  -1   7.56
+ 243  436 000:000  -208.1  -208.1     0.0     0.0     0.0    0.0  -1  12.95
+ 244  437 000:000  -208.1  -208.1     0.0     0.0     0.0    0.0  -1   9.34
+ 245  443 000:000  -207.6  -207.6     0.0     0.0     0.0    0.0  -1  11.87
+ 246  444 000:000  -207.6  -207.6     0.0     0.0     0.0    0.0  -1  13.61
+ 247  446 000:000  -207.3  -207.3     0.0     0.0     0.0    0.0  -1  10.43
+ 248  447 000:000  -207.2  -207.2     0.0     0.0     0.0    0.0  -1  14.37
+ 248  448 000:000  -207.2  -207.2     0.0     0.0     0.0    0.0  -1  14.48
+ 249  449 000:000  -207.2  -207.2     0.0     0.0     0.0    0.0  -1  17.76
+ 250  450 000:000  -207.2  -207.2     0.0     0.0     0.0    0.0  -1  12.57
+ 251  452 000:000  -207.0  -207.0     0.0     0.0     0.0    0.0  -1  12.62
+ 252  453 000:000  -207.0  -207.0     0.0     0.0     0.0    0.0  -1  11.65
+ 253  454 000:000  -207.0  -207.0     0.0     0.0     0.0    0.0  -1   9.38
+ 254  455 000:000  -206.9  -206.9     0.0     0.0     0.0    0.0  -1  15.24
+ 255  459 000:000  -206.5  -206.5     0.0     0.0     0.0    0.0  -1  11.78
+ 256  461 000:000  -206.4  -206.4     0.0     0.0     0.0    0.0  -1  11.63
+ 256  660 000:000  -196.0  -196.0     0.0     0.0     0.0    0.0  -1  10.75
+ 257  462 000:000  -206.2  -206.2     0.0     0.0     0.0    0.0  -1   8.35
+ 257  534 000:000  -202.4  -202.4     0.0     0.0     0.0    0.0  -1   8.34
+ 258  463 000:000  -206.2  -206.2     0.0     0.0     0.0    0.0  -1  12.70
+ 259  466 000:000  -206.1  -206.1     0.0     0.0     0.0    0.0  -1  16.11
+ 259  555 000:000  -201.0  -201.0     0.0     0.0     0.0    0.0  -1  15.57
+ 260  468 000:000  -205.9  -205.9     0.0     0.0     0.0    0.0  -1   9.25
+ 260  482 000:000  -205.4  -205.4     0.0     0.0     0.0    0.0  -1   8.15
+ 261  469 000:000  -205.9  -205.9     0.0     0.0     0.0    0.0  -1  13.86
+ 261  571 000:000  -200.5  -200.5     0.0     0.0     0.0    0.0  -1  14.10
+ 262  470 000:000  -205.9  -205.9     0.0     0.0     0.0    0.0  -1   9.18
+ 262  493 000:000  -204.8  -204.8     0.0     0.0     0.0    0.0  -1  11.06
+ 262  548 000:000  -201.4  -201.4     0.0     0.0     0.0    0.0  -1   9.24
+ 263  472 000:000  -205.9  -205.9     0.0     0.0     0.0    0.0  -1  17.78
+ 263  624 000:000  -198.0  -198.0     0.0     0.0     0.0    0.0  -1  17.58
+ 264  473 000:000  -205.9  -205.9     0.0     0.0     0.0    0.0  -1  13.22
+ 265  475 000:000  -205.8  -205.8     0.0     0.0     0.0    0.0  -1  19.62
+ 266  476 000:000  -205.8  -205.8     0.0     0.0     0.0    0.0  -1  10.83
+ 267  477 000:000  -205.7  -205.7     0.0     0.0     0.0    0.0  -1  12.01
+ 268  480 000:000  -205.7  -205.7     0.0     0.0     0.0    0.0  -1   9.96
+ 268  542 000:000  -201.9  -201.9     0.0     0.0     0.0    0.0  -1   9.80
+ 269  481 000:000  -205.5  -205.5     0.0     0.0     0.0    0.0  -1  12.78
+ 270  483 000:000  -205.4  -205.4     0.0     0.0     0.0    0.0  -1  14.04
+ 271  484 000:000  -205.4  -205.4     0.0     0.0     0.0    0.0  -1  21.55
+ 271  530 000:000  -202.8  -202.8     0.0     0.0     0.0    0.0  -1  21.54
+ 271  617 000:000  -198.4  -198.4     0.0     0.0     0.0    0.0  -1  21.04
+ 272  485 000:000  -205.3  -205.3     0.0     0.0     0.0    0.0  -1  14.97
+ 273  486 000:000  -205.2  -205.2     0.0     0.0     0.0    0.0  -1   6.32
+ 274  487 000:000  -205.2  -205.2     0.0     0.0     0.0    0.0  -1  15.92
+ 275  488 000:000  -205.1  -205.1     0.0     0.0     0.0    0.0  -1  20.67
+ 276  489 000:000  -204.9  -204.9     0.0     0.0     0.0    0.0  -1  10.61
+ 277  492 000:000  -204.8  -204.8     0.0     0.0     0.0    0.0  -1  22.76
+ 278  494 000:000  -204.7  -204.7     0.0     0.0     0.0    0.0  -1  17.30
+ 279  496 000:000  -204.7  -204.7     0.0     0.0     0.0    0.0  -1  13.47
+ 280  497 000:000  -204.7  -204.7     0.0     0.0     0.0    0.0  -1  19.10
+ 281  498 000:000  -204.6  -204.6     0.0     0.0     0.0    0.0  -1  18.06
+ 281  615 000:000  -198.6  -198.6     0.0     0.0     0.0    0.0  -1  18.01
+ 281  619 000:000  -198.3  -198.3     0.0     0.0     0.0    0.0  -1  18.16
+ 282  499 000:000  -204.5  -204.5     0.0     0.0     0.0    0.0  -1  12.83
+ 283  500 000:000  -204.5  -204.5     0.0     0.0     0.0    0.0  -1  16.28
+ 284  501 000:000  -204.5  -204.5     0.0     0.0     0.0    0.0  -1  17.34
+ 284  551 000:000  -201.3  -201.3     0.0     0.0     0.0    0.0  -1  16.74
+ 284  639 000:000  -197.0  -197.0     0.0     0.0     0.0    0.0  -1  17.80
+ 285  503 000:000  -204.3  -204.3     0.0     0.0     0.0    0.0  -1  13.03
+ 286  504 000:000  -204.3  -204.3     0.0     0.0     0.0    0.0  -1   9.70
+ 286  596 000:000  -199.4  -199.4     0.0     0.0     0.0    0.0  -1   9.44
+ 287  505 000:000  -204.3  -204.3     0.0     0.0     0.0    0.0  -1  19.26
+ 288  507 000:000  -204.3  -204.3     0.0     0.0     0.0    0.0  -1  10.20
+ 289  509 000:000  -204.2  -204.2     0.0     0.0     0.0    0.0  -1  14.14
+ 290  510 000:000  -204.2  -204.2     0.0     0.0     0.0    0.0  -1  10.80
+ 291  511 000:000  -204.0  -204.0     0.0     0.0     0.0    0.0  -1  14.57
+ 292  513 000:000  -204.0  -204.0     0.0     0.0     0.0    0.0  -1  16.86
+ 292  622 000:000  -198.2  -198.2     0.0     0.0     0.0    0.0  -1  16.23
+ 293  514 000:000  -203.7  -203.7     0.0     0.0     0.0    0.0  -1  21.42
+ 293  685 000:000  -194.8  -194.8     0.0     0.0     0.0    0.0  -1  21.40
+ 294  515 000:000  -203.5  -203.5     0.0     0.0     0.0    0.0  -1  13.01
+ 295  516 000:000  -203.5  -203.5     0.0     0.0     0.0    0.0  -1  14.24
+ 296  518 000:000  -203.3  -203.3     0.0     0.0     0.0    0.0  -1  13.49
+ 297  519 000:000  -203.3  -203.3     0.0     0.0     0.0    0.0  -1  19.53
+ 297  656 000:000  -196.1  -196.1     0.0     0.0     0.0    0.0  -1  19.68
+ 298  521 000:000  -203.2  -203.2     0.0     0.0     0.0    0.0  -1  17.29
+ 299  522 000:000  -203.1  -203.1     0.0     0.0     0.0    0.0  -1  14.35
+ 300  523 000:000  -203.1  -203.1     0.0     0.0     0.0    0.0  -1   4.75
+ 300  703 000:000  -193.9  -193.9     0.0     0.0     0.0    0.0  -1   5.88
+ 301  524 000:000  -203.1  -203.1     0.0     0.0     0.0    0.0  -1  12.74
+ 301  666 000:000  -195.7  -195.7     0.0     0.0     0.0    0.0  -1  12.19
+ 302  525 000:000  -203.0  -203.0     0.0     0.0     0.0    0.0  -1  15.17
+ 302  558 000:000  -200.9  -200.9     0.0     0.0     0.0    0.0  -1  14.36
+ 303  526 000:000  -203.0  -203.0     0.0     0.0     0.0    0.0  -1  20.36
+ 304  527 000:000  -202.9  -202.9     0.0     0.0     0.0    0.0  -1   6.76
+ 304  545 000:000  -201.6  -201.6     0.0     0.0     0.0    0.0  -1   6.53
+ 305  528 000:000  -202.9  -202.9     0.0     0.0     0.0    0.0  -1  19.66
+ 306  529 000:000  -202.9  -202.9     0.0     0.0     0.0    0.0  -1  21.63
+ 307  531 000:000  -202.7  -202.7     0.0     0.0     0.0    0.0  -1  17.42
+ 308  533 000:000  -202.4  -202.4     0.0     0.0     0.0    0.0  -1  20.45
+ 309  535 000:000  -202.4  -202.4     0.0     0.0     0.0    0.0  -1  11.04
+ 310  536 000:000  -202.3  -202.3     0.0     0.0     0.0    0.0  -1  10.48
+ 311  537 000:000  -202.2  -202.2     0.0     0.0     0.0    0.0  -1   5.01
+ 312  539 000:000  -202.0  -202.0     0.0     0.0     0.0    0.0  -1  19.94
+ 312  600 000:000  -199.2  -199.2     0.0     0.0     0.0    0.0  -1  19.18
+ 312  661 000:000  -196.0  -196.0     0.0     0.0     0.0    0.0  -1  20.30
+ 313  540 000:000  -201.9  -201.9     0.0     0.0     0.0    0.0  -1  12.45
+ 314  541 000:000  -201.9  -201.9     0.0     0.0     0.0    0.0  -1  17.84
+ 315  543 000:000  -201.7  -201.7     0.0     0.0     0.0    0.0  -1  16.68
+ 316  544 000:000  -201.6  -201.6     0.0     0.0     0.0    0.0  -1   8.76
+ 317  546 000:000  -201.5  -201.5     0.0     0.0     0.0    0.0  -1  14.58
+ 318  547 000:000  -201.4  -201.4     0.0     0.0     0.0    0.0  -1  16.93
+ 319  549 000:000  -201.4  -201.4     0.0     0.0     0.0    0.0  -1  12.03
+ 320  550 000:000  -201.3  -201.3     0.0     0.0     0.0    0.0  -1  16.21
+ 321  552 000:000  -201.2  -201.2     0.0     0.0     0.0    0.0  -1  13.05
+ 321  597 000:000  -199.3  -199.3     0.0     0.0     0.0    0.0  -1  13.35
+ 321  625 000:000  -197.9  -197.9     0.0     0.0     0.0    0.0  -1  13.19
+ 321  644 000:000  -196.6  -196.6     0.0     0.0     0.0    0.0  -1  13.95
+ 322  553 000:000  -201.1  -201.1     0.0     0.0     0.0    0.0  -1  10.78
+ 323  554 000:000  -201.1  -201.1     0.0     0.0     0.0    0.0  -1  16.27
+ 324  556 000:000  -201.0  -201.0     0.0     0.0     0.0    0.0  -1  12.57
+ 325  557 000:000  -200.9  -200.9     0.0     0.0     0.0    0.0  -1   7.95
+ 325  575 000:000  -200.2  -200.2     0.0     0.0     0.0    0.0  -1   7.77
+ 326  559 000:000  -200.9  -200.9     0.0     0.0     0.0    0.0  -1  14.95
+ 327  560 000:000  -200.8  -200.8     0.0     0.0     0.0    0.0  -1  19.23
+ 328  561 000:000  -200.8  -200.8     0.0     0.0     0.0    0.0  -1   5.73
+ 329  562 000:000  -200.8  -200.8     0.0     0.0     0.0    0.0  -1   9.35
+ 330  563 000:000  -200.7  -200.7     0.0     0.0     0.0    0.0  -1  12.03
+ 330  715 000:000  -193.2  -193.2     0.0     0.0     0.0    0.0  -1  11.94
+ 331  564 000:000  -200.7  -200.7     0.0     0.0     0.0    0.0  -1   8.28
+ 331  638 000:000  -197.0  -197.0     0.0     0.0     0.0    0.0  -1   8.93
+ 332  565 000:000  -200.7  -200.7     0.0     0.0     0.0    0.0  -1   7.64
+ 332  689 000:000  -194.7  -194.7     0.0     0.0     0.0    0.0  -1   8.60
+ 333  567 000:000  -200.6  -200.6     0.0     0.0     0.0    0.0  -1  19.59
+ 333  611 000:000  -198.7  -198.7     0.0     0.0     0.0    0.0  -1  19.66
+ 334  568 000:000  -200.6  -200.6     0.0     0.0     0.0    0.0  -1  14.31
+ 334  627 000:000  -197.7  -197.7     0.0     0.0     0.0    0.0  -1  13.33
+ 335  569 000:000  -200.5  -200.5     0.0     0.0     0.0    0.0  -1  15.64
+ 336  570 000:000  -200.5  -200.5     0.0     0.0     0.0    0.0  -1  17.14
+ 337  572 000:000  -200.4  -200.4     0.0     0.0     0.0    0.0  -1  19.71
+ 337  680 000:000  -195.0  -195.0     0.0     0.0     0.0    0.0  -1  19.80
+ 337  705 000:000  -193.9  -193.9     0.0     0.0     0.0    0.0  -1  19.83
+ 338  573 000:000  -200.2  -200.2     0.0     0.0     0.0    0.0  -1  14.11
+ 339  574 000:000  -200.2  -200.2     0.0     0.0     0.0    0.0  -1  11.65
+ 340  576 000:000  -200.1  -200.1     0.0     0.0     0.0    0.0  -1  21.05
+ 341  578 000:000  -200.0  -200.0     0.0     0.0     0.0    0.0  -1  22.57
+ 341  730 000:000  -192.4  -192.4     0.0     0.0     0.0    0.0  -1  22.37
+ 342  579 000:000  -200.0  -200.0     0.0     0.0     0.0    0.0  -1  14.91
+ 342  592 000:000  -199.5  -199.5     0.0     0.0     0.0    0.0  -1  14.55
+ 343  581 000:000  -199.9  -199.9     0.0     0.0     0.0    0.0  -1  13.71
+ 343  774 000:000  -190.1  -190.1     0.0     0.0     0.0    0.0  -1  14.34
+ 344  582 000:000  -199.9  -199.9     0.0     0.0     0.0    0.0  -1  17.81
+ 345  583 000:000  -199.8  -199.8     0.0     0.0     0.0    0.0  -1  10.13
+ 346  584 000:000  -199.8  -199.8     0.0     0.0     0.0    0.0  -1  12.17
+ 347  585 000:000  -199.8  -199.8     0.0     0.0     0.0    0.0  -1   4.80
+ 347  608 000:000  -198.9  -198.9     0.0     0.0     0.0    0.0  -1   5.08
+ 348  586 000:000  -199.7  -199.7     0.0     0.0     0.0    0.0  -1  10.15
+ 348  595 000:000  -199.4  -199.4     0.0     0.0     0.0    0.0  -1   8.79
+ 348  648 000:000  -196.4  -196.4     0.0     0.0     0.0    0.0  -1   9.03
+ 349  587 000:000  -199.7  -199.7     0.0     0.0     0.0    0.0  -1  20.68
+ 350  589 000:000  -199.6  -199.6     0.0     0.0     0.0    0.0  -1  13.54
+ 350  633 000:000  -197.3  -197.3     0.0     0.0     0.0    0.0  -1  13.42
+ 350  768 000:000  -190.5  -190.5     0.0     0.0     0.0    0.0  -1  12.24
+ 351  590 000:000  -199.6  -199.6     0.0     0.0     0.0    0.0  -1   8.65
+ 351  725 000:000  -192.6  -192.6     0.0     0.0     0.0    0.0  -1   7.79
+ 352  591 000:000  -199.5  -199.5     0.0     0.0     0.0    0.0  -1  18.87
+ 353  593 000:000  -199.4  -199.4     0.0     0.0     0.0    0.0  -1  15.84
+ 354  594 000:000  -199.4  -199.4     0.0     0.0     0.0    0.0  -1  14.47
+ 354  744 000:000  -191.7  -191.7     0.0     0.0     0.0    0.0  -1  14.65
+ 355  598 000:000  -199.3  -199.3     0.0     0.0     0.0    0.0  -1  10.24
+ 355  632 000:000  -197.3  -197.3     0.0     0.0     0.0    0.0  -1  11.60
+ 356  599 000:000  -199.2  -199.2     0.0     0.0     0.0    0.0  -1  20.91
+ 357  601 000:000  -199.1  -199.1     0.0     0.0     0.0    0.0  -1  14.94
+ 358  602 000:000  -199.1  -199.1     0.0     0.0     0.0    0.0  -1  20.82
+ 358  706 000:000  -193.6  -193.6     0.0     0.0     0.0    0.0  -1  20.73
+ 358  777 000:000  -190.1  -190.1     0.0     0.0     0.0    0.0  -1  20.89
+ 359  603 000:000  -199.1  -199.1     0.0     0.0     0.0    0.0  -1  17.18
+ 359  682 000:000  -194.9  -194.9     0.0     0.0     0.0    0.0  -1  18.41
+ 360  604 000:000  -199.0  -199.0     0.0     0.0     0.0    0.0  -1  18.27
+ 361  606 000:000  -199.0  -199.0     0.0     0.0     0.0    0.0  -1  15.41
+ 361  805 000:000  -188.2  -188.2     0.0     0.0     0.0    0.0  -1  15.39
+ 362  607 000:000  -198.9  -198.9     0.0     0.0     0.0    0.0  -1  10.45
+ 363  609 000:000  -198.9  -198.9     0.0     0.0     0.0    0.0  -1  20.40
+ 364  610 000:000  -198.7  -198.7     0.0     0.0     0.0    0.0  -1  18.47
+ 365  612 000:000  -198.7  -198.7     0.0     0.0     0.0    0.0  -1  13.41
+ 366  613 000:000  -198.6  -198.6     0.0     0.0     0.0    0.0  -1  11.46
+ 367  614 000:000  -198.6  -198.6     0.0     0.0     0.0    0.0  -1   9.12
+ 367  790 000:000  -189.6  -189.6     0.0     0.0     0.0    0.0  -1   9.61
+ 368  616 000:000  -198.5  -198.5     0.0     0.0     0.0    0.0  -1  20.45
+ 369  618 000:000  -198.3  -198.3     0.0     0.0     0.0    0.0  -1  22.70
+ 370  620 000:000  -198.3  -198.3     0.0     0.0     0.0    0.0  -1   7.80
+ 371  621 000:000  -198.2  -198.2     0.0     0.0     0.0    0.0  -1  20.81
+ 371  654 000:000  -196.2  -196.2     0.0     0.0     0.0    0.0  -1  21.36
+ 371  741 000:000  -192.0  -192.0     0.0     0.0     0.0    0.0  -1  21.00
+ 372  623 000:000  -198.1  -198.1     0.0     0.0     0.0    0.0  -1  13.26
+ 373  626 000:000  -197.7  -197.7     0.0     0.0     0.0    0.0  -1  14.82
+ 374  628 000:000  -197.6  -197.6     0.0     0.0     0.0    0.0  -1   9.72
+ 374  634 000:000  -197.3  -197.3     0.0     0.0     0.0    0.0  -1   9.83
+ 375  629 000:000  -197.5  -197.5     0.0     0.0     0.0    0.0  -1  19.80
+ 376  630 000:000  -197.5  -197.5     0.0     0.0     0.0    0.0  -1  14.92
+ 377  631 000:000  -197.4  -197.4     0.0     0.0     0.0    0.0  -1  10.63
+ 378  635 000:000  -197.3  -197.3     0.0     0.0     0.0    0.0  -1  21.45
+ 378  642 000:000  -196.6  -196.6     0.0     0.0     0.0    0.0  -1  22.29
+ 378  807 000:000  -188.0  -188.0     0.0     0.0     0.0    0.0  -1  21.72
+ 379  636 000:000  -197.2  -197.2     0.0     0.0     0.0    0.0  -1   7.81
+ 380  637 000:000  -197.1  -197.1     0.0     0.0     0.0    0.0  -1   9.67
+ 381  640 000:000  -197.0  -197.0     0.0     0.0     0.0    0.0  -1   9.90
+ 382  641 000:000  -196.8  -196.8     0.0     0.0     0.0    0.0  -1  20.81
+ 383  643 000:000  -196.6  -196.6     0.0     0.0     0.0    0.0  -1  21.56
+ 384  645 000:000  -196.5  -196.5     0.0     0.0     0.0    0.0  -1   6.56
+ 385  646 000:000  -196.5  -196.5     0.0     0.0     0.0    0.0  -1  14.56
+ 385  671 000:000  -195.5  -195.5     0.0     0.0     0.0    0.0  -1  14.40
+ 385  824 000:000  -187.3  -187.3     0.0     0.0     0.0    0.0  -1  14.00
+ 386  647 000:000  -196.5  -196.5     0.0     0.0     0.0    0.0  -1  13.91
+ 387  649 000:000  -196.4  -196.4     0.0     0.0     0.0    0.0  -1   9.09
+ 387  718 000:000  -193.1  -193.1     0.0     0.0     0.0    0.0  -1   9.03
+ 388  650 000:000  -196.4  -196.4     0.0     0.0     0.0    0.0  -1  15.60
+ 389  651 000:000  -196.3  -196.3     0.0     0.0     0.0    0.0  -1  10.48
+ 389  687 000:000  -194.7  -194.7     0.0     0.0     0.0    0.0  -1  11.06
+ 390  652 000:000  -196.3  -196.3     0.0     0.0     0.0    0.0  -1  13.54
+ 391  653 000:000  -196.2  -196.2     0.0     0.0     0.0    0.0  -1  20.68
+ 392  655 000:000  -196.2  -196.2     0.0     0.0     0.0    0.0  -1  10.62
+ 392  681 000:000  -194.9  -194.9     0.0     0.0     0.0    0.0  -1  10.63
+ 393  657 000:000  -196.1  -196.1     0.0     0.0     0.0    0.0  -1  20.69
+ 394  658 000:000  -196.1  -196.1     0.0     0.0     0.0    0.0  -1   7.61
+ 394  788 000:000  -189.6  -189.6     0.0     0.0     0.0    0.0  -1   7.67
+ 394  811 000:000  -187.8  -187.8     0.0     0.0     0.0    0.0  -1   8.50
+ 395  659 000:000  -196.1  -196.1     0.0     0.0     0.0    0.0  -1  16.71
+ 395  724 000:000  -192.8  -192.8     0.0     0.0     0.0    0.0  -1  16.77
+ 396  662 000:000  -195.8  -195.8     0.0     0.0     0.0    0.0  -1  15.18
+ 397  663 000:000  -195.8  -195.8     0.0     0.0     0.0    0.0  -1  20.92
+ 397  855 000:000  -185.8  -185.8     0.0     0.0     0.0    0.0  -1  21.33
+ 398  664 000:000  -195.8  -195.8     0.0     0.0     0.0    0.0  -1   6.00
+ 399  665 000:000  -195.7  -195.7     0.0     0.0     0.0    0.0  -1  14.29
+ 400  667 000:000  -195.7  -195.7     0.0     0.0     0.0    0.0  -1  13.54
+ 400  733 000:000  -192.3  -192.3     0.0     0.0     0.0    0.0  -1  13.90
+ 400  753 000:000  -191.1  -191.1     0.0     0.0     0.0    0.0  -1  13.79
+ 401  668 000:000  -195.6  -195.6     0.0     0.0     0.0    0.0  -1   9.76
+ 402  669 000:000  -195.6  -195.6     0.0     0.0     0.0    0.0  -1  15.88
+ 403  670 000:000  -195.5  -195.5     0.0     0.0     0.0    0.0  -1  10.90
+ 404  672 000:000  -195.4  -195.4     0.0     0.0     0.0    0.0  -1  14.74
+ 405  673 000:000  -195.4  -195.4     0.0     0.0     0.0    0.0  -1  15.27
+ 406  674 000:000  -195.3  -195.3     0.0     0.0     0.0    0.0  -1  14.32
+ 407  675 000:000  -195.2  -195.2     0.0     0.0     0.0    0.0  -1  21.14
+ 408  676 000:000  -195.2  -195.2     0.0     0.0     0.0    0.0  -1  16.37
+ 409  677 000:000  -195.2  -195.2     0.0     0.0     0.0    0.0  -1  22.00
+ 409  844 000:000  -186.6  -186.6     0.0     0.0     0.0    0.0  -1  22.49
+ 410  678 000:000  -195.2  -195.2     0.0     0.0     0.0    0.0  -1  10.40
+ 410  767 000:000  -190.5  -190.5     0.0     0.0     0.0    0.0  -1   9.88
+ 410  825 000:000  -187.2  -187.2     0.0     0.0     0.0    0.0  -1  10.28
+ 411  679 000:000  -195.2  -195.2     0.0     0.0     0.0    0.0  -1  11.79
+ 412  683 000:000  -194.8  -194.8     0.0     0.0     0.0    0.0  -1   8.40
+ 413  684 000:000  -194.8  -194.8     0.0     0.0     0.0    0.0  -1  19.93
+ 414  686 000:000  -194.7  -194.7     0.0     0.0     0.0    0.0  -1  15.46
+ 415  688 000:000  -194.7  -194.7     0.0     0.0     0.0    0.0  -1  20.50
+ 415  803 000:000  -188.6  -188.6     0.0     0.0     0.0    0.0  -1  20.17
+ 416  690 000:000  -194.6  -194.6     0.0     0.0     0.0    0.0  -1   7.91
+ 417  691 000:000  -194.4  -194.4     0.0     0.0     0.0    0.0  -1  13.35
+ 418  692 000:000  -194.4  -194.4     0.0     0.0     0.0    0.0  -1  15.48
+ 419  693 000:000  -194.3  -194.3     0.0     0.0     0.0    0.0  -1  17.51
+ 419  884 000:000  -184.6  -184.6     0.0     0.0     0.0    0.0  -1  17.03
+ 420  694 000:000  -194.3  -194.3     0.0     0.0     0.0    0.0  -1  21.05
+ 421  695 000:000  -194.3  -194.3     0.0     0.0     0.0    0.0  -1   4.66
+ 422  696 000:000  -194.2  -194.2     0.0     0.0     0.0    0.0  -1   8.81
+ 422  704 000:000  -193.9  -193.9     0.0     0.0     0.0    0.0  -1   8.56
+ 423  697 000:000  -194.1  -194.1     0.0     0.0     0.0    0.0  -1  13.35
+ 423  829 000:000  -187.0  -187.0     0.0     0.0     0.0    0.0  -1  14.76
+ 424  698 000:000  -194.0  -194.0     0.0     0.0     0.0    0.0  -1  18.77
+ 425  699 000:000  -193.9  -193.9     0.0     0.0     0.0    0.0  -1   6.77
+ 426  700 000:000  -193.9  -193.9     0.0     0.0     0.0    0.0  -1  18.89
+ 426  801 000:000  -188.8  -188.8     0.0     0.0     0.0    0.0  -1  19.26
+ 427  701 000:000  -193.9  -193.9     0.0     0.0     0.0    0.0  -1  20.25
+ 427  719 000:000  -193.0  -193.0     0.0     0.0     0.0    0.0  -1  19.99
+ 428  702 000:000  -193.9  -193.9     0.0     0.0     0.0    0.0  -1  13.66
+ 429  707 000:000  -193.6  -193.6     0.0     0.0     0.0    0.0  -1   8.79
+ 430  708 000:000  -193.4  -193.4     0.0     0.0     0.0    0.0  -1  10.51
+ 431  709 000:000  -193.4  -193.4     0.0     0.0     0.0    0.0  -1  14.43
+ 432  710 000:000  -193.3  -193.3     0.0     0.0     0.0    0.0  -1  19.40
+ 433  711 000:000  -193.3  -193.3     0.0     0.0     0.0    0.0  -1  14.37
+ 434  712 000:000  -193.3  -193.3     0.0     0.0     0.0    0.0  -1  21.88
+ 435  713 000:000  -193.3  -193.3     0.0     0.0     0.0    0.0  -1  13.08
+ 435  847 000:000  -186.5  -186.5     0.0     0.0     0.0    0.0  -1  12.88
+ 436  714 000:000  -193.2  -193.2     0.0     0.0     0.0    0.0  -1  10.03
+ 437  716 000:000  -193.1  -193.1     0.0     0.0     0.0    0.0  -1  18.78
+ 437  752 000:000  -191.2  -191.2     0.0     0.0     0.0    0.0  -1  18.71
+ 438  717 000:000  -193.1  -193.1     0.0     0.0     0.0    0.0  -1  19.69
+ 438  909 000:000  -183.4  -183.4     0.0     0.0     0.0    0.0  -1  19.71
+ 439  720 000:000  -193.0  -193.0     0.0     0.0     0.0    0.0  -1  11.31
+ 440  721 000:000  -192.9  -192.9     0.0     0.0     0.0    0.0  -1  14.31
+ 441  722 000:000  -192.9  -192.9     0.0     0.0     0.0    0.0  -1  16.26
+ 442  723 000:000  -192.8  -192.8     0.0     0.0     0.0    0.0  -1  12.19
+ 442  732 000:000  -192.4  -192.4     0.0     0.0     0.0    0.0  -1  13.03
+ 443  726 000:000  -192.6  -192.6     0.0     0.0     0.0    0.0  -1  14.98
+ 443  791 000:000  -189.5  -189.5     0.0     0.0     0.0    0.0  -1  14.97
+ 444  727 000:000  -192.5  -192.5     0.0     0.0     0.0    0.0  -1  18.25
+ 444  888 000:000  -184.4  -184.4     0.0     0.0     0.0    0.0  -1  17.48
+ 445  728 000:000  -192.5  -192.5     0.0     0.0     0.0    0.0  -1  12.97
+ 446  729 000:000  -192.5  -192.5     0.0     0.0     0.0    0.0  -1  20.97
+ 447  731 000:000  -192.4  -192.4     0.0     0.0     0.0    0.0  -1  14.43
+ 448  734 000:000  -192.3  -192.3     0.0     0.0     0.0    0.0  -1  12.65
+ 448  846 000:000  -186.5  -186.5     0.0     0.0     0.0    0.0  -1  12.75
+ 449  735 000:000  -192.3  -192.3     0.0     0.0     0.0    0.0  -1  11.73
+ 450  736 000:000  -192.2  -192.2     0.0     0.0     0.0    0.0  -1  19.66
+ 451  737 000:000  -192.2  -192.2     0.0     0.0     0.0    0.0  -1  10.48
+ 452  738 000:000  -192.2  -192.2     0.0     0.0     0.0    0.0  -1  13.16
+ 453  739 000:000  -192.1  -192.1     0.0     0.0     0.0    0.0  -1  17.13
+ 454  740 000:000  -192.1  -192.1     0.0     0.0     0.0    0.0  -1  13.99
+ 455  742 000:000  -191.8  -191.8     0.0     0.0     0.0    0.0  -1  20.05
+ 456  743 000:000  -191.7  -191.7     0.0     0.0     0.0    0.0  -1   6.41
+ 457  745 000:000  -191.6  -191.6     0.0     0.0     0.0    0.0  -1  14.87
+ 457  864 000:000  -185.4  -185.4     0.0     0.0     0.0    0.0  -1  16.08
+ 458  746 000:000  -191.4  -191.4     0.0     0.0     0.0    0.0  -1   9.30
+ 459  747 000:000  -191.4  -191.4     0.0     0.0     0.0    0.0  -1  20.26
+ 460  748 000:000  -191.3  -191.3     0.0     0.0     0.0    0.0  -1   9.08
+ 461  749 000:000  -191.3  -191.3     0.0     0.0     0.0    0.0  -1  14.58
+ 461  865 000:000  -185.3  -185.3     0.0     0.0     0.0    0.0  -1  14.96
+ 462  750 000:000  -191.2  -191.2     0.0     0.0     0.0    0.0  -1  14.10
+ 463  751 000:000  -191.2  -191.2     0.0     0.0     0.0    0.0  -1  20.31
+ 464  754 000:000  -191.0  -191.0     0.0     0.0     0.0    0.0  -1  22.57
+ 465  755 000:000  -190.9  -190.9     0.0     0.0     0.0    0.0  -1  22.39
+ 466  756 000:000  -190.9  -190.9     0.0     0.0     0.0    0.0  -1  10.32
+ 466  876 000:000  -184.9  -184.9     0.0     0.0     0.0    0.0  -1   9.58
+ 467  757 000:000  -190.8  -190.8     0.0     0.0     0.0    0.0  -1  13.14
+ 467  873 000:000  -184.9  -184.9     0.0     0.0     0.0    0.0  -1  13.66
+ 468  758 000:000  -190.8  -190.8     0.0     0.0     0.0    0.0  -1  18.64
+ 469  759 000:000  -190.8  -190.8     0.0     0.0     0.0    0.0  -1  16.94
+ 470  760 000:000  -190.7  -190.7     0.0     0.0     0.0    0.0  -1  11.49
+ 471  761 000:000  -190.7  -190.7     0.0     0.0     0.0    0.0  -1  11.27
+ 471  917 000:000  -183.0  -183.0     0.0     0.0     0.0    0.0  -1  11.48
+ 472  762 000:000  -190.7  -190.7     0.0     0.0     0.0    0.0  -1  15.95
+ 472  789 000:000  -189.6  -189.6     0.0     0.0     0.0    0.0  -1  14.75
+ 472  795 000:000  -189.2  -189.2     0.0     0.0     0.0    0.0  -1  16.35
+ 472  840 000:000  -186.7  -186.7     0.0     0.0     0.0    0.0  -1  17.20
+ 473  763 000:000  -190.7  -190.7     0.0     0.0     0.0    0.0  -1  12.45
+ 473  910 000:000  -183.4  -183.4     0.0     0.0     0.0    0.0  -1  13.57
+ 474  764 000:000  -190.6  -190.6     0.0     0.0     0.0    0.0  -1  20.91
+ 475  765 000:000  -190.6  -190.6     0.0     0.0     0.0    0.0  -1  12.67
+ 476  766 000:000  -190.6  -190.6     0.0     0.0     0.0    0.0  -1  20.07
+ 477  769 000:000  -190.4  -190.4     0.0     0.0     0.0    0.0  -1  16.05
+ 477  826 000:000  -187.1  -187.1     0.0     0.0     0.0    0.0  -1  15.47
+ 478  770 000:000  -190.4  -190.4     0.0     0.0     0.0    0.0  -1  12.43
+ 479  771 000:000  -190.4  -190.4     0.0     0.0     0.0    0.0  -1  12.82
+ 479  928 000:000  -182.8  -182.8     0.0     0.0     0.0    0.0  -1  12.62
+ 480  772 000:000  -190.4  -190.4     0.0     0.0     0.0    0.0  -1  21.70
+ 481  773 000:000  -190.2  -190.2     0.0     0.0     0.0    0.0  -1  10.36
+ 482  775 000:000  -190.1  -190.1     0.0     0.0     0.0    0.0  -1   7.92
+ 483  776 000:000  -190.1  -190.1     0.0     0.0     0.0    0.0  -1   9.01
+ 483  854 000:000  -185.9  -185.9     0.0     0.0     0.0    0.0  -1   8.46
+ 484  778 000:000  -190.0  -190.0     0.0     0.0     0.0    0.0  -1  12.77
+ 485  779 000:000  -189.9  -189.9     0.0     0.0     0.0    0.0  -1  16.54
+ 486  780 000:000  -189.9  -189.9     0.0     0.0     0.0    0.0  -1  10.74
+ 487  781 000:000  -189.9  -189.9     0.0     0.0     0.0    0.0  -1  17.21
+ 488  782 000:000  -189.9  -189.9     0.0     0.0     0.0    0.0  -1  13.36
+ 489  783 000:000  -189.9  -189.9     0.0     0.0     0.0    0.0  -1   9.65
+ 490  784 000:000  -189.8  -189.8     0.0     0.0     0.0    0.0  -1  22.49
+ 491  785 000:000  -189.8  -189.8     0.0     0.0     0.0    0.0  -1  12.31
+ 492  786 000:000  -189.7  -189.7     0.0     0.0     0.0    0.0  -1  12.21
+ 492  820 000:000  -187.4  -187.4     0.0     0.0     0.0    0.0  -1  11.32
+ 493  787 000:000  -189.7  -189.7     0.0     0.0     0.0    0.0  -1  17.68
+ 493  808 000:000  -188.0  -188.0     0.0     0.0     0.0    0.0  -1  17.06
+ 494  792 000:000  -189.3  -189.3     0.0     0.0     0.0    0.0  -1  16.47
+ 495  793 000:000  -189.3  -189.3     0.0     0.0     0.0    0.0  -1  21.80
+ 496  794 000:000  -189.3  -189.3     0.0     0.0     0.0    0.0  -1  13.37
+ 496  800 000:000  -188.9  -188.9     0.0     0.0     0.0    0.0  -1  13.16
+ 497  796 000:000  -189.0  -189.0     0.0     0.0     0.0    0.0  -1  12.26
+ 498  797 000:000  -189.0  -189.0     0.0     0.0     0.0    0.0  -1  14.50
+ 498  827 000:000  -187.1  -187.1     0.0     0.0     0.0    0.0  -1  13.99
+ 499  798 000:000  -189.0  -189.0     0.0     0.0     0.0    0.0  -1  16.72
+ 500  799 000:000  -188.9  -188.9     0.0     0.0     0.0    0.0  -1  19.81
+---------------------------------------------------------------------------
+Cluster summary for the top solutions from each of 500 clusters...
+Cluster rank of 1st top within  3A = 146 (1.28). 1 tops (2 total) within  3A.
+Cluster rank of 1st top within  5A = 24 (4.56). 8 tops (15 total) within  5A.
+Cluster rank of 1st top within 10A = 2 (8.31). 101 tops (190 total) within 10A.
+---------------------------------------------------------------------------
+   1    1 000:000  -336.1  -336.1     0.0     0.0     0.0    0.0  -1  22.49
+Saving orientation 1 (solution 1) to /dev/shm/1_13_0001.pdb
+Saving orientation 2 (solution 2) to /dev/shm/1_13_0002.pdb
+Saving orientation 3 (solution 3) to /dev/shm/1_13_0003.pdb
+Saving orientation 4 (solution 5) to /dev/shm/1_13_0004.pdb
+Saving orientation 5 (solution 6) to /dev/shm/1_13_0005.pdb
+Saving orientation 6 (solution 8) to /dev/shm/1_13_0006.pdb
+Saving orientation 7 (solution 10) to /dev/shm/1_13_0007.pdb
+Saving orientation 8 (solution 12) to /dev/shm/1_13_0008.pdb
+Saving orientation 9 (solution 13) to /dev/shm/1_13_0009.pdb
+Saving orientation 10 (solution 14) to /dev/shm/1_13_0010.pdb
+Saving orientation 11 (solution 15) to /dev/shm/1_13_0011.pdb
+Saving orientation 12 (solution 16) to /dev/shm/1_13_0012.pdb
+Saving orientation 13 (solution 21) to /dev/shm/1_13_0013.pdb
+Saving orientation 14 (solution 25) to /dev/shm/1_13_0014.pdb
+Saving orientation 15 (solution 26) to /dev/shm/1_13_0015.pdb
+Saving orientation 16 (solution 27) to /dev/shm/1_13_0016.pdb
+Saving orientation 17 (solution 28) to /dev/shm/1_13_0017.pdb
+Saving orientation 18 (solution 30) to /dev/shm/1_13_0018.pdb
+Saving orientation 19 (solution 32) to /dev/shm/1_13_0019.pdb
+Saving orientation 20 (solution 33) to /dev/shm/1_13_0020.pdb
+Saving orientation 21 (solution 34) to /dev/shm/1_13_0021.pdb
+Saving orientation 22 (solution 35) to /dev/shm/1_13_0022.pdb
+Saving orientation 23 (solution 37) to /dev/shm/1_13_0023.pdb
+Saving orientation 24 (solution 38) to /dev/shm/1_13_0024.pdb
+Saving orientation 25 (solution 39) to /dev/shm/1_13_0025.pdb
+Saving orientation 26 (solution 40) to /dev/shm/1_13_0026.pdb
+Saving orientation 27 (solution 43) to /dev/shm/1_13_0027.pdb
+Saving orientation 28 (solution 47) to /dev/shm/1_13_0028.pdb
+Saving orientation 29 (solution 51) to /dev/shm/1_13_0029.pdb
+Saving orientation 30 (solution 52) to /dev/shm/1_13_0030.pdb
+Saving orientation 31 (solution 53) to /dev/shm/1_13_0031.pdb
+Saving orientation 32 (solution 57) to /dev/shm/1_13_0032.pdb
+Saving orientation 33 (solution 58) to /dev/shm/1_13_0033.pdb
+Saving orientation 34 (solution 59) to /dev/shm/1_13_0034.pdb
+Saving orientation 35 (solution 61) to /dev/shm/1_13_0035.pdb
+Saving orientation 36 (solution 63) to /dev/shm/1_13_0036.pdb
+Saving orientation 37 (solution 64) to /dev/shm/1_13_0037.pdb
+Saving orientation 38 (solution 65) to /dev/shm/1_13_0038.pdb
+Saving orientation 39 (solution 67) to /dev/shm/1_13_0039.pdb
+Saving orientation 40 (solution 69) to /dev/shm/1_13_0040.pdb
+Saving orientation 41 (solution 70) to /dev/shm/1_13_0041.pdb
+Saving orientation 42 (solution 71) to /dev/shm/1_13_0042.pdb
+Saving orientation 43 (solution 72) to /dev/shm/1_13_0043.pdb
+Saving orientation 44 (solution 75) to /dev/shm/1_13_0044.pdb
+Saving orientation 45 (solution 76) to /dev/shm/1_13_0045.pdb
+Saving orientation 46 (solution 78) to /dev/shm/1_13_0046.pdb
+Saving orientation 47 (solution 80) to /dev/shm/1_13_0047.pdb
+Saving orientation 48 (solution 83) to /dev/shm/1_13_0048.pdb
+Saving orientation 49 (solution 84) to /dev/shm/1_13_0049.pdb
+Saving orientation 50 (solution 85) to /dev/shm/1_13_0050.pdb
+Saving orientation 51 (solution 87) to /dev/shm/1_13_0051.pdb
+Saving orientation 52 (solution 88) to /dev/shm/1_13_0052.pdb
+Saving orientation 53 (solution 95) to /dev/shm/1_13_0053.pdb
+Saving orientation 54 (solution 97) to /dev/shm/1_13_0054.pdb
+Saving orientation 55 (solution 99) to /dev/shm/1_13_0055.pdb
+Saving orientation 56 (solution 100) to /dev/shm/1_13_0056.pdb
+Saving orientation 57 (solution 102) to /dev/shm/1_13_0057.pdb
+Saving orientation 58 (solution 106) to /dev/shm/1_13_0058.pdb
+Saving orientation 59 (solution 108) to /dev/shm/1_13_0059.pdb
+Saving orientation 60 (solution 111) to /dev/shm/1_13_0060.pdb
+Saving orientation 61 (solution 112) to /dev/shm/1_13_0061.pdb
+Saving orientation 62 (solution 114) to /dev/shm/1_13_0062.pdb
+Saving orientation 63 (solution 120) to /dev/shm/1_13_0063.pdb
+Saving orientation 64 (solution 121) to /dev/shm/1_13_0064.pdb
+Saving orientation 65 (solution 122) to /dev/shm/1_13_0065.pdb
+Saving orientation 66 (solution 126) to /dev/shm/1_13_0066.pdb
+Saving orientation 67 (solution 130) to /dev/shm/1_13_0067.pdb
+Saving orientation 68 (solution 131) to /dev/shm/1_13_0068.pdb
+Saving orientation 69 (solution 136) to /dev/shm/1_13_0069.pdb
+Saving orientation 70 (solution 137) to /dev/shm/1_13_0070.pdb
+Saving orientation 71 (solution 139) to /dev/shm/1_13_0071.pdb
+Saving orientation 72 (solution 142) to /dev/shm/1_13_0072.pdb
+Saving orientation 73 (solution 144) to /dev/shm/1_13_0073.pdb
+Saving orientation 74 (solution 147) to /dev/shm/1_13_0074.pdb
+Saving orientation 75 (solution 150) to /dev/shm/1_13_0075.pdb
+Saving orientation 76 (solution 151) to /dev/shm/1_13_0076.pdb
+Saving orientation 77 (solution 155) to /dev/shm/1_13_0077.pdb
+Saving orientation 78 (solution 156) to /dev/shm/1_13_0078.pdb
+Saving orientation 79 (solution 157) to /dev/shm/1_13_0079.pdb
+Saving orientation 80 (solution 162) to /dev/shm/1_13_0080.pdb
+Saving orientation 81 (solution 163) to /dev/shm/1_13_0081.pdb
+Saving orientation 82 (solution 164) to /dev/shm/1_13_0082.pdb
+Saving orientation 83 (solution 167) to /dev/shm/1_13_0083.pdb
+Saving orientation 84 (solution 168) to /dev/shm/1_13_0084.pdb
+Saving orientation 85 (solution 171) to /dev/shm/1_13_0085.pdb
+Saving orientation 86 (solution 174) to /dev/shm/1_13_0086.pdb
+Saving orientation 87 (solution 176) to /dev/shm/1_13_0087.pdb
+Saving orientation 88 (solution 177) to /dev/shm/1_13_0088.pdb
+Saving orientation 89 (solution 179) to /dev/shm/1_13_0089.pdb
+Saving orientation 90 (solution 180) to /dev/shm/1_13_0090.pdb
+Saving orientation 91 (solution 181) to /dev/shm/1_13_0091.pdb
+Saving orientation 92 (solution 182) to /dev/shm/1_13_0092.pdb
+Saving orientation 93 (solution 184) to /dev/shm/1_13_0093.pdb
+Saving orientation 94 (solution 186) to /dev/shm/1_13_0094.pdb
+Saving orientation 95 (solution 187) to /dev/shm/1_13_0095.pdb
+Saving orientation 96 (solution 188) to /dev/shm/1_13_0096.pdb
+Saving orientation 97 (solution 190) to /dev/shm/1_13_0097.pdb
+Saving orientation 98 (solution 191) to /dev/shm/1_13_0098.pdb
+Saving orientation 99 (solution 193) to /dev/shm/1_13_0099.pdb
+Saving orientation 100 (solution 196) to /dev/shm/1_13_0100.pdb
+
+Max application memory used: 44.05 MB virtual + 0.00 KB shared.
+
+Hex stopping: Wed Nov 21 01:51:23 2012
+
+------------------------------------------------------------------------------
+Hex 6.3 + CUDA log stopping at Wed Nov 21 01:51:23 2012 on host node-140.
+------------------------------------------------------------------------------

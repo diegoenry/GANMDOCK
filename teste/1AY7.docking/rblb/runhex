@@ -1,0 +1,2 @@
+parallel -j1 --sshloginfile $PBS_NODEFILE --wd $PWD <<EOF
+EOF

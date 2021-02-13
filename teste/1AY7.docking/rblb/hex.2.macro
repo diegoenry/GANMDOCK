@@ -1,0 +1,36 @@
+
+close_all
+open_receptor ./dockinput/fixed.r_8.pdb
+open_ligand   ./dockinput/fixed.l_9.pdb
+open_complex  ./complex.pdb
+
+DOCKING_RECEPTOR_SAMPLES  492
+DOCKING_LIGAND_SAMPLES    492
+DOCKING_ALPHA_SAMPLES     128
+
+RECEPTOR_RANGE_ANGLE       30
+LIGAND_RANGE_ANGLE         30
+TWIST_RANGE_ANGLE          90
+
+
+R12_RANGE                  21
+R12_STEP                 0.75
+GRID_SIZE                0.6
+
+DOCKING_MAIN_SCAN          16
+DOCKING_MAIN_SEARCH        25
+max_docking_solutions      1000
+
+#pede a GPU
+docking_fft_device 1
+
+# Actually do the docking
+activate_docking
+
+# Save best results
+save_range 1 100 /dev/shm/ 8_9_ pdb
+save_summary      ./dockout/8_9.sum
+save_transform    ./dockout/8_9.hex
+
+EXIT
+

@@ -1,0 +1,81 @@
+GANMDOCK roteiro
+
+Pre-requisitos: Programas
+CHARMM
+MMTSB
+HEX
+ISSCORE ( http://cssb.biology.gatech.edu/isscore )
+gnu-parallel 
+
+Pre-requisitos: Variaveis de ambiente: Voce tem que exportar as variaveis indicando a localizacao dos programas e das bibliotecas.
+
+#### MMTSB ############################################################
+export MMTSBDIR=$HOME/software64/mmtsb
+export PATH=$PATH:$MMTSBDIR/perl:$MMSTBDIR/bin
+export CHARMMEXEC=$HOME/software64/c36b1/exec/gnu_M/charmm
+export CHARMMDATA=$HOME/software64/c36b1/toppar/
+
+
+#### HEX ####
+export HEX_ROOT=/home/dgomes/software64/hex/ # required
+export HEX_PDB=.
+export HEX_MACROS=.
+export HEX_COLOUR=.
+export HEX_DATA=$HEX_ROOT/data/
+export HEX_CACHE=$HEX_ROOT/hex_cache
+#export HEX_STARTUP=/var/lmdm/dgomes/hex/examples/startup_v5.mac
+export HEX_CPUS=8
+export HEX_GPUS=1
+export HEX_MESSAGES=yes
+#export HEX_STEREO=yes
+export PATH=$PATH:$HEX_ROOT/bin    # required
+#### HEX ####i
+export PATH=${PATH}:"/home/dgomes/software64/parallel/bin/"
+export PATH=${PATH}:"/home/dgomes/GANMDOCK.1.0.RELEASE/bin/"
+export PATH=${PATH}:"/home/dgomes/GANMDOCK.1.0.RELEASE/bin/isscore/bin/"
+
+Running: 
+A) Prepare files to run:
+  a.1) Prepare structures with CHARMM-GUI and save it to a separate folder.
+  a.2) Copy run input files from "charmm.scripts" ( *.inp )
+  a.2) replace "step1_pdbreader.inp" topology with the one in "prep.inp"
+  a.3) Run charmm -i step1_pdbreader.inp 
+  a.4) charmm -i mini.inp
+  a.5) charmm -i nma.inp
+
+
+B) Generate pool of structures
+b.1) Create a folder for the docking and structure generation (ex. 1AY7.docking/rblb ) 
+b.2) Create the files defining witch Normal Modes to optimize and the maximum positive and pegative amplitudes:
+
+ex. nmrec.dat
+#mode neg    pos
+  7   -1.0   1.0
+  8   -1.0   1.0
+# 9    8.0   1.0   < "#" tells not to optimize
+ 10   -5.0   0.0 
+  
+b.3) Copy the .pdb, .psf and .mod files of each receptor and ligand to this folder. 
+Name the receptor files as receptor.pdb, receptor.psf and receptor.mod, same for the ligand:
+ex
+cp /home/dgomes/1AY7/receptor/step1_pdbreader.psf /home/dgomes/1AY7.docking/receptor.psf
+cp /home/dgomes/1AY7/receptor/step1_pdbreader.pdb /home/dgomes/1AY7.docking/receptor.pdb
+cp /home/dgomes/1AY7/receptor/modes.mod /home/dgomes/1AY7.docking/receptor.mod
+
+b.4) If you have the complex structure, copy it here as "complex.pdb"
+
+b.5) Generate the structures  ( "ganmdock -h" shows the help )
+     mkdir input
+     mkdir output
+     mkdir dockinput
+     mkdir dockout
+     ganmdock -nodock -psize -pbs 1  ....
+
+C) GA dock them.
+c.1) ganmdock -onlydock -psize ....
+
+D) Analyse
+
+
+[ ] Energy table has duplicate results.
+

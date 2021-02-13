@@ -1,0 +1,62 @@
+* chainA energy and  minimisation
+*
+
+! Read topology and parameter files
+!stream toppar.str
+! protein topology and parameter
+open read card unit 10 name $CHARMMDATA/top_all22_prot.inp
+read  rtf card unit 10
+
+open read card unit 20 name $CHARMMDATA/par_all22_prot.inp
+read para card unit 20
+
+open read card unit 12 name step1_pdbreader.psf
+read psf card unit 12
+close unit 12
+
+open read card unit 12 name mini.crd
+read coor card unit 12
+close unit 12
+
+! define force field 2
+set par1 8.0
+set par2 10.0
+set par3 12.0
+set par4 2.0
+
+updat  inbfrq -1 -
+atom rdiel switch vswitch -
+ctonnb @par1 ctofnb @par2 cutnb @par3 eps @par4 e14fac 1.0 wmin 1.5
+!ctonnb 5. ctofnb 9. cutnb 11.0 eps 2.0 e14fac 1.0 wmin 1.5
+
+ener
+coor copy comp
+
+! Perform a final minimization to eliminate roundoff errors
+! Minimisation d'energie jusqu'a un gradient moyen (rms)
+! de 10-5 kcal/mol-Angstroem-degree-de-liberte
+mini abnr tolgrd 0.000001 nsteps 100000
+
+open write file unit 14 name ./mini-b4nma.bin
+write coor  unit 14 
+* Writing the coordinates of the minimised structure in binary
+* of chainA ctonnb @par1 ctofnb @par2 cutnb @par3 eps @par4 e14fac 1.0 wmin 1.5
+* harmonic restraints are used + ABNR tol gradient of 0.00001
+*
+
+
+!dgomes; increase bomlev to allow computing NM for more than 3600 atoms
+bomlev -2 
+
+! Calculer les modes:
+vibran nmod 200
+
+!diag
+open write file unit 41 name modes.mod
+diagonalize
+write norm file unit 41
+
+
+stop
+end
+

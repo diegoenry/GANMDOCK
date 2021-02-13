@@ -1,0 +1,75 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+subroutine GenerateStructures
+use vectors, only : nPerson,nmodes,Receptor,Ligand,nproc,nnodes,pbs
+use vectors, only : nModesReceptor,nModesLigand
+use vectors, only : nPersonReceptor,nPersonLigand
+
+open(99,file="runcharmm")
+
+1000  format("parallel -j",i5," <<EOF")
+2000  format("parallel -j",i5," --sshloginfile $PBS_NODEFILE --wd $PWD <<EOF")
+!3000  format("parallel -j1 --sshloginfile $PBS_NODEFILE -W$PWD <<EOF")
+
+!if (pbs==1) write(99,*) "export CHARMMEXEC='mpirun -n 8 $CHARMMEXEC'"
+
+if (pbs==0) write(99,1000) nproc
+if (pbs==1) write(99,2000) nproc
+if (pbs==2) write(99,2000) nnodes
+!if (pbs==3) write(99,3000) !use MPI and nproc
+
+do i=1,nPersonReceptor
+  call runcharmm(nModesReceptor,i,Receptor(i)%disp(:),pbs,nproc,0) ! "0" for Receptor
+enddo
+
+do i=1,nPersonLigand
+  call runcharmm(nModesLigand,i,Ligand(i)%disp(:),pbs,nproc,1)   ! "1" for Ligand
+enddo
+  
+write(99,"(a3)") "EOF" 
+
+close(99)
+
+!Actually run charmm
+call system("bash runcharmm")
+
+
+end subroutine GenerateStructures
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+subroutine runcharmm(nmodes,pos,disp,pbs,nproc,rl)
+!script is written in WRITE UNIT "99"
+integer,intent(in)   :: pbs          ! Are we using a cluster ? ( 0 = no ; 1 = yes, grid ; 2 = yes, single job )
+integer,intent(in)   :: nproc
+integer,intent(in)   :: nmodes       ! Number of normal modes to consider
+integer,intent(in)   :: pos          ! Position Receptor or Ligand
+real,intent(in)      :: disp(nmodes) ! Amplitude for each normal mode
+integer,intent(in)   :: rl           ! "0" for Receptor, "1" for Ligand
+character            :: string*5
+character            :: command*256
+character            :: command2*256
+
+  open(1,file="disp.dat")
+  write(1,"(f8.3)") disp(:)
+  close(1)
+  write(unit=string, fmt='(I4)') pos !computes energy for "pos"
+
+  if (rl==0) then
+    command="./optimize.NM.displacement.bash > input/r_"//trim(adjustl(string))//".inp"
+    command2="$CHARMMEXEC -i input/r_"//trim(adjustl(string))//".inp istr=r_"//trim(adjustl(string))//" -o output/r_"//trim(adjustl(string))//".log filename=Receptor dirnam=output"
+  else
+    command="./optimize.NM.displacement.bash > input/l_"//trim(adjustl(string))//".inp"
+    command2="$CHARMMEXEC -i input/l_"//trim(adjustl(string))//".inp istr=l_"//trim(adjustl(string))//" -o output/l_"//trim(adjustl(string))//".log filename=Ligand dirnam=output"
+  endif
+
+!  if (pbs/=3) write(99,*) trim(command), " ; ", trim(command2)
+!  if (pbs==3) write(99,"(A,A,A,i3,2x,A)") trim(command), " ; ", "mpirun -n ",nproc, trim(command2)
+
+  call system(trim(command))
+
+  if (pbs/=3) write(99,*) trim(command2)
+  if (pbs==3) write(99,"(A,A,A,i3,2x,A)") "mpirun -n ",nproc, trim(command2)
+
+end subroutine

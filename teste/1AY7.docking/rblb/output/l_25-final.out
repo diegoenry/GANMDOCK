@@ -1,0 +1,59 @@
+  
+ CHARMM>     
+  
+ CHARMM>    ! compute the energy of the final structure
+ CHARMM>    ener
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    RDIElec  SWITch   VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 12.000 CTEXNB =999.000 CTONNB =  8.000 CTOFNB = 10.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  2.000
+ NBXMOD =      5
+ There are   298767 atom  pairs and     7860 atom  exclusions.
+ There are        0 group pairs and     1269 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR   389256 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+   299378 ATOM PAIRS WERE FOUND FOR ATOM LIST
+    17677 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+ENER CROSS:           CMAPs        PMF1D        PMF2D        PRIMO
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ENER MMFP2:            VMOD
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0   -322.47789      1.84092      0.43395
+ENER INTERN>       46.41149    156.76301     11.50296    352.25622      6.54886
+ENER CROSS>      -147.85689      0.00000      0.00000      0.00000
+ENER EXTERN>     -428.32851   -516.66319      0.00000      0.00000      0.00000
+ENER MMFP2>       196.88816
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>     
+  
+ CHARMM>    ! compute the rmsd from the initial structure
+ CHARMM>    coor rms
+ TOTAL SQUARE DIFF IS    328.8323  DENOMINATOR IS   1434.0000
+       THUS RMS DIFF IS    0.478865
+ RMS FOUND FOR SELECTED COORDINATES WITHOUT ROTATION
+  
+ CHARMM>     
+  
+ CHARMM>    mmfp
+
+      MISCELANEOUS MEAN FIELD POTENTIALS
+  
+   MMFP>    vmod print
+                      Q-target Q-current Force-const E-restraint
+RESTRAINT   1 MOD   7  -1.000  -0.432     1000.00      161.13
+RESTRAINT   2 MOD   8   0.500   0.233     1000.00       35.70
+  
+   MMFP>    end
+  
+ CHARMM>     
+  
+ CHARMM>    outu 6
